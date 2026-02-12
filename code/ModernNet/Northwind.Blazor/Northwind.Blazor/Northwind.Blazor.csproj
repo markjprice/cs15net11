@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup Label="Package reference versions are set at the solution level.">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
+  </ItemGroup>
+
+  <ItemGroup Label="Project references.">
+    <ProjectReference Include="..\..\Northwind.Blazor.Services\Northwind.Blazor.Services.csproj" />
+    <ProjectReference Include="..\Northwind.Blazor.Client\Northwind.Blazor.Client.csproj" />
+    <!-- change Sqlite to SqlServer if you prefer -->
+    <ProjectReference Include="..\..\Northwind.DataContext.Sqlite\Northwind.DataContext.Sqlite.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Northwind.EntityModels" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Components\Pages\Functions.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+</Project>

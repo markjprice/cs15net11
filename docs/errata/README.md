@@ -1,28 +1,16 @@
 # Errata and Improvements
 
-If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
+If you find any mistakes in the eleventh edition, *C# 15 and .NET 11 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs15net11/issues) or email me at markjprice (at) gmail.com.
 
-[**Errata** (11 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
+[**Errata** (0 items)](errata.md): Typos, tool user interface and behavior changes, or mistakes in code that would cause a compilation error that prevents a successful build.
 
-[**Improvements** (11 items)](improvements.md): Changes to text or code that would improve the content. These are optional.
+[**Improvements** (0 items)](improvements.md): Changes to text or code that would improve the content. These are optional.
 
 [**Common Mistakes**](https://github.com/markjprice/markjprice/blob/main/articles/common-mistakes.md): These are some of the most common mistakes that a reader might encounter when trying to get code in book tasks to work, or when trying to write your own code. (Links to the `markjprice` shared articles repository.)
 
-All errata and improvements will be included in the 11th edition planned for publishing in November 2026 alongside .NET 11. To be included they must be submitted by mid-September 2026.
+All errata and improvements will be included in the 12th edition planned for publishing in November 2027 alongside .NET 12. To be included they must be submitted by mid-September 2027.
 
 # Top Contributors
 
 Who|Errata|Improvements
 ---|---|---
-[Amar Jamal](https://github.com/amarjamal)|3|2
-[Chris Alberty](https://github.com/calberty)|1|1
-[mushobeti](https://github.com/mushobeti)|2|0
-[Nick Johnston](https://github.com/nick-johnston)|1|1
-[Donald Maisey](https://github.com/donaldmaisey)|1|0
-[Paul Marangoni](https://github.com/pmarangoni)|1|0
-[iheartdotnet](https://github.com/iheartdotnet)|1|0
-José Luis García|1|0
-[alhi44](https://github.com/alhi44)|0|1
-[s3ba-b](https://github.com/s3ba-b)|0|1
-[zkazz](https://github.com/zkazz)|0|1
-**TheHeLlWarrior31** / `thehellwarrior31`|0|1

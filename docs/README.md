@@ -117,12 +117,12 @@ This documentation section of the repository contains links to all the optional 
 
 # [Errata, Improvements, and Common Mistakes](errata/README.md)
 
-If you find any mistakes in the tenth edition, *C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs14net10/issues) or email me at markjprice (at) gmail.com.
+If you find any mistakes in the tenth edition, *C# 15 and .NET 11 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs15net11/issues) or email me at markjprice (at) gmail.com.
 
 # Miscellaneous
 
 [**Book Links**](book-links.md): All links in the published book.
 
-[**Support for .NET 11**](https://github.com/markjprice/markjprice/blob/main/articles/dotnet11.md): How to use the .NET 10 edition of this book with .NET 11 previews starting in February 2026.
+[**Support for .NET 12**](https://github.com/markjprice/markjprice/blob/main/articles/dotnet12.md): How to use the .NET 11 edition of this book with .NET 12 previews starting in February 2027.
 
-[**What's New in the 10th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 10th edition.
+[**What's New in the 11th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 11th edition.

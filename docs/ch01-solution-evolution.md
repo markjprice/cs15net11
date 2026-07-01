@@ -126,6 +126,8 @@ For example, in *Chapter 3*, the reader creates six projects during the tasks in
 
 > **Warning!** Solution filter files are tied to a specific solution file. If you migrate your solution from `.sln` to `.slnx` then you’ll need to update the filter file to reference the new `.slnx` file, otherwise it will still try to open the old `.sln` file.
 
+> Solution filters can now be edited from the CLI: https://github.com/dotnet/core/blob/main/release-notes/11.0/preview/preview3/sdk.md#solution-filters-can-now-be-edited-from-the-cli 
+
 Learn more about solution filters at the following links:
 - [Filtered solutions in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/filtered-solutions)
 - [Solution filters in MSBuild](https://learn.microsoft.com/en-us/visualstudio/msbuild/solution-filters)

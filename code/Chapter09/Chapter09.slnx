@@ -1,11 +1,11 @@
 <Solution>
   <Project Path="ControllingJson/ControllingJson.csproj" />
   <Project Path="Exercise_SerializingShapes/Exercise_SerializingShapes.csproj" />
-  <Project Path="WorkingWithEncodings/WorkingWithEncodings.csproj" />
-  <Project Path="WorkingWithEnvVars/WorkingWithEnvVars.csproj" />
-  <Project Path="WorkingWithFileSystems/WorkingWithFileSystems.csproj" />
-  <Project Path="WorkingWithRandomAccess/WorkingWithRandomAccess.csproj" />
-  <Project Path="WorkingWithSerialization/WorkingWithSerialization.csproj" />
-  <Project Path="WorkingWithStreams/WorkingWithStreams.csproj" />
-  <Project Path="WorkingWithTarArchives/WorkingWithTarArchives.csproj" />
+  <Project Path="Encodings/Encodings.csproj" />
+  <Project Path="EnvVars/EnvVars.csproj" />
+  <Project Path="FileSystems/FileSystems.csproj" />
+  <Project Path="RandomAccess/RandomAccess.csproj" />
+  <Project Path="Serialization/Serialization.csproj" />
+  <Project Path="Streams/Streams.csproj" />
+  <Project Path="TarArchives/TarArchives.csproj" />
 </Solution>

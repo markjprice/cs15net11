@@ -1,13 +1,13 @@
 <Project>
 
-  <!--Last updated package versions: March 10, 2026.-->
+  <!--Last updated package versions: July 1, 2026.-->
 
   <PropertyGroup Label="To enable Central Package Management.">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <PropertyGroup Label="Define custom properties for common version numbers.">
-    <Net11>11.0.0-preview.2.26159.112</Net11>
+    <Net11>11.0.0-preview.5.26302.115</Net11>
   </PropertyGroup>
 
   <ItemGroup Label="For EF Core.">
@@ -17,9 +17,14 @@
   </ItemGroup>
 
   <ItemGroup Label="For unit testing.">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.3" />
-    <PackageVersion Include="coverlet.collector" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.7.0" />
+    <PackageVersion Include="coverlet.collector" Version="10.0.1" />
+
+    <!-- xUnit v2 is now deprecated. -->
     <PackageVersion Include="xunit" Version="2.9.3" />
+
+    <!-- xUnit v3 should be used instead. -->
+    <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
   </ItemGroup>
 
@@ -31,7 +36,7 @@
 
   <ItemGroup Label="For web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net11)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.13.3" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.7" />
   </ItemGroup>
 
 </Project>

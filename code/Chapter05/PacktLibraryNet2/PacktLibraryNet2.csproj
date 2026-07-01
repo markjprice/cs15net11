@@ -6,8 +6,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 
     <!--To use most modern C# compiler features. -->
-    <!--Change to 14 after .NET 10 GA.-->
-    <LangVersion>13</LangVersion>
+    <!--Change to 15 after .NET 11 GA.-->
+    <LangVersion>preview</LangVersion>
 
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>

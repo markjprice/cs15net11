@@ -55,27 +55,24 @@ Catch up on previous newsletters in the archive: https://packtnetpro.substack.co
 - Chapter 5 Building Your Own Types with Object-Oriented Programming: [code/Chapter05](code/Chapter05)
 - Chapter 6 Implementing Interfaces and Inheriting Classes: [code/Chapter06](code/Chapter06)
 
-**.NET Libraries and Frameworks**
+**.NET Libraries**
 - Chapter 7 Packaging and Distributing .NET Types: [code/Chapter07](code/Chapter07)
 - Chapter 8 Working with Common .NET Types: [code/Chapter08](code/Chapter08)
 - Chapter 9 Working with Files, Streams, and Serialization: [code/Chapter09](code/Chapter09)
-- Chapter 10 Avalonia: [code/Chapter10](code/ModernNet/DesktopApp)
-  - [code/ModernWeb/nuget.config](code/ModernNet/nuget.config)
-  - [code/ModernWeb/Directory.Packages.props](code/ModernNet/Directory.Packages.props)
-- Chapter 11 Working with Data Using Entity Framework Core: [code/Chapter10](code/Chapter11)
-- Chapter 12 Querying and Manipulating Data Using LINQ: [code/Chapter11](code/Chapter12)
-- Chapter 13 Building Websites Using Blazor: [code/ModernWeb/Northwind.Blazor](code/ModernWeb/Northwind.Blazor)
-- Chapter 14 Building and Consuming Web Services: [code/ModernWeb/Northwind.MinimalApi](code/ModernWeb/Northwind.MinimalApi)
 
-**Appendices**
-- [*Appendix A, Answers to the Test Your Knowledge Questions*](docs/B37286_Appendix%20A.pdf)
-- [*Appendix B, Setting Up Your Development Environment*](docs/B37286_Appendix%20B.pdf)
-- [*Appendix C, Looking for help*](https://github.com/markjprice/markjprice/blob/main/articles/getting-help.md) and [PDF](docs/B37286_Appendix%20C.pdf)
-- Appendices are included with your purchase. Visit https://packtpub.com/unlock, then use the search bar to find this book by name. Double-check the edition shown to make sure you get the right one.
+**Web and Data**
+- Chapter 10 Building Websites Using Blazor: [code/WebData/Northwind.Blazor](code/WebData/Northwind.Blazor)
+  - [code/WebData/nuget.config](code/WebData/nuget.config)
+  - [code/WebData/Directory.Packages.props](code/WebData/Directory.Packages.props)
+- Chapter 11 Working with Data Using Entity Framework Core: [code/WebData](code/WebData)
+- Chapter 12 Querying and Manipulating Data Using LINQ: [code/WebData](code/WebData)
+- Chapter 13 Building and Consuming Web Services: [code/WebData/Northwind.MinimalApi](code/WebData/Northwind.MinimalApi)
+
+**Online Material**
+- [*Appendix, Answers to the Test Your Knowledge Questions*](docs/B37286_Appendix.pdf)
+- The Appendix is included with your purchase. Visit https://packtpub.com/unlock, then use the search bar to find this book by name. Double-check the edition shown to make sure you get the right one.
 
 # Code solutions for Visual Studio and VS Code
-
-[Figures for all of the code solution folders](docs/ch01-solution-folders.md).
 
 VS Code now has an extension named **C# Dev Kit** that includes a solution explorer so it can better work with Visual Studio solution files. Visual Studio 2026 for Windows, VS Code + C# Dev Kit, and Rider can use the same code solution files and projects for each chapter, found here: [/code](/code). 
 
@@ -90,7 +87,7 @@ Corrections for typos and other mistakes and improvements like refactoring code.
 - [Command-Lines](docs/command-lines.md) page lists all commands as a single line that can be copied and pasted to make it easier to enter commands at the prompt.
 - [Book Links](docs/book-links.md)
 - [Common Mistakes, Improvements, and Errata aka list of corrections](docs/errata/README.md)
-- [Tenth edition's support for .NET 11](docs/dotnet11.md)
+- [11th edition's support for .NET 12](docs/dotnet12.md)
 
 # Miscellaneous
 

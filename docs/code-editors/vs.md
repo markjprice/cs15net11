@@ -1,10 +1,17 @@
-**Visual Studio 2026 for Windows**
+**Visual Studio for Windows**
 
-In this article, I provide detailed step-by-step instuctions for using Visual Studio 2026 for Windows for topics like creating a solution with multiple projects and using debugging tools.
+> Visual Studio 2027 now uses annual branding with monthly feature updates, as described at the following link: https://devblogs.microsoft.com/visualstudio/visual-studio-built-for-the-speed-of-modern-development/. 
+> 
+> This means:
+> - Feature updates every month, not every quarter.
+> - A new annual version each year, released in November alongside the .NET release.
+> - Predictable servicing and support under the Modern Support Lifecycle, with one year of monthly feature updates followed by one year of security fixes.
+
+In this article, I provide detailed step-by-step instuctions for using Visual Studio for topics like creating a solution with multiple projects and using debugging tools.
 
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
   - [Downloading and installing Visual Studio](#downloading-and-installing-visual-studio)
-  - [Building console apps using Visual Studio](#building-console-apps-using-visual-studio)
+  - [Building console apps using Visual Studio on Windows](#building-console-apps-using-visual-studio-on-windows)
     - [Managing multiple projects using Visual Studio](#managing-multiple-projects-using-visual-studio)
     - [Writing code using Visual Studio](#writing-code-using-visual-studio)
   - [Compiling and running code using Visual Studio](#compiling-and-running-code-using-visual-studio)
@@ -30,9 +37,9 @@ In this article, I provide detailed step-by-step instuctions for using Visual St
 
 ## Downloading and installing Visual Studio
 
-If you have not already installed Visual Studio 2026 for Windows, let's do so now:
+If you have not already installed Visual Studio for Windows, let's do so now:
 
-1.	Download Microsoft Visual Studio 2026 version 18.0 or later for Windows from the following link: https://visualstudio.microsoft.com/downloads/.
+1.	Download Microsoft Visual Studio 2027 version 19.0 or later for Windows from the following link: https://visualstudio.microsoft.com/downloads/.
 2.	Start the installer.
 3.	On the **Workloads** tab, select the following:
     -	**ASP.NET and web development**
@@ -41,23 +48,23 @@ If you have not already installed Visual Studio 2026 for Windows, let's do so no
 4.	Click **Install** and wait for the installer to acquire the selected software and install it.
 5.	When the installation is complete, click **Launch**.
 6.	The first time that you run Visual Studio, you will be prompted to sign in. If you have a Microsoft account, you can use that account. If you don't, then register for a new one at the following link: https://signup.live.com/
-7.	The first time that you run Visual Studio, you will be prompted to configure your environment. For **Development Settings**, choose **Visual C#**. For the color theme, I chose **Blue**, but you can choose whatever tickles your fancy.
+7.	The first time that you run Visual Studio, you will be prompted to configure your environment. For **Development Settings**, choose **Visual C#**. For the color theme, I chose **Light**, but you can choose whatever tickles your fancy.
 8.	If you want to customize your keyboard shortcuts, navigate to **Tools** | **Options...**, and then select the **Keyboard** section.
 
-## Building console apps using Visual Studio
+## Building console apps using Visual Studio on Windows
 
-The goal of this section is to showcase how to build a console app using Visual Studio. 
+The goal of this section is to showcase how to build a console app using Visual Studio on Windows. 
 
 ### Managing multiple projects using Visual Studio
 
-Visual Studio has a concept named a solution that allows you to open and manage multiple projects simultaneously. We will use a solution to manage the two projects that you will create in this chapter.
+Visual Studio has a concept named a *solution* that allows you to open and manage multiple projects simultaneously. We will use a solution to manage the two projects that you will create in this chapter.
 
 ### Writing code using Visual Studio
 
 Let's get started writing code!
 
 1.	Start **Visual Studio**.
-2.	In the **Visual Studio 2026** | **Get started** window, click **Create a new project**, as shown in *Figure 1.3*:
+2.	In the **Visual Studio 2027** | **Get started** window, click **Create a new project**, as shown in *Figure 1.3*:
 
 ![Creating a new project in Visual Studio](assets/vs/B19586_01_03.png)
 *Figure 1.3: Creating a new project in Visual Studio*

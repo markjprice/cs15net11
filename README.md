@@ -61,7 +61,7 @@ Catch up on previous newsletters in the archive: https://packtnetpro.substack.co
 - Chapter 9 Working with Files, Streams, and Serialization: [code/Chapter09](code/Chapter09)
 
 **Web and Data**
-- Chapter 10 Building Websites Using Blazor: [code/WebData/Northwind.Blazor](code/WebData/Northwind.Blazor)
+- Chapter 10 Building Web Apps Using Blazor: [code/WebData/Northwind.Blazor](code/WebData/Northwind.Blazor)
   - [code/WebData/nuget.config](code/WebData/nuget.config)
   - [code/WebData/Directory.Packages.props](code/WebData/Directory.Packages.props)
 - Chapter 11 Working with Data Using Entity Framework Core: [code/WebData](code/WebData)

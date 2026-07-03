@@ -60,13 +60,21 @@ Catch up on previous newsletters in the archive: https://packtnetpro.substack.co
 - Chapter 8 Working with Common .NET Types: [code/Chapter08](code/Chapter08)
 - Chapter 9 Working with Files, Streams, and Serialization: [code/Chapter09](code/Chapter09)
 
-**Web and Data**
-- Chapter 10 Building Web Apps Using Blazor: [code/WebData/Northwind.Blazor](code/WebData/Northwind.Blazor)
-  - [code/WebData/nuget.config](code/WebData/nuget.config)
-  - [code/WebData/Directory.Packages.props](code/WebData/Directory.Packages.props)
-- Chapter 11 Working with Data Using Entity Framework Core: [code/WebData](code/WebData)
-- Chapter 12 Querying and Manipulating Data Using LINQ: [code/WebData](code/WebData)
-- Chapter 13 Building and Consuming Web Services: [code/WebData/Northwind.MinimalApi](code/WebData/Northwind.MinimalApi)
+**Web and Data**: [code/WebData](code/WebData)
+- Chapter 10 Working with Data Using Entity Framework Core
+  - [code/WebData/WorkingWithEFCore](code/WebData/WorkingWithEFCore)
+  - [code/WebData/Northwind.EntityModels](code/WebData/Northwind.EntityModels)
+  - [code/WebData/Northwind.DataContext](code/WebData/Northwind.DataContext)
+  - [code/WebData/Northwind.UnitTests](code/WebData/Northwind.UnitTests)
+- Chapter 11 Building Web Apps Using Blazor
+  - [code/WebData/Northwind.Blazor](code/WebData/Northwind.Blazor)
+  - [code/WebData/Northwind.Blazor.Services](code/WebData/Northwind.Blazor.Services)
+- Chapter 12 Querying and Manipulating Data Using LINQ
+  - [code/WebData/LinqWithObjects](code/WebData/LinqWithObjects)
+  - [code/WebData/LinqWithEFCore](code/WebData/LinqWithEFCore)
+- Chapter 13 Building and Consuming Web Services
+  - [code/WebData/Northwind.WebApi](code/WebData/Northwind.WebApi)
+  - [code/WebData/Northwind.WebApi.WasmClient](code/WebData/Northwind.WebApi.WasmClient)
 
 **Online Material**
 - [*Appendix, Answers to the Test Your Knowledge Questions*](docs/B37286_Appendix.pdf)

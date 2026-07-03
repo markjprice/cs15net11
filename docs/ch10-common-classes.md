@@ -1,4 +1,4 @@
-# Chapter 13 - ASP.NET Core common classes and methods
+# Chapter 10 - ASP.NET Core common classes and methods
 
 ```mermaid
 classDiagram

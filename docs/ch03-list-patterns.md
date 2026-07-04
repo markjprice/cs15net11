@@ -80,3 +80,13 @@ sixNumbers: Any items in any order.
 ```
 
 You can learn more about list pattern matching at the following link: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns#list-patterns.
+
+## Trailing commas
+
+The trailing comma after the last item in the switch expression is optional and the compiler will not complain about it.
+
+Most languages, including C#, allow the code style of trailing commas. When multiple items are separated by commas (for example, when declaring an anonymous object, an array, collection initializers, enums, and switch expressions), C# allows you to have the trailing comma after the last item. This makes it easy to rearrange the order of the items without having to keep adding and removing commas.
+
+You can read a discussion about allowing trailing commas for switch expressions back in 2018 at the following link: https://github.com/dotnet/csharplang/issues/2098.
+
+Even JSON serializers have an option to allow this because it is so common to use, as discussed at the following link: https://learn.microsoft.com/en-us/dotnet/api/system.text.json.jsonserializeroptions.allowtrailingcommas.

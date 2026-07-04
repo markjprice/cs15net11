@@ -52,6 +52,7 @@
 - Moved the *Adding a new item to a project using Visual Studio* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-adding-a-new-item.md
 - Moved the *Understanding how foreach works internally* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-foreach-internals.md
 - Moved the *List pattern matching with arrays* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-list-patterns.md
+- Moved the *Rounding numbers and the default rounding rules* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-rounding-numbers.md
 
 ## Chapter 4
 

@@ -113,3 +113,5 @@ After decrementing: 2147483646
 Of course, it would be rare that you would want to explicitly switch off a check like this because it allows an overflow to occur. But perhaps you can think of a scenario where you might want that behavior.
 
 > **Prompt**: Please explain `checked` and `unchecked` integer overflow in C#. Show what happens at compile time and runtime and explain when overflow could become a security or correctness problem.
+
+> **Good practice**: Use a `checked` context when converting externally supplied or calculated values to a smaller numeric type. An `unchecked` narrowing conversion can silently discard significant bits and produce a plausible but incorrect value.

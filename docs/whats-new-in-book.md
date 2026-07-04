@@ -50,7 +50,8 @@
 ## Chapter 3
 - Moved the *Why you should always use braces with if statements* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-always-use-braces.md
 - Moved the *Adding a new item to a project using Visual Studio* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-adding-a-new-item.md
-- Moved the *Understanding how foreach works internally* subsection to be optional online-only: 
+- Moved the *Understanding how foreach works internally* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-foreach-internals.md
+- Moved the *List pattern matching with arrays* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-list-patterns.md
 
 ## Chapter 4
 

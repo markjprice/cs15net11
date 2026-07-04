@@ -49,3 +49,5 @@ The .NET `Base64Url` class offers a range of optimized methods for encoding and 
 ReadOnlySpan<byte> bytes = ...;
 string encoded = Base64Url.EncodeToString(bytes);
 ```
+
+> **Warning!**: Base64 and Base64Url are encodings, not encryption or hashing. Anyone can decode the original bytes, and the encoded representation is usually about one-third larger.

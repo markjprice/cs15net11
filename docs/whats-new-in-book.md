@@ -48,15 +48,18 @@
 - Moved the *Passing arguments to a console app* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch02-arguments.md
 
 ## Chapter 3
+- Added a *Comparison and equality operators* subsection.
+- Added a *Understanding operator precedence and associativity* subsection.
 - Moved the *Why you should always use braces with if statements* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-always-use-braces.md
 - Moved the *Adding a new item to a project using Visual Studio* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-adding-a-new-item.md
 - Moved the *Understanding how foreach works internally* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-foreach-internals.md
 - Moved the *List pattern matching with arrays* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-list-patterns.md
 - Moved the *Rounding numbers and the default rounding rules* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-rounding-numbers.md
+- Moved the *Converting from a binary object to a string using Base64 encoding* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-binary-to-string.md
 - Moved the *Checking for overflow* section to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-overflow.md
 
 ## Chapter 4
-
+- 
 
 ## Chapter 5
 

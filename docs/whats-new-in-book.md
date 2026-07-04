@@ -53,8 +53,10 @@
 - Moved the *Understanding how foreach works internally* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-foreach-internals.md
 - Moved the *List pattern matching with arrays* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-list-patterns.md
 - Moved the *Rounding numbers and the default rounding rules* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-rounding-numbers.md
+- Moved the *Checking for overflow* section to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-overflow.md
 
 ## Chapter 4
+
 
 ## Chapter 5
 

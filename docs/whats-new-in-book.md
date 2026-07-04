@@ -13,11 +13,13 @@
   - [Chapter 12](#chapter-12)
   - [Chapter 13](#chapter-13)
 
+> A major goal for the 11th edition is to reduce the page count of the print book so that we can (1) reduce the price of the book, and (2) reduce the physical size and weight of the book. 
+
 # What's New in the 11th Edition
 - There are hundreds of minor fixes and improvements throughout the 11th edition; too many to list individually. 
 - All [errata](https://github.com/markjprice/cs14net10/blob/main/docs/errata/errata.md) and [improvements](https://github.com/markjprice/cs14net10/blob/main/docs/errata/improvements.md) for the 10th edition (up to mid-September 2026) have been made to the 11th edition. 
 - The *Test your knowledge* questions at the end of each chapter have stayed the same for many editions. I have now reviewed, updated, and expanded them all.
-- Removed "version-to-version" commentary. In previous editions, I would often say which version of C# or .NET a feature was introduced. I now assume the reader will be using the version the book was written for. I limit historic discussions and version-specific commentary to optional online-only sections.
+- Removed "version-to-version" commentary. In previous editions, I would often say which version of C# or .NET a feature was introduced. I now assume the reader will be using the version the book was written for and does not care when a feature was introduced. I limit historic discussions and version-specific commentary to optional online-only sections.
 - Removed `, as shown in the following code/markup:`. Earlier Packt editors insisted that I always lead-in to code and commands, but this just adds about 1-2 pages of verbosity to every chapter so I've trimmed that out, unless I need to point out highlighted parts.
 - Moved subsections that cover topics that are never used again in the book to become optional online-only in the book's GitHub repository (see details of which subsections below).
 
@@ -48,6 +50,7 @@
 ## Chapter 3
 - Moved the *Why you should always use braces with if statements* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-always-use-braces.md
 - Moved the *Adding a new item to a project using Visual Studio* subsection to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-adding-a-new-item.md
+- Moved the *Understanding how foreach works internally* subsection to be optional online-only: 
 
 ## Chapter 4
 

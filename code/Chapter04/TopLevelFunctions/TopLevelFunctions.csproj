@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup Label="To simplify use of Console members.">
+    <Using Include="System.Console" Static="true" />
+  </ItemGroup>
+
 </Project>

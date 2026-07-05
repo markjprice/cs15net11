@@ -1,4 +1,4 @@
-﻿using Ch04Ex02PrimeFactorsLib;
+﻿using Exercise_PrimeFactorsLib;
 
 Write("Enter a number between 1 and 1000: ");
 

@@ -1,16 +1,7 @@
-﻿Write("Enter a number: ");
-string number = ReadLine()!;
+﻿double number1 = 4.5;
+double number2 = 2.5;
+double answer = Add(number1, number2);
 
-double a = double.Parse(number);
-double b = 2.5;
-double answer = Add(a, b);
-
-WriteLine($"{a} + {b} = {answer}");
+WriteLine($"{number1} + {number2} = {answer}");
 WriteLine("Press Enter to end the app.");
 ReadLine(); // Wait for user to press Enter.
-
-// Functions in Program.cs must be at the bottom of the file.
-double Add(double a, double b)
-{
-  return a + b; // deliberate bug!
-}

@@ -1,6 +1,6 @@
-using Ch04Ex02PrimeFactorsLib;
+using Exercise_PrimeFactorsLib;
 
-namespace Ch04Ex02PrimeFactorsTests
+namespace Exercise_PrimeFactorsTests
 {
   public class PrimeFactorsUnitTests
   {

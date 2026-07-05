@@ -2,19 +2,6 @@
 
 partial class Program
 {
-  static void ConfigureConsole(string culture = "en-US",
-    bool useComputerCulture = false)
-  {
-    // To enable Unicode characters like Euro symbol in the console.
-    OutputEncoding = System.Text.Encoding.UTF8;
-
-    if (!useComputerCulture)
-    {
-      CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
-    }
-    WriteLine($"CurrentCulture: {CultureInfo.CurrentCulture.DisplayName}");
-  }
-
   static void TimesTable(byte number, byte size = 12)
   {
     WriteLine($"This is the {number} times table with {size} rows:");
@@ -27,9 +14,24 @@ partial class Program
     WriteLine();
   }
 
+    static void ConfigureConsole(string culture = "en-US",
+      bool useComputerCulture = false)
+    {
+        // To enable Unicode characters like Euro symbol in the console.
+        OutputEncoding = System.Text.Encoding.UTF8;
+
+        if (!useComputerCulture)
+        {
+            CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+        }
+        WriteLine($"CurrentCulture: {CultureInfo.CurrentCulture.DisplayName}");
+    }
+
   static decimal CalculateTax(
     decimal amount, string twoLetterRegionCode)
   {
+    twoLetterRegionCode = twoLetterRegionCode.Trim().ToUpper();
+
     decimal rate = twoLetterRegionCode switch
     {
       "CH" => 0.08M, // Switzerland
@@ -88,20 +90,16 @@ partial class Program
   {
     if (number < 0)
     {
-      throw new ArgumentOutOfRangeException(message:
-        $"The factorial function is defined for non-negative integers only. Input: {number}",
+      throw new ArgumentOutOfRangeException(
+        message: $"The factorial function is defined for non-negative integers only. Input: {number}",
         paramName: nameof(number));
     }
-    else if (number == 0)
+
+    if (number == 0) return 1;
+
+    checked // for overflow
     {
-      return 1;
-    }
-    else
-    {
-      checked // for overflow
-      {
-        return number * Factorial(number - 1);
-      }
+      return number * Factorial(number - 1);
     }
   }
 
@@ -117,7 +115,7 @@ partial class Program
       {
         WriteLine($"{i}! is too big for a 32-bit integer.");
       }
-      catch (Exception ex)
+      catch (ArgumentOutOfRangeException ex)
       {
         WriteLine($"{i}! throws {ex.GetType()}: {ex.Message}");
       }

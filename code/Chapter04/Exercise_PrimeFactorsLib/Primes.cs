@@ -1,7 +1,7 @@
-﻿namespace Ch04Ex02PrimeFactorsLib
+﻿namespace Exercise_PrimeFactorsLib;
+
+public class Primes
 {
-  public class Primes
-  {
     public static int[] PrimeNumbers = new[]
     {
       997, 991, 983, 977, 971, 967, 953,
@@ -34,34 +34,33 @@
     /// <returns>A string listing the prime factors of number, or an error message.</returns>
     public static string PrimeFactors(int number)
     {
-      if ((number < 1) || (number > 1000))
-      {
-        return $"{nameof(number)} must be between 1 and 1000.";
-      }
-
-      string factors = string.Empty;
-
-      foreach (int divisor in PrimeNumbers)
-      {
-        int remainder;
-        do
+        if ((number < 1) || (number > 1000))
         {
-          remainder = number % divisor;
-          if (remainder == 0)
-          {
-            number = number / divisor;
-            if (number == 1)
+            return $"{nameof(number)} must be between 1 and 1000.";
+        }
+
+        string factors = string.Empty;
+
+        foreach (int divisor in PrimeNumbers)
+        {
+            int remainder;
+            do
             {
-              factors += $"{divisor}";
-            }
-            else
-            {
-              factors += $"{divisor} x ";
-            }
-          }
-        } while (remainder == 0);
-      }
-      return $"{factors}";
+                remainder = number % divisor;
+                if (remainder == 0)
+                {
+                    number = number / divisor;
+                    if (number == 1)
+                    {
+                        factors += $"{divisor}";
+                    }
+                    else
+                    {
+                        factors += $"{divisor} x ";
+                    }
+                }
+            } while (remainder == 0);
+        }
+        return $"{factors}";
     }
-  }
 }

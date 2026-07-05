@@ -1,15 +1,17 @@
 # Using lambdas in function implementations
 
-F# is Microsoft’s strongly typed functional-first programming language that, like C#, compiles to *Intermediate Language (IL)* to be executed by .NET. Functional languages evolved from the lambda calculus, a computational system based only on functions. The code looks more like mathematical functions than steps in a recipe.
+F# is Microsoft’s strongly typed functional-first programming language that, like C#, compiles to **Intermediate Language (IL)** to be executed by .NET. Functional languages evolved from the lambda calculus, a computational system based only on functions. The code looks more like mathematical functions than steps in a recipe.
 
 Some of the important attributes of functional languages are defined in the following list:
-- Modularity: The same benefit of defining functions in C# applies to functional languages. This breaks up a large, complex code base into smaller pieces.
-- Immutability: Variables in the C# sense do not exist. Any data value inside a function cannot change. Instead, a new data value can be created from an existing one. This reduces bugs.
-- Maintainability: Functional code is cleaner and clearer (for mathematically inclined programmers).
+- **Modularity**: The same benefit of defining functions in C# applies to functional languages. This breaks up a large, complex code base into smaller pieces.
+- **Immutability**: Variables in the C# sense do not exist. Any data value inside a function cannot change. Instead, a new data value can be created from an existing one. This reduces bugs.
+- **Maintainability**: Functional code is cleaner and clearer (for mathematically inclined programmers).
 
-C# has features to support a more functional approach, for example, tuples and pattern matching, non-null reference types, records aka immutable objects, and expression-bodied function members. We will look at examples of this now. 
+C# has features to support a more functional approach, for example, tuples and pattern matching, non-null reference types, records aka immutable objects, and expression-bodied function members. 
 
 In C#, lambdas are the use of the `=>` character to indicate a return value from a function. They work especially well for single-statement functions, as they can look much cleaner.
+
+## Understanding the Fibonacci sequence
 
 The Fibonacci sequence of numbers always starts with `0` and `1`. Then, the rest of the sequence is generated using the rule of adding together the previous two numbers, as shown in the following sequence of numbers:
 ```
@@ -17,6 +19,8 @@ The Fibonacci sequence of numbers always starts with `0` and `1`. Then, the rest
 ```
 
 The next term in the sequence would be `34` + `55`, which is `89`.
+
+## Generating the Fibonacci sequence function using imperative code
 
 We will use the Fibonacci sequence to illustrate the difference between an imperative and a declarative function implementation:
 
@@ -69,7 +73,11 @@ The 29th term of the Fibonacci sequence is 317,811.
 The 30th term of the Fibonacci sequence is 514,229.
 ```
 
-5.	In `Program.Functions.cs`, write a function named `FibFunctional` written in a declarative style:
+## Generating the Fibonacci sequence function using declarative code
+
+Now let's see how we can improve the implementation using **functional programming (FP)** style:
+
+1.	In `Program.Functions.cs`, write a function named `FibFunctional` written in a declarative style:
 ```cs
 static int FibFunctional(uint term) => term switch
   {
@@ -80,7 +88,7 @@ static int FibFunctional(uint term) => term switch
   };
 ```
 
-6.	In `Program.Functions.cs`, write a function to call the `FibFunctional` function inside a `for` statement that loops from `1` to `30`:
+2.	In `Program.Functions.cs`, write a function to call the `FibFunctional` function inside a `for` statement that loops from `1` to `30`:
 ```cs
 static void RunFibFunctional()
 {
@@ -93,5 +101,5 @@ static void RunFibFunctional()
 }
 ```
 
-7.	In `Program.cs`, comment out the `RunFibImperative` method call and call the `RunFibFunctional` method.
-8.	Run the code and view the results (which will be the same as before).
+3.	In `Program.cs`, comment out the `RunFibImperative` method call and call the `RunFibFunctional` method.
+4.	Run the code and view the results (which will be the same as before).

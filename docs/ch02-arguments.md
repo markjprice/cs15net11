@@ -12,7 +12,7 @@ dotnet new mvc
 
 You might have been wondering how to get any arguments that might be passed to a console app.
 
-In every version of .NET prior to version 6, the console app project template made it obvious:
+In every version prior to .NET 6, the console app project template made it obvious:
 ```cs
 using System;
 

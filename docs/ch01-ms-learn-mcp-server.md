@@ -27,9 +27,9 @@ For Visual Studio, at the time of writing in July 2026, you must configure it ma
 
 6.	Close the **Options** tab or click **OK**.
 7.	Open the **GitHub Copilot Chat** window.
-8.	At the bottom of the chat window, select **Agent** mode, select the tool named `microsoft.docs.mcp`, and select a model like GPT-5 mini, GPT-4.1, or Claude Sonnet 3.7.
+8.	At the bottom of the chat window, select **Agent** mode, select the tool named `microsoft.docs.mcp`, and select a model like GPT-5 mini, GPT-5.6, or Claude Sonnet 4.5.
 
-> The list of models available to you will vary. Some models, like Gemini 2.5 Pro, might require additional configuration and cost premium requests. You will have a monthly limit of premium requests. Requests to GPT 4.1 or GPT-4o do not use premium requests.
+> The list of models available to you will vary. Some models, like Gemini 3.5 Pro, might require additional configuration and cost premium requests. You will have a monthly limit of premium requests.
 
 9.	Click the **+** button to add a reference, select **Solution**, and note that **#solution** is added next to **Active Document** in the references.
 10.	In the chat box, ask what the HelloCS project does, as shown in the following query:
@@ -40,9 +40,9 @@ What does the HelloCS project do?
 ```text
 4 references
 Read 4 code snippets for ‘HelloCS’, ‘Main’, ...
-The HelloCS project is a simple .NET 10 console application. It prints "Hello, C#!" to the console, displays the namespace of the Program class, and then throws an exception. Its main purpose is likely to demonstrate basic console output and exception handling in C#.
+The HelloCS project is a simple .NET 11 console application. It prints "Hello, C#!" to the console, displays the namespace of the Program class, and then throws an exception. Its main purpose is likely to demonstrate basic console output and exception handling in C#.
 ```
-12.	Ask what the remarks are about the int data type in the official documentation, as shown in the following query:
+12.	Ask what the remarks are about the `int` data type in the official documentation, as shown in the following query:
 ```text
 what do the docs say about int?
 ```

@@ -4,6 +4,8 @@ If you already have some familiarity with older versions of C# and are excited t
 
 > C# programming language in Wikipedia: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
 
+> **The History of C#**: https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
+
 - [Project COOL](#project-cool)
 - [C# 1, February 2002](#c-1-february-2002)
 - [C# 1.2, 2003](#c-12-2003)
@@ -23,6 +25,7 @@ If you already have some familiarity with older versions of C# and are excited t
 - [C# 12, November 2023](#c-12-november-2023)
 - [C# 13, November 2024](#c-13-november-2024)
 - [C# 14, November 2025](#c-14-november-2025)
+- [C# 15, November 2026](#c-15-november-2026)
 
 
 # Project COOL
@@ -228,4 +231,14 @@ Extension members|6|Extension members
 
 *Table 2.15: Features of C# 14 mentioned in this book*
 
-> **The History of C#**: https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
+# C# 15, November 2026
+
+Focused on one big feature: union types, and the topics listed in *Table 2.16*:
+
+Feature|Chapter|Topic
+---|---|---
+Multi-file support in file-based apps|1|Running a C# code file without a project file
+`union` keyword|5|Union types
+`closed` keyword|6|Closed class hierarchies
+
+*Table 2.16: Features of C# 15 mentioned in this book*

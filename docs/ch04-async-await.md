@@ -1,6 +1,6 @@
-**Understanding async and await**
+# Understanding async and await
 
-C# 5 introduced two C# keywords when working with the `Task` type that enable easy multithreading. The pair of keywords is especially useful for the following:
+C# has two C# keywords for when working with the `Task` type that enable easy multithreading. The pair of keywords is especially useful for the following:
 - Implementing multitasking for a graphical user interface (GUI).
 - Improving the scalability of web applications and web services.
 - Preventing blocking calls when interacting with the filesystem, databases, and remote services, all of which tend to take a long time to complete their work.

@@ -7,6 +7,7 @@ This documentation section of the repository contains links to all the optional 
   - [Chapter 2 Speaking C#](#chapter-2-speaking-c)
   - [Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions](#chapter-3-controlling-flow-converting-types-and-handling-exceptions)
   - [Chapter 4 Writing, Debugging, and Testing Functions](#chapter-4-writing-debugging-and-testing-functions)
+  - [Chapter 5 Building Your Own Types with Object-Oriented Programming](#chapter-5-building-your-own-types-with-object-oriented-programming)
   - [Chapter 6 Implementing Interfaces and Inheriting Classes](#chapter-6-implementing-interfaces-and-inheriting-classes)
   - [Chapter 7 Packaging and Distributing .NET Types](#chapter-7-packaging-and-distributing-net-types)
   - [Chapter 8 Working with Common .NET Types](#chapter-8-working-with-common-net-types)
@@ -22,37 +23,56 @@ This documentation section of the repository contains links to all the optional 
 # Online-only sections
 
 ## Chapter 1 Hello C#, Welcome .NET!
-
 - [.NET History](ch01-dotnet-history.md)
 - [Project Options](ch01-project-options.md)
 - [Solution Evolution](ch01-solution-evolution.md)
-- [Solution Folders](ch01-solution-folders.md)
+- [Microsoft Learn documentation MCP server](ch01-ms-learn-mcp-server.md)
+- [Source Code](ch01-source-code.md)
 
 ## Chapter 2 Speaking C#
-
 - [C# language versions and features](ch02-features.md)
+- [Revealing the extent of the C# vocabulary](ch02-vocabulary.md)
 - [`decimal` vs. `double`](ch02-decimal-vs-double.md)
-- [Dynamic Type](ch02-dynamic.md)
+- [Special real number values](ch02-special-real-numbers.md)
+- [Getting and setting the default values for types](ch02-defaults.md)
+- [Dynamic types](ch02-dynamic.md)
+- [Custom number formatting](ch02-custom-formatting.md)
+- [Passing arguments to a console app](ch02-arguments.md)
 - [Handling platforms that do not support an API](ch02-api-unsupported-platforms.md)
 
 ## Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions
-
+- [Adding a new item to a project using Visual Studio](ch03-adding-a-new-item.md)
+- [Why you should always use braces with `if` statements](ch03-always-use-braces.md)
+- [Understanding how `foreach` works internally](ch03-foreach-internals.md)
+- [Rounding numbers and the default rounding rules](ch03-rounding-numbers.md)
+- [Converting from a binary object to a string using Base64 encoding](ch03-binary-to-string.md)
+- [List pattern matching with arrays](ch03-list-patterns.md)
+- [Checking for overflow](ch03-overflow.md)
 - [Returning result types versus throwing exceptions](ch03-result-types.md)
 
 ## Chapter 4 Writing, Debugging, and Testing Functions
-
+- [Using lambdas in function implementations](ch04-lambdas.md)
+- [Implementing the tester-doer and try patterns](ch04-try-pattern.md)
 - [Logging during development and runtime](ch04-logging.md)
-- [Understanding async and await](ch04-async-await.md)
+- [Understanding `async` and `await`](ch04-async-await.md)
+
+## Chapter 5 Building Your Own Types with Object-Oriented Programming
+- [Changing an enum base type for performance](ch05-enum-base-type.md)
+- [Implementing functionality using local functions](ch05-local-functions.md)
+- [Defining a primary constructor for a class](ch05-primary-constructor.md)
+- [Type aliases](ch05-type-alias.md)
+- [Limiting flags enum values](ch05-validating-properties.md)
+- [Equality of other types](ch05-equality.md)
+- [Pattern matching with objects](ch05-pattern-matching.md)
 
 ## Chapter 6 Implementing Interfaces and Inheriting Classes
-
-- [Comparing objects using a separate class](ch06-comparing-objects.md)
+- [Raising and handling events](ch06-events.md)
+- [Comparing objects when sorting](ch06-comparing-objects.md)
 - [Managing memory with reference and value types](ch06-memory.md)
 - [Summarizing custom type choices](ch06-summarizing-custom-types.md)
 - [Writing Better Code](ch06-writing-better-code.md)
 
 ## Chapter 7 Packaging and Distributing .NET Types
-
 - [New features in modern .NET](ch07-features.md)
 - [Working with preview features](ch07-preview-features.md)
 - [Decompiling .NET assemblies](ch07-decompiling.md)

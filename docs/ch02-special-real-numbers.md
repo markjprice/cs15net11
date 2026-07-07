@@ -1,5 +1,3 @@
-
-
 # Special real number values
 
 The `float` and `double` types have some useful special values: 

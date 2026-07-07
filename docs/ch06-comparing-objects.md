@@ -29,6 +29,8 @@ namespace System
 
 The `in` keyword specifies that the type parameter `T` is contravariant, which means that you can use a less derived type than that specified. For example, if `Employee` derives from `Person`, then both can be compared to each other.
 
+> **Prompt**: Explain generic covariance and contravariance using `IEnumerable<out T>`, `Action<in T>`, `Person`, and `Employee`. Include examples that compile and examples that do not.
+
 ## Common implementations of CompareTo
 
 For example, the `string` type implements `IComparable` by returning:

@@ -40,3 +40,5 @@ C# enums default to `int` as their underlying type primarily because it's the mo
 `uint` gives one more positive value, but signed `int` is the default integer type in C# and .NET. It’s used in `for` loops, array indexing, and almost every system API. That means an `enum` based on `int` is easier to work with by default, avoiding implicit cast warnings or needing explicit conversions.
 
 `int` is also **Common Language Specification (CLS)**-compliant; `uint` is not. The CLS defines a set of rules for .NET language interoperability and it doesn’t include `uint`. So if you define an `enum` with `uint`, it can’t be used as is from some .NET languages like Visual Basic .NET. `int` enums are just safer across the .NET ecosystem.
+
+> **Good practice**: Use the `enum` values to store combinations of discrete options. Derive an `enum` type from `byte` if there are up to eight options, from `ushort` if there are up to 16 options, from `uint` if there are up to 32 options, and from `ulong` if there are up to 64 options.

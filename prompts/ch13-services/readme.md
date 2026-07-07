@@ -1,0 +1,15 @@
+**Prompts for *Chapter 13 Building and Consuming Web Services* with links to responses**
+
+1. [What are the risks of blindly trusting AI-generated scaffolding code?](ch13-01.md)
+2. [Please explain the difference between a Product Requirements Document and a functional specification with examples from a Django web app.](ch13-02.md)
+3. [What security risks exist in anonymous survey submissions? What other vulnerabilities should I watch for in a survey web application?](ch13-03.md)
+4. [What mistakes do beginners make when defining scope for their first web app?](ch13-04.md)
+5. [Please show me an example of a bad one-shot prompt for TallyApp and how to improve it.](ch13-05.md)
+6. [Why does asking the AI to restate requirements before generating code reduce hallucinations? Please explain the psychology behind structured prompting and why it improves code quality.](ch13-06.md)
+7. [Compare one-shot prompting with iterative refinement prompting for building a Django project.](ch13-07.md)
+8. [How would you modify the TallyApp one-shot prompt to enforce stricter architectural constraints?](ch13-08.md)
+9. [Please explain how AI tools like Codex and Claude Code differ in workflow philosophy.](ch13-09.md)
+10. [Please explain in depth why modeling survey answers is the most important architectural decision in TallyApp. Show three different database designs for handling single-choice, multi-choice, and text answers, and compare trade-offs. How would a senior engineer review AI-generated Django models?](ch13-10.md)
+11. [How do environment variables improve E2E test reliability? Please explain how test.skip() works in Playwright and when it should be used.](ch13-11.md)
+12. [How should I structure prompts when asking AI to explain unfamiliar code?](ch13-12.md)
+13. [If TallyApp grew to 1 million responses per survey, what architectural changes would be needed? How would I evolve TallyApp into a multi-tenant SaaS product?](ch13-13.md)

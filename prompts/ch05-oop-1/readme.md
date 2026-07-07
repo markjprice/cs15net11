@@ -1,0 +1,17 @@
+**Prompts for *Chapter 5 Building Your Own Types with Object-Oriented Programming* with links to responses**
+
+1. [Please explain encapsulation, composition, aggregation, inheritance, abstraction, and polymorphism by designing one coherent C# model for a television production company.](ch05-01.md)
+2. [Please explain how a project’s target framework and C# language version interact. Show examples of modern C# syntax that can target .NET Standard 2.0 and features that also require newer runtime or library support.](ch05-02.md)
+3. [Teach me how to design a flags enum correctly. Cover None = 0, powers-of-two values, composite values, bitwise operators, HasFlag, validation, and choosing an underlying integer type.](ch05-03.md)
+4. [Please explain the binary versioning problem with public const fields in class libraries. Compare const, static readonly, and instance readonly fields with examples.](ch05-04.md)
+5. [Please explain parameter passing by value, in, ref, and out for both value types and reference types. Include diagrams showing what is copied and what can be changed.](ch05-05.md)
+6. [Compare params arrays with params collections. Explain how calls are translated, when allocations occur, and when a normal collection parameter would be clearer.](ch05-06.md)
+7. [Please explain tuple field names, inferred tuple names, tuple aliases, deconstruction, discards, and tuple equality with short C# examples.](ch05-07.md)
+8. [Please explain how Deconstruct methods work, how overload resolution chooses among them, and why two Deconstruct methods with the same number of parameters can be problematic.](ch05-08.md)
+9. [Please explain modern partial types and partial members. Distinguish optional partial methods from partial methods whose implementations are required and show how source generators use them.](ch05-09.md)
+10. [Compare public fields, private fields, automatically implemented properties, field-backed properties, computed properties, init-only properties, and required properties. Show when each should be used.](ch05-10.md)
+11. [Review several proposed C# indexers and identify which ones provide intuitive collection-like behavior and which would surprise callers.](ch05-11.md)
+12. [Please explain why C# records are not automatically deeply immutable. Demonstrate mutable record properties, shallow copying with with, and techniques for designing genuinely immutable object graphs.](ch05-12.md)
+13. [Compare returning several values using out parameters, tuples, records, and small result classes. Give guidance for private methods and public APIs.](ch05-13.md)
+14. [Compare constructors, object initializers, required members, init-only properties, primary constructors, and positional records. Show situations where each produces the clearest API.](ch05-14.md)
+15. [Compare C# union types with inheritance hierarchies, interfaces, enums with optional properties, discriminated unions in F#, Rust enums, Swift enums, and TypeScript unions.](ch05-15.md)

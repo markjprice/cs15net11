@@ -1,0 +1,15 @@
+**Prompts for *Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions* with links to responses**
+
+1. [Compare integer division, floating-point division, decimal division, and the remainder operator in C#. Include examples with positive and negative operands.](ch03-01.md)
+2. [Please explain the differences among ?., ?[], ??, ??=, the null-forgiving operator !, and nullable reference type annotations such as string?. Include examples where each is appropriate and examples where it hides a bug.](ch03-02.md)
+3. [Please explain the difference between & and &&, and between | and ||, when used with Boolean operands. Show situations in which the single-character operators are deliberately useful.](ch03-03.md)
+4. [Please explain the difference between arithmetic, comparison, equality, logical, conditional logical, bitwise, shift, assignment, and null-related operators in C#. Give a compact example of each category.](ch03-04.md)
+5. [Compare nested if statements, else if chains, and guard clauses. Show examples where guard clauses improve readability and examples where retaining an else is clearer.](ch03-05.md)
+6. [Please explain exhaustiveness in C# switch expressions. Show how the compiler determines whether every possible input is covered and what the discard pattern _ means.](ch03-06.md)
+7. [Compare while, do, for, and foreach loops. Give practical guidelines for selecting the clearest loop for a task rather than merely showing their syntax.](ch03-07.md)
+8. [Compare single-dimensional arrays, rectangular multidimensional arrays, and jagged arrays in C#. Include diagrams, indexing examples, memory-layout implications, and typical use cases.](ch03-08.md)
+9. [Show how to parse and format numbers and dates reliably for users in different cultures. Compare CurrentCulture, InvariantCulture, NumberStyles, DateTimeStyles, and explicit format strings.](ch03-09.md)
+10. [Show how to safely read and validate an integer entered by the user without throwing an exception. Explain why int.TryParse is usually better than int.Parse for interactive input.](ch03-10.md)
+11. [Please explain the differences among an implicit conversion, an explicit conversion, a cast, a user-defined conversion, parsing, and formatting in C#. Give a small example of each.](ch03-11.md)
+12. [Please explain the difference between a compiler error, compiler warning, analyzer warning, runtime exception, and logical error. Give a small C# example of each.](ch03-12.md)
+13. [Compare catching a specific exception, catching Exception, using an exception filter, and allowing an exception to propagate. Give guidelines for deciding which approach is appropriate.](ch03-13.md)

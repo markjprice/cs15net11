@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1" />
+    <title>SVG Control Points</title>
+    <style>
+      /* Just to make the SVG area obvious on the page */
+      .frame {
+        width: 320px;
+        padding: 12px;
+        border: 1px solid #ccc;
+      }
+      svg {
+        display: block;
+        border: 1px dashed #999;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SVG Control Points</h1>
+    <div class="frame">
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <path fill="none" stroke="#007bff" stroke-width="4">
+    <animate 
+      attributeName="d" 
+      dur="4s" 
+      repeatCount="indefinite"
+      values="M 50 150 Q 50 20 350 150; 
+              M 50 150 Q 200 20 350 150; 
+              M 50 150 Q 350 20 350 150; 
+              M 50 150 Q 200 180 350 150; 
+              M 50 150 Q 50 20 350 150" />
+  </path>
+
+  <circle r="6" fill="#ff4757">
+    <animate attributeName="cx" dur="4s" repeatCount="indefinite" values="50; 200; 350; 200; 50" />
+    <animate attributeName="cy" dur="4s" repeatCount="indefinite" values="20; 20; 20; 180; 20" />
+  </circle>
+
+  <polyline fill="none" stroke="#ff4757" stroke-width="1" stroke-dasharray="5,5">
+    <animate 
+      attributeName="points" 
+      dur="4s" 
+      repeatCount="indefinite"
+      values="50,150 50,20 350,150; 
+              50,150 200,20 350,150; 
+              50,150 350,20 350,150; 
+              50,150 200,180 350,150; 
+              50,150 50,20 350,150" />
+  </polyline>
+
+  <text x="50" y="170" font-family="Arial" font-size="12" text-anchor="middle">Start (P0)</text>
+  <text x="350" y="170" font-family="Arial" font-size="12" text-anchor="middle">End (P2)</text>
+  <text y="15" font-family="Arial" font-size="12" font-weight="bold" fill="#ff4757" text-anchor="middle">
+    <animate attributeName="x" dur="4s" repeatCount="indefinite" values="50; 200; 350; 200; 50" />
+    <animate attributeName="y" dur="4s" repeatCount="indefinite" values="15; 15; 15; 195; 15" />
+    Control Point (P1)
+  </text>
+</svg>    </div>
+  </body>
+</html>

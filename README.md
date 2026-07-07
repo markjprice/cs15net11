@@ -58,7 +58,7 @@ Catch up on previous newsletters in the archive: https://packtnetpro.substack.co
 **.NET Libraries**
 - Chapter 7 Packaging and Distributing .NET Types: [code/Chapter07](code/Chapter07)
 - Chapter 8 Working with Common .NET Types: [code/Chapter08](code/Chapter08)
-- Chapter 9 Working with Files, Streams, and Serialization: [code/Chapter09](code/Chapter09)
+- Chapter 9 Processes, Files, Streams, Serialization and Async: [code/Chapter09](code/Chapter09)
 
 **Web and Data**: [code/WebData](code/WebData)
 - Chapter 10 Working with Data Using Entity Framework Core

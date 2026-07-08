@@ -167,14 +167,14 @@ After adding the NuGet packages, we can see the references in the project file. 
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="11.0.0" />
   </ItemGroup>
 
 </Project>
@@ -194,7 +194,7 @@ After adding the NuGet packages, we can see the references in the project file. 
 
 Until `Microsoft.Extensions.Configuration.Binder` package version `7.0.3`, you could set the `Level` property instead of the `Value` property. For example: `"Level": "Info"`. After the bug fix, this now causes an exception to be thrown. Instead, we must set the `Value` property, or both. This is due to an internal class needing the `Value` to be set, as explained at the following link: https://github.com/dotnet/runtime/issues/82998.
 
-4.	In Visual Studio and Rider, in **Solution Explorer**, right-click `appsettings.json`, select **Properties**, and then in the **Properties** window, change **Copy to Output Directory** to **Copy always**. This is necessary because unlike Code, which runs the console app in the project folder, Visual Studio and Rider run the console app in `Instrumenting\bin\Debug\net10.0` or `Instrumenting\bin\Release\net10.0`. To confirm this is done correctly, review the element that was added to the project file, as shown in the following markup:
+4.	In Visual Studio and Rider, in **Solution Explorer**, right-click `appsettings.json`, select **Properties**, and then in the **Properties** window, change **Copy to Output Directory** to **Copy always**. This is necessary because unlike Code, which runs the console app in the project folder, Visual Studio and Rider run the console app in `Instrumenting\bin\Debug\net11.0` or `Instrumenting\bin\Release\net11.0`. To confirm this is done correctly, review the element that was added to the project file, as shown in the following markup:
 ```xml
 <ItemGroup>
   <None Update="appsettings.json">
@@ -248,7 +248,7 @@ Trace.WriteLineIf(ts.TraceInfo, "Trace information");
 Trace.WriteLineIf(ts.TraceVerbose, "Trace verbose");
 ```
 
-If the `appsettings.json` file is not found, then the following exception will be thrown: `System.IO.FileNotFoundException: The configuration file 'appsettings.json' was not found and is not optional. The expected physical path was 'C:\cs14net10\Chapter04\Instrumenting\bin\Debug\net10.0\appsettings.json'`.
+If the `appsettings.json` file is not found, then the following exception will be thrown: `System.IO.FileNotFoundException: The configuration file 'appsettings.json' was not found and is not optional. The expected physical path was 'C:\cs14net10\Chapter04\Instrumenting\bin\Debug\net11.0\appsettings.json'`.
 
 7.	After the statements that close `Debug` and `Trace`, add some statements to prompt the user to press Enter to exit the console app, as shown in the following code:
 ```cs

@@ -84,6 +84,8 @@ This documentation section of the repository contains links to all the optional 
 - [Specialized numbers](ch08-numbers.md)
 - [Benchmarking performance and resource usage](ch08-benchmarking.md)
 - [.NET Collections Overview](ch08-collections.md)
+- [Sorting collections](ch08-sorting-collections.md)
+- [Read-only, immutable, and frozen collections](ch08-readonly-frozen.md)
 - [Working with spans, indexes, and ranges](ch08-spans-indexes-ranges.md)
 - [Working with Network Resources](ch08-network-resources.md)
 

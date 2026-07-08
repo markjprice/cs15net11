@@ -82,6 +82,7 @@ This documentation section of the repository contains links to all the optional 
 
 ## Chapter 8 Working with Common .NET Types
 - [Specialized numbers](ch08-numbers.md)
+- [Benchmarking performance and resource usage](ch08-benchmarking.md)
 - [.NET Collections Overview](ch08-collections.md)
 - [Working with spans, indexes, and ranges](ch08-spans-indexes-ranges.md)
 - [Working with Network Resources](ch08-network-resources.md)

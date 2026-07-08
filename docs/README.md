@@ -11,12 +11,11 @@ This documentation section of the repository contains links to all the optional 
   - [Chapter 6 Implementing Interfaces and Inheriting Classes](#chapter-6-implementing-interfaces-and-inheriting-classes)
   - [Chapter 7 Packaging and Distributing .NET Types](#chapter-7-packaging-and-distributing-net-types)
   - [Chapter 8 Working with Common .NET Types](#chapter-8-working-with-common-net-types)
-  - [Chapter 9 Working with Files, Streams, and Serialization](#chapter-9-working-with-files-streams-and-serialization)
-  - [Chapter 10 Avalonia](#chapter-10-avalonia)
-  - [Chapter 11 Working with Data Using Entity Framework Core](#chapter-11-working-with-data-using-entity-framework-core)
+  - [Chapter 9 Processes, Files, and Async](#chapter-9-processes-files-and-async)
+  - [Chapter 10 Working with Data Using Entity Framework Core](#chapter-10-working-with-data-using-entity-framework-core)
+  - [Chapter 11 Building Web Apps Using Blazor](#chapter-11-building-web-apps-using-blazor)
   - [Chapter 12 Querying and Manipulating Data Using LINQ](#chapter-12-querying-and-manipulating-data-using-linq)
-  - [Chapter 13 Building Websites Using ASP.NET Core Blazor](#chapter-13-building-websites-using-aspnet-core-blazor)
-  - [Chapter 14 Building Web Services Using ASP.NET Core Minimal API](#chapter-14-building-web-services-using-aspnet-core-minimal-api)
+  - [Chapter 13 Building Web Services Using Minimal API](#chapter-13-building-web-services-using-minimal-api)
 - [Errata, Improvements, and Common Mistakes](#errata-improvements-and-common-mistakes)
 - [Miscellaneous](#miscellaneous)
 
@@ -73,6 +72,7 @@ This documentation section of the repository contains links to all the optional 
 - [Writing Better Code](ch06-writing-better-code.md)
 
 ## Chapter 7 Packaging and Distributing .NET Types
+- [Controlling the .NET SDK](ch07-control-sdk.md)
 - [New features in modern .NET](ch07-features.md)
 - [Working with preview features](ch07-preview-features.md)
 - [Decompiling .NET assemblies](ch07-decompiling.md)
@@ -81,22 +81,16 @@ This documentation section of the repository contains links to all the optional 
 - [Improving performance in .NET](ch07-performance.md)
 
 ## Chapter 8 Working with Common .NET Types
-
 - [.NET Collections Overview](ch08-collections.md)
 - [Working with spans, indexes, and ranges](ch08-spans-indexes-ranges.md)
 - [Working with Network Resources](ch08-network-resources.md)
 
-## Chapter 9 Working with Files, Streams, and Serialization
-
+## Chapter 9 Processes, Files, and Async
 - [Working with environment variables](ch09-environment-variables.md)
 - [Working with Tar archives](ch09-tar-archives.md)
 
-## Chapter 10 Avalonia
-
+## Chapter 10 Working with Data Using Entity Framework Core
 - [Structuring Projects](ch10-structuring-projects.md)
-
-## Chapter 11 Working with Data Using Entity Framework Core
-
 - [Database Primer](ch11-database-primer.md)
 - [Entity-Relationship Diagram for Northwind](ch11-er-diagram.md)
 - [Loading and tracking patterns with EF Core](ch11-loading-tracking.md)
@@ -106,6 +100,17 @@ This documentation section of the repository contains links to all the optional 
 - [Code First EF Core models](ch11-code-first.md)
 - [App Secrets](ch11-app-secrets.md)
 
+## Chapter 11 Building Web Apps Using Blazor
+- [New features in ASP.NET Core](ch11-features.md)
+- [Understanding web development](ch11-http-web-techs.md)
+- [Understanding `MapStaticAssets`](ch11-mapstaticassets.md)
+- [Prototyping with Bootstrap](ch11-bootstrap.md)
+- [ASP.NET Core common classes and methods](ch11-common-classes.md)
+- [Configuring services and the HTTP request pipeline](ch11-http-pipeline.md)
+- [Enabling HTTP/3 and request decompression support](ch11-enabling-http3.md)
+- [Enabling client-side execution using WebAssembly](ch11-blazor-wasm.md)
+- [Enhancing Blazor apps](ch11-enhanced-blazor.md)
+
 ## Chapter 12 Querying and Manipulating Data Using LINQ
 
 - [LINQ extension methods](ch12-linq-methods.md)
@@ -114,25 +119,12 @@ This documentation section of the repository contains links to all the optional 
 - [Working with LINQ to XML](ch12-linq-to-xml.md)
 - [Creating your own LINQ extension methods](ch12-custom-linq-methods.md)
 
-## Chapter 13 Building Websites Using ASP.NET Core Blazor
+## Chapter 13 Building Web Services Using Minimal API
 
-- [New features in ASP.NET Core](ch13-features.md)
-- [Understanding web development](ch13-http-web-techs.md)
-- [Understanding `MapStaticAssets`](ch13-mapstaticassets.md)
-- [Prototyping with Bootstrap](ch13-bootstrap.md)
-- [ASP.NET Core common classes and methods](ch13-common-classes.md)
-- [Configuring services and the HTTP request pipeline](ch13-http-pipeline.md)
-- [Enabling HTTP/3 and request decompression support](ch13-enabling-http3.md)
-- [Enabling client-side execution using WebAssembly](ch13-blazor-wasm.md)
-- [Enhancing Blazor apps](ch13-enhanced-blazor.md)
-
-## Chapter 14 Building Web Services Using ASP.NET Core Minimal API
-
-- [Implementing asynchronous operations](ch14-async-endpoints.md)
-- [In-memory, distributed, and hybrid caches](ch14-caching.md)
-- [Testing requests with the Swagger UI](ch14-swagger-ui.md)
-- [Implementing advanced features for web services](ch14-advanced.md)
-- [Exercise 15.2 – Practice creating and deleting customers with HttpClient](ch14-exercise-2.md)
+- [Implementing asynchronous operations](ch13-async-endpoints.md)
+- [In-memory, distributed, and hybrid caches](ch13-caching.md)
+- [Implementing advanced features for web services](ch13-advanced.md)
+- [Exercise 13.2 – Practice creating and deleting customers with HttpClient](ch13-exercise-2.md)
 
 # [Errata, Improvements, and Common Mistakes](errata/README.md)
 

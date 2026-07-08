@@ -86,6 +86,7 @@ This documentation section of the repository contains links to all the optional 
 - [.NET Collections Overview](ch08-collections.md)
 - [Sorting collections](ch08-sorting-collections.md)
 - [Read-only, immutable, and frozen collections](ch08-readonly-frozen.md)
+- [Good practice with collections](ch08-good-practice.md)
 - [Working with spans, indexes, and ranges](ch08-spans-indexes-ranges.md)
 - [Working with Network Resources](ch08-network-resources.md)
 

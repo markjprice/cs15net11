@@ -13,3 +13,5 @@ In the first version of .NET Core, the Microsoft team removed `BinaryFormatter` 
 With .NET 9 and later, the flags to enable `BinaryFormatter` have been removed, and any use of it will throw an exception. But there is still a way to re-enable it, by referencing a NuGet package marked as being permanently vulnerable and setting some configuration.
 
 You can learn more about why and how the `BinaryFormatter` class was removed in .NET 9 at the following link: https://devblogs.microsoft.com/dotnet/binaryformatter-removed-from-dotnet-9/.
+
+> **Prompt**: Please explain why `BinaryFormatter` was removed from modern .NET and what safer alternatives exist.

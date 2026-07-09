@@ -1,6 +1,6 @@
 **Loading and tracking patterns with EF Core**
 
-- [Eager loading entities using the Include extension method](#eager-loading-entities-using-the-include-extension-method)
+- [Eager loading entities using the `Include` extension method](#eager-loading-entities-using-the-include-extension-method)
 - [Enabling lazy loading](#enabling-lazy-loading)
 - [Explicit loading entities using the Load method](#explicit-loading-entities-using-the-load-method)
 - [Controlling the tracking of entities](#controlling-the-tracking-of-entities)
@@ -16,7 +16,7 @@ There are three loading patterns that are commonly used with EF Core:
 
 In this section, we're going to introduce each of them.
 
-# Eager loading entities using the Include extension method
+# Eager loading entities using the `Include` extension method
 
 In the `QueryingCategories` method, the code currently uses the `Categories` property to loop through each category, outputting the category name and the number of products in that category.
 
@@ -174,6 +174,8 @@ Seafood has 12 products.
 ```
 
 > **Good Practice**: Carefully consider which loading pattern is best for your code. Lazy loading could literally make you a lazy database developer! Read more about loading patterns at the following link: https://learn.microsoft.com/en-us/ef/core/querying/related-data.
+
+> **Prompt**: Please explain eager loading, explicit loading, lazy loading, and filtered includes in EF Core. Give a small example of each.
 
 # Controlling the tracking of entities
 

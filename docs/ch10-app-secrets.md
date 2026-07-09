@@ -17,3 +17,6 @@ Instead, production secrets should be accessed through a controlled means like e
 # Database connection strings
 
 Connection strings: https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings
+
+> **Prompt**: Please explain why secrets such as database passwords should not be stored in source code. Compare Secret Manager, environment variables, and Azure Key Vault.
+

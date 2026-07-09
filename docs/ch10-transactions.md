@@ -79,3 +79,5 @@ If you were to use SQL Server, you would see the following output:
 ```
 Transaction isolation level: ReadCommitted
 ```
+
+> **Prompt**: Please explain how transactions work in EF Core. What does a `Serializable` isolation level mean?

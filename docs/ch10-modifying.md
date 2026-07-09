@@ -255,6 +255,8 @@ else
 
 If multiple product names started with `Bob`, then they would all be deleted. As an optional challenge, modify the statements to add three new products that start with `Bob` and then delete them.
 
+> **Prompt**: Please explain how `SaveChanges` works in EF Core. What does it return, and what happens if multiple tracked entities have changed?
+
 # More efficient updates and deletes
 
 You have now seen the traditional way of modifying data using EF Core, as summarized in the following steps:

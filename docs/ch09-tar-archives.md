@@ -21,6 +21,8 @@ Member|Description
 `ExtractToDirectory`, `ExtractToDirectoryAsync`|Extracts the contents of a stream that represents a Tar archive into the specified directory.
 `DefaultCapacity`|Windows' `MAX_PATH` (260) is used as an arbitrary default capacity.
 
+> **Prompt**: Please explain how TAR archives are commonly used with Linux, containers, and deployment workflows. Show how TAR differs from ZIP.
+
 ## Exploring Tar archives
 
 Let's see some example code in action:

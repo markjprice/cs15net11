@@ -100,10 +100,11 @@ This documentation section of the repository contains links to all the optional 
 - [Working with environment variables](ch09-environment-variables.md)
 
 ## Chapter 10 Working with Data Using Entity Framework Core
+- [Database Primer](ch11-database-primer.md)
 - [Understanding legacy Entity Framework](ch10-legacy-ef.md)
 - [Structuring Projects](ch10-structuring-projects.md)
-- [Database Primer](ch11-database-primer.md)
 - [Entity-Relationship Diagram for Northwind](ch11-er-diagram.md)
+- [Why the EF Core CLI cannot use data annotations for everything](ch10-data-annotations.md)
 - [Loading and tracking patterns with EF Core](ch11-loading-tracking.md)
 - [Modifying data with EF Core](ch11-modifying.md)
 - [Working with transactions](ch11-transactions.md)

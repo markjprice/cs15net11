@@ -92,6 +92,8 @@ This documentation section of the repository contains links to all the optional 
 
 ## Chapter 9 Processes, Files, Streams, and Serialization
 - [Compressing streams](ch09-compression.md)
+- [Reading and writing with random access handles](ch09-random-access-handles.md)
+- [Serializing object graphs as XML](ch09-serializing-xml.md)
 - [Working with environment variables](ch09-environment-variables.md)
 - [Working with Tar archives](ch09-tar-archives.md)
 

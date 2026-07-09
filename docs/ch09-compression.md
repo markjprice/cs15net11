@@ -1,6 +1,9 @@
-# Compressing streams
+- [Compressing streams with GZIP and Brotli](#compressing-streams-with-gzip-and-brotli)
+- [Asynchronous ZIP archive APIs](#asynchronous-zip-archive-apis)
 
-XML is relatively verbose, so it takes up more space in bytes than plain text. We could squeeze the XML using a common compression algorithm, known as `gzip` (to match the Linux command) or **GZIP** (to match the RFC specification), or we could use an implementation of the Brotli compression algorithm. In performance, Brotli is like the algorithm used in DEFLATE and GZIP, but the output is about 20% denser.
+# Compressing streams with GZIP and Brotli
+
+XML is relatively verbose, so it takes up more space in bytes than plain text. We could squeeze the XML using a common compression algorithm, known as `gzip` (to match the Linux command) or **GZIP** (to match the RFC specification), or we could use an implementation of the **Brotli** compression algorithm. In performance, Brotli is like the algorithm used in DEFLATE and GZIP, but the output is about 20% denser.
 
 Let’s compare the two compression algorithms:
 1.	Add a new class file named `Program.Compress.cs`.
@@ -157,3 +160,41 @@ We can summarize the file sizes as follows:
 - Brotli-compressed: 117 bytes
 
 As well as choosing a compression mode, you can also choose a compression level. You can learn more about this at the following link: https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.compressionlevel.
+
+# Asynchronous ZIP archive APIs
+
+.NET has asynchronous APIs for working with ZIP archives, making it easier to perform non-blocking operations when reading from or writing to ZIP files.
+
+The new APIs, added to the `System.IO.Compression` and `System.IO.Compression.ZipFile` assemblies, provide async methods for extracting, creating, and updating ZIP archives. These methods enable developers to efficiently handle large files and improve application responsiveness, especially in scenarios involving I/O-bound operations:
+```cs
+// Extract a ZIP archive.
+await ZipFile.ExtractToDirectoryAsync("archive.zip",
+   "destinationFolder", overwriteFiles: true);
+
+// Create a ZIP archive.
+await ZipFile.CreateFromDirectoryAsync("sourceFolder", "archive.zip",
+  CompressionLevel.SmallestSize, includeBaseDirectory: true,
+  entryNameEncoding: Encoding.UTF8);
+
+// Open a filestream to a ZIP archive for fine-grained manipulation.
+using FileStream archiveStream = File.OpenRead("archive.zip");
+
+await using (ZipArchive archive = await ZipArchive.CreateAsync(
+  archiveStream, ZipArchiveMode.Update,
+  leaveOpen: false, entryNameEncoding: Encoding.UTF8))
+{
+  foreach (ZipArchiveEntry entry in archive.Entries)
+  {
+    // Extract an entry to the filesystem.
+    await entry.ExtractToFileAsync(
+      destinationFileName: "file.txt", overwrite: true);
+
+    // Open an entry's stream.
+    await using Stream entryStream = await entry.OpenAsync();
+
+    // Create an entry from a filesystem object.
+    ZipArchiveEntry createdEntry = await archive.CreateEntryFromFileAsync(
+      sourceFileName "path/to/file.txt", entryName: "file.txt");
+  }
+}
+```

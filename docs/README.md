@@ -11,7 +11,7 @@ This documentation section of the repository contains links to all the optional 
   - [Chapter 6 Implementing Interfaces and Inheriting Classes](#chapter-6-implementing-interfaces-and-inheriting-classes)
   - [Chapter 7 Packaging and Distributing .NET Types](#chapter-7-packaging-and-distributing-net-types)
   - [Chapter 8 Working with Common .NET Types](#chapter-8-working-with-common-net-types)
-  - [Chapter 9 Processes, Files, and Async](#chapter-9-processes-files-and-async)
+  - [Chapter 9 Processes, Files, Streams, and Serialization](#chapter-9-processes-files-streams-and-serialization)
   - [Chapter 10 Working with Data Using Entity Framework Core](#chapter-10-working-with-data-using-entity-framework-core)
   - [Chapter 11 Building Web Apps Using Blazor](#chapter-11-building-web-apps-using-blazor)
   - [Chapter 12 Querying and Manipulating Data Using LINQ](#chapter-12-querying-and-manipulating-data-using-linq)
@@ -90,7 +90,8 @@ This documentation section of the repository contains links to all the optional 
 - [Working with spans, indexes, and ranges](ch08-spans-indexes-ranges.md)
 - [Working with Network Resources](ch08-network-resources.md)
 
-## Chapter 9 Processes, Files, and Async
+## Chapter 9 Processes, Files, Streams, and Serialization
+- [Compressing streams](ch09-compression.md)
 - [Working with environment variables](ch09-environment-variables.md)
 - [Working with Tar archives](ch09-tar-archives.md)
 

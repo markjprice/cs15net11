@@ -100,6 +100,7 @@ This documentation section of the repository contains links to all the optional 
 - [Working with environment variables](ch09-environment-variables.md)
 
 ## Chapter 10 Working with Data Using Entity Framework Core
+- [Understanding legacy Entity Framework](ch10-legacy-ef.md)
 - [Structuring Projects](ch10-structuring-projects.md)
 - [Database Primer](ch11-database-primer.md)
 - [Entity-Relationship Diagram for Northwind](ch11-er-diagram.md)

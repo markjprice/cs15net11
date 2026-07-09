@@ -1,11 +1,13 @@
-**Working with Tar archives**
+# Working with Tar archives
 
-- [Introducing Tar archives](#introducing-tar-archives)
-- [Exploring Tar archives](#exploring-tar-archives)
-- [Reading and writing Tar entries](#reading-and-writing-tar-entries)
+- [Working with Tar archives](#working-with-tar-archives)
+  - [Introducing Tar archives](#introducing-tar-archives)
+  - [Exploring Tar archives](#exploring-tar-archives)
+  - [Reading and writing Tar entries](#reading-and-writing-tar-entries)
+  - [Selecting a TAR archive format](#selecting-a-tar-archive-format)
 
 
-# Introducing Tar archives
+## Introducing Tar archives
 
 A file with the extension `.tar` has been created using the Unix-based archival application `tar` which uses the **Tape Archive (TAR)** file archiving format. A file with the extension `.tar.gz` has been created using `tar` and then compressed using the GZIP compression algorithm.
 
@@ -19,7 +21,7 @@ Member|Description
 `ExtractToDirectory`, `ExtractToDirectoryAsync`|Extracts the contents of a stream that represents a Tar archive into the specified directory.
 `DefaultCapacity`|Windows' `MAX_PATH` (260) is used as an arbitrary default capacity.
 
-# Exploring Tar archives
+## Exploring Tar archives
 
 Let's see some example code in action:
 1.	Use your preferred code editor to add a new **Console App** / `console` project named `WorkingWithTarArchives` to the `Chapter09` solution.
@@ -148,10 +150,61 @@ INFO: Extracted directory C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debu
 
 > You can download and install the free and open-source 7-Zip at the following link: https://www.7-zip.org/.
 
-# Reading and writing Tar entries
+## Reading and writing Tar entries
 
 As well as the `TarFile` class, there are classes for reading and writing individual entries in a Tar archive, named `TarEntry`, `TarEntryFormat`, `TarReader`, and `TarWriter`. 
 
 These can be combined with `GzipStream` to compress or decompress entries as they are written and read.
 
 > You can learn more about .NET Tar support at the following link: https://learn.microsoft.com/en-us/dotnet/api/system.formats.tar.
+
+## Selecting a TAR archive format
+
+A TAR archive stores multiple files and directories in a single archive file. Unlike ZIP, TAR does not normally compress the contents by itself. It is common to combine TAR with a compression format, producing files with names like `.tar.gz`, `.tar.br`, or `.tar.zst`.
+
+Overloads of `CreateFromDirectory` and `CreateFromDirectoryAsync` let you choose the TAR entry format to use when creating the archive.
+
+This matters because TAR is an old format with several variants. Different tools and operating systems may expect different TAR formats. You can explicitly choose from the supported `TarEntryFormat` values:
+
+| Format                 | Use when                                                          |
+| ---------------------- | ----------------------------------------------------------------- |
+| `TarEntryFormat.Pax`   | You want the modern default with broad metadata support.          |
+| `TarEntryFormat.Ustar` | You want a POSIX-compatible format with broad tool compatibility. |
+| `TarEntryFormat.Gnu`   | You need compatibility with GNU TAR behavior.                     |
+| `TarEntryFormat.V7`    | You need the older Unix V7 format for a specific legacy tool.     |
+
+For most new code, `Pax` is a good default. Choose another format only when a tool, script, operating system, container image, deployment target, or customer requirement expects it.
+
+The following example creates a TAR archive using the GNU format:
+
+```cs
+using System.Formats.Tar;
+
+string sourceDirectory = "publish";
+string destinationArchive = "publish.tar";
+
+TarFile.CreateFromDirectory(
+    sourceDirectoryName: sourceDirectory,
+    destinationFileName: destinationArchive,
+    includeBaseDirectory: true,
+    format: TarEntryFormat.Gnu);
+```
+
+The `includeBaseDirectory` argument controls whether the base directory name is included in the archive entry paths. If it is `true`, files are stored under a top-level `publish` directory inside the archive. If it is `false`, the contents of the directory are stored at the root of the archive.
+
+You can also create an archive asynchronously:
+
+```cs
+using System.Formats.Tar;
+
+await TarFile.CreateFromDirectoryAsync(
+    sourceDirectoryName: "publish",
+    destinationFileName: "publish.tar",
+    includeBaseDirectory: true,
+    format: TarEntryFormat.Pax,
+    cancellationToken: CancellationToken.None);
+```
+
+Selecting the archive format does not compress the archive. If you want compression, write the TAR archive to a compression stream, such as `GZipStream`, `BrotliStream`, or the new `ZstandardStream` introduced earlier in this chapter.
+
+> **Good practice**: Use `Pax` unless you have a specific compatibility reason to choose another TAR format. Format selection is not about making the archive smaller. It is about what metadata can be represented and which tools can read the archive correctly.

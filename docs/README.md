@@ -96,6 +96,7 @@ This documentation section of the repository contains links to all the optional 
 - [Reading and writing with random access handles](ch09-random-access-handles.md)
 - [Serializing object graphs as XML](ch09-serializing-xml.md)
 - [JSON Patch implementation improvements](ch09-json-patch.md)
+- [Parsing structured text files with `TextFieldParser`](ch09-textfieldparser.md)
 - [Working with environment variables](ch09-environment-variables.md)
 
 ## Chapter 10 Working with Data Using Entity Framework Core

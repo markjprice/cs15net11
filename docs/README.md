@@ -110,6 +110,7 @@ This documentation section of the repository contains links to all the optional 
 - [Working with transactions](ch11-transactions.md)
 - [Implementing asynchronous methods with EF Core](ch11-ef-core-async.md)
 - [Code First EF Core models](ch11-code-first.md)
+- [Avoiding EF Core performance traps](ch10-ef-core-performance.md)
 - [App Secrets](ch11-app-secrets.md)
 
 ## Chapter 11 Building Web Apps Using Blazor

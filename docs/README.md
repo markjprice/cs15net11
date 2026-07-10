@@ -1,8 +1,9 @@
-**Docs**
+# Docs
 
 This documentation section of the repository contains links to all the optional online-only sections for the book as well as other content that readers will find useful.
 
-- [Online-only sections](#online-only-sections)
+- [Docs](#docs)
+  - [Overview](#overview)
   - [Chapter 1 Hello C#, Welcome .NET!](#chapter-1-hello-c-welcome-net)
   - [Chapter 2 Speaking C#](#chapter-2-speaking-c)
   - [Chapter 3 Controlling Flow, Converting Types, and Handling Exceptions](#chapter-3-controlling-flow-converting-types-and-handling-exceptions)
@@ -15,11 +16,13 @@ This documentation section of the repository contains links to all the optional 
   - [Chapter 10 Working with Data Using Entity Framework Core](#chapter-10-working-with-data-using-entity-framework-core)
   - [Chapter 11 Building Web Apps Using Blazor](#chapter-11-building-web-apps-using-blazor)
   - [Chapter 12 Querying and Manipulating Data Using LINQ](#chapter-12-querying-and-manipulating-data-using-linq)
-  - [Chapter 13 Building Web Services Using Minimal API](#chapter-13-building-web-services-using-minimal-api)
+  - [Chapter 13 Building and Consuming Web Services](#chapter-13-building-and-consuming-web-services)
 - [Errata, Improvements, and Common Mistakes](#errata-improvements-and-common-mistakes)
-- [Miscellaneous](#miscellaneous)
 
-# Online-only sections
+## Overview
+- [**Book Links**](book-links.md): All links in the published book.
+- [**Support for .NET 12**](https://github.com/markjprice/markjprice/blob/main/articles/dotnet12.md): How to use the .NET 11 edition of this book with .NET 12 previews starting in February 2027.
+- [**What's New in the 11th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 11th edition.
 
 ## Chapter 1 Hello C#, Welcome .NET!
 - [.NET History](ch01-dotnet-history.md)
@@ -114,26 +117,25 @@ This documentation section of the repository contains links to all the optional 
 - [App Secrets](ch11-app-secrets.md)
 
 ## Chapter 11 Building Web Apps Using Blazor
-- [New features in ASP.NET Core](ch11-features.md)
 - [Understanding web development](ch11-http-web-techs.md)
-- [Understanding `MapStaticAssets`](ch11-mapstaticassets.md)
+- [History of Blazor](ch11-blazor-history.md)
 - [Prototyping with Bootstrap](ch11-bootstrap.md)
+- [New features in ASP.NET Core](ch11-features.md)
 - [ASP.NET Core common classes and methods](ch11-common-classes.md)
 - [Configuring services and the HTTP request pipeline](ch11-http-pipeline.md)
 - [Enabling HTTP/3 and request decompression support](ch11-enabling-http3.md)
+- [Understanding `MapStaticAssets`](ch11-mapstaticassets.md)
 - [Enabling client-side execution using WebAssembly](ch11-blazor-wasm.md)
 - [Enhancing Blazor apps](ch11-enhanced-blazor.md)
 
 ## Chapter 12 Querying and Manipulating Data Using LINQ
-
 - [LINQ extension methods](ch12-linq-methods.md)
 - [Aggregating and paging sequences](ch12-aggregating.md)
 - [Using multiple threads with parallel LINQ](ch12-plinq.md)
 - [Working with LINQ to XML](ch12-linq-to-xml.md)
 - [Creating your own LINQ extension methods](ch12-custom-linq-methods.md)
 
-## Chapter 13 Building Web Services Using Minimal API
-
+## Chapter 13 Building and Consuming Web Services
 - [Implementing asynchronous operations](ch13-async-endpoints.md)
 - [In-memory, distributed, and hybrid caches](ch13-caching.md)
 - [Implementing advanced features for web services](ch13-advanced.md)
@@ -142,11 +144,3 @@ This documentation section of the repository contains links to all the optional 
 # [Errata, Improvements, and Common Mistakes](errata/README.md)
 
 If you find any mistakes in the tenth edition, *C# 15 and .NET 11 - Modern Cross-Platform Development Fundamentals*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs15net11/issues) or email me at markjprice (at) gmail.com.
-
-# Miscellaneous
-
-[**Book Links**](book-links.md): All links in the published book.
-
-[**Support for .NET 12**](https://github.com/markjprice/markjprice/blob/main/articles/dotnet12.md): How to use the .NET 11 edition of this book with .NET 12 previews starting in February 2027.
-
-[**What's New in the 11th Edition**](whats-new-in-book.md): There are hundreds of minor fixes and improvements throughout the 11th edition.

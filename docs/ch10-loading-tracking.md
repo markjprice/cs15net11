@@ -45,17 +45,17 @@ Each item in `foreach` is an instance of the `Category` class, which has a prope
 
 # Enabling lazy loading
 
-Lazy loading was introduced in EF Core 2.1, and it can automatically load missing related data. To enable lazy loading, developers must:
+Lazy loading can automatically load missing related data. To enable lazy loading, developers must:
 - Reference a NuGet package for proxies.
 - Configure lazy loading to use a proxy.
 
 Let's see this in action:
-1.	In the `WorkingWithEFCore` project, add a package reference for EF Core proxies, as shown in the following markup:
+1.	In the `EFCore` project, add a package reference for EF Core proxies, as shown in the following markup:
 ```xml
-<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="10.0.0" />
+<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" />
 ```
 
-2.	Build the `WorkingWithEFCore` project to restore packages.
+2.	Build the `EFCore` project to restore packages.
 3.	In `NorthwindDb.cs`, at the bottom of the `OnConfiguring` method, call an extension method to use lazy loading proxies, as shown in the following code:
 ```cs
 optionsBuilder.UseLazyLoadingProxies();
@@ -65,11 +65,11 @@ Now, every time the loop enumerates and an attempt is made to read the `Products
 
 4.	Run the code and note that the product counts are now correct. But you will see that the problem with lazy loading is that multiple round trips to the database server are required to eventually fetch all the data. For example, getting all the categories and then getting the products for the first category, `Beverages`, requires the execution of two SQL commands, as shown in the following partial output:
 ```
-dbug: 05/03/2025 13:41:40.221 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+dbug: 05/03/2026 13:41:40.221 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
       Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
       SELECT "c"."CategoryId", "c"."CategoryName", "c"."Description"
       FROM "Categories" AS "c"
-dbug: 05/03/2025 13:41:40.331 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+dbug: 05/03/2026 13:41:40.331 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
       Executing DbCommand [Parameters=[@__p_0='1'], CommandType='Text', CommandTimeout='30']
       SELECT "p"."ProductId", "p"."CategoryId", "p"."UnitPrice", "p"."Discontinued", "p"."ProductName", "p"."UnitsInStock"
       FROM "Products" AS "p"
@@ -278,12 +278,7 @@ Save changes|Alfreds Futterkiste, 030-1928|Alfreds Futterkiste, 030-9876
 
 # Lazy loading for no tracking queries
 
-In EF Core 7 or earlier, if you enable no tracking, then you cannot use the lazy loading pattern. If you try, then you will see the following exception at runtime:
-```
-Unhandled exception. System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Infrastructure.DetachedLazyLoadingWarning': An attempt was made to lazy-load navigation 'Category' on a detached entity of type 'ProductProxy'. Lazy loading is not supported for detached entities or entities that are loaded with 'AsNoTracking'. This exception can be suppressed or logged by passing event ID 'CoreEventId.DetachedLazyLoadingWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
-```
-
-EF Core 8 enabled support for the lazy loading of entities that are not being tracked.
+EF Core supports lazy loading of entities that are not being tracked.
 
 Let's try an example:
 1.	In `Program.Queries.cs`, add a method to request a no tracking query for products, and when you enumerate the products, use lazy loading to fetch the related category name, as shown in the following code:
@@ -312,8 +307,6 @@ private static void LazyLoadingWithNoTracking()
 
 2.	In `Program.cs`, add a call to `LazyLoadingWithNoTracking`. You might want to comment out any other method calls except `ConfigureConsole`, which ensures you see the same currency and other formatting as shown in the book.
 3.	Run the code and note that it works without throwing an exception as it would have done with previous versions of EF Core.
-
-> If you want to see the runtime exception for yourself, in the project file, change the version numbers of the three EF Core packages from `10.0.0` to any package version older than `8.0.0`, like `7.0.0` or `6.0.0`.
 
 # Summary of tracking
 

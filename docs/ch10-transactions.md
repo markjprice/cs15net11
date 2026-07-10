@@ -1,5 +1,6 @@
-**Working with transactions**
+# Working with transactions
 
+- [Working with transactions](#working-with-transactions)
 - [Understanding transactions](#understanding-transactions)
 - [Implicit transactions](#implicit-transactions)
 - [Controlling transactions using isolation levels](#controlling-transactions-using-isolation-levels)

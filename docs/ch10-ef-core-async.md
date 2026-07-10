@@ -1,7 +1,8 @@
-**Implementing asynchronous methods with EF Core**
+# Implementing asynchronous methods with EF Core
 
 Implementing asynchronous methods with EF Core allows your application to perform other work while waiting for database operations to complete, which is especially important for avoiding thread exhaustion in high-traffic websites and web services.
 
+- [Implementing asynchronous methods with EF Core](#implementing-asynchronous-methods-with-ef-core)
 - [How to use EF Core asynchronous methods](#how-to-use-ef-core-asynchronous-methods)
   - [Key Asynchronous EF Core Methods](#key-asynchronous-ef-core-methods)
   - [Explanation](#explanation)

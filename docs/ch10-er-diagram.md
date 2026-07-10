@@ -1,4 +1,4 @@
-**Entity-Relationship Diagram for Northwind**
+# Entity-Relationship Diagram for Northwind
 
 ```mermaid
 erDiagram

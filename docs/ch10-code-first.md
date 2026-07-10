@@ -166,7 +166,7 @@ using (Academy a = new())
 ```
 3.	Run the code, and note that the first time you run the code it will not need to delete the database because it does not exist yet, as shown in the following output:
 ```
-Connection: Filename=C:\cs14net10\Chapter10\CoursesAndStudents\bin\Debug\net10.0\Academy.db
+Connection: Filename=C:\cs15net11\Chapter10\CoursesAndStudents\bin\Debug\net11.0\Academy.db
 Database deleted: False
 Database created: True
 SQL script used to create database:
@@ -187,7 +187,7 @@ CREATE TABLE "CourseStudent" (
     CONSTRAINT "FK_CourseStudent_Students_StudentsStudentId" FOREIGN KEY ("StudentsStudentId") REFERENCES "Students" ("StudentId") ON DELETE CASCADE
 );
 INSERT INTO "Courses" ("CourseId", "Title")
-VALUES (1, 'C# 14 and .NET 10');
+VALUES (1, 'C# 15 and .NET 11');
 INSERT INTO "Courses" ("CourseId", "Title")
 VALUES (2, 'Web Development');
 INSERT INTO "Courses" ("CourseId", "Title")
@@ -211,12 +211,12 @@ VALUES (3, 3);
 CREATE INDEX "IX_CourseStudent_StudentsStudentId" ON "CourseStudent" ("StudentsStudentId");
 
 Alice Jones attends the following 1 courses:
-  C# 14 and .NET 10
+  C# 15 and .NET 11
 Bob Smith attends the following 2 courses:
-  C# 14 and .NET 10
+  C# 15 and .NET 11
   Web Development
 Cecilia Ramirez attends the following 2 courses:
-  C# 14 and .NET 10
+  C# 15 and .NET 11
   Python for Beginners
 ```
 
@@ -259,6 +259,6 @@ public class Employee : Person
 }
 ```
 
-By default, EF Core will map these to a single table using the table-per-hierarchy (TPH) mapping strategy. EF Core 5 introduced support for the table-per-type (TPT) mapping strategy. EF Core 7 introduced support for the table-per-concrete-type (TPC) mapping strategy.
+By default, EF Core will map these to a single table using the table-per-hierarchy (TPH) mapping strategy.
 
-To learn about the TPH, TPT, and TPC mapping strategies, how they work, and code some examples, either get my companion book, *Apps and Services with .NET 8*, or read the documentation at the following link: https://learn.microsoft.com/en-us/ef/core/modeling/inheritance.
+To learn about the TPH, TPT, and TPC mapping strategies, how they work, and code some examples, you can read the documentation at the following link: https://learn.microsoft.com/en-us/ef/core/modeling/inheritance.

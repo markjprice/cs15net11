@@ -1,5 +1,6 @@
-**Prototyping with Bootstrap**
+# Prototyping with Bootstrap
 
+- [Prototyping with Bootstrap](#prototyping-with-bootstrap)
 - [Introduction to Bootstrap](#introduction-to-bootstrap)
 - [Layouts with breakpoints and containers](#layouts-with-breakpoints-and-containers)
 - [Rows and columns](#rows-and-columns)

@@ -66,12 +66,12 @@ Catch up on previous newsletters in the archive: https://packtnetpro.substack.co
   - [code/WebData/Northwind.EntityModels](code/WebData/Northwind.EntityModels)
   - [code/WebData/Northwind.DataContext](code/WebData/Northwind.DataContext)
   - [code/WebData/Northwind.UnitTests](code/WebData/Northwind.UnitTests)
-- Chapter 11 Building Web Apps Using Blazor
-  - [code/WebData/Northwind.Blazor](code/WebData/Northwind.Blazor)
-  - [code/WebData/Northwind.Blazor.Services](code/WebData/Northwind.Blazor.Services)
-- Chapter 12 Querying and Manipulating Data Using LINQ
+- Chapter 11 Querying and Manipulating Data Using LINQ
   - [code/WebData/LinqWithObjects](code/WebData/LinqWithObjects)
   - [code/WebData/LinqWithEFCore](code/WebData/LinqWithEFCore)
+- Chapter 12 Building Web Apps Using Blazor
+  - [code/WebData/Northwind.Blazor](code/WebData/Northwind.Blazor)
+  - [code/WebData/Northwind.Blazor.Services](code/WebData/Northwind.Blazor.Services)
 - Chapter 13 Building and Consuming Web Services
   - [code/WebData/Northwind.WebApi](code/WebData/Northwind.WebApi)
   - [code/WebData/Northwind.WebApi.WasmClient](code/WebData/Northwind.WebApi.WasmClient)

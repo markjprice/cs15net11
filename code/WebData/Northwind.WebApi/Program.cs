@@ -1,6 +1,7 @@
-using Northwind.EntityModels; // To use AddNorthwindDb method.
 using Microsoft.AspNetCore.HttpLogging; // To use HttpLoggingFields.
+using Northwind.EntityModels; // To use AddNorthwindDb method.
 using Scalar.AspNetCore; // To use MapScalarApiReference method.
+using System.ComponentModel.DataAnnotations; // To use RangeAttribute.
 
 const string corsPolicyName = "allowWasmClient";
 
@@ -8,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi(documentName: "v2");
+builder.Services.AddOpenApi(documentName: "book-readers");
 
 builder.Services.AddNorthwindDb();
 
@@ -26,8 +27,11 @@ builder.Services.AddCors(options =>
   options.AddPolicy(name: corsPolicyName,
     policy =>
     {
-      policy.WithOrigins("https://localhost:5132",
-        "http://localhost:5133");
+      policy.WithOrigins(
+        "https://localhost:5132",
+        "http://localhost:5133")
+      .AllowAnyHeader()
+      .WithMethods("GET", "POST", "PUT", "DELETE");
     });
 });
 
@@ -36,7 +40,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  //app.MapOpenApi(); // Defaults to /openapi/v2/openapi.json and /openapi/v2/index.html.
+  //app.MapOpenApi(); // Defaults to /openapi/v1.json.
   app.MapOpenApi("/openapi/{documentName}.json");
   app.MapOpenApi("/openapi/{documentName}.yaml");
   app.MapScalarApiReference();
@@ -48,8 +52,8 @@ app.UseHttpsRedirection();
 
 app.UseCors(corsPolicyName);
 
-app.MapGet("/weatherforecast/{days:int?}", 
-  (int days = 5) => GetWeather(days))
+app.MapGet("/weatherforecast", 
+  ([Range(1, 14)] int days = 5) => GetWeather(days))
   .WithName("GetWeatherForecast");
 
 app.MapGet("/hello", () => "Hello World");
@@ -63,3 +67,6 @@ app.MapCustomers();
 
 app.Run();
 
+public partial class Program
+{
+}

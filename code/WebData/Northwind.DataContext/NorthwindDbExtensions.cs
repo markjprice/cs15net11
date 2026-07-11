@@ -5,21 +5,62 @@ namespace Northwind.EntityModels;
 
 public static class NorthwindDbExtensions
 {
+  private static string FindFileInCurrentOrParentDirectories(
+    string fileName,
+    string? startingDirectory = null)
+  {
+    ArgumentException.ThrowIfNullOrWhiteSpace(fileName);
+
+    string start = Path.GetFullPath(
+      startingDirectory ?? AppContext.BaseDirectory);
+
+    if (!Directory.Exists(start))
+    {
+      throw new DirectoryNotFoundException(
+        $"The starting directory does not exist: {start}");
+    }
+
+    DirectoryInfo? directory = new(start);
+
+    while (directory is not null)
+    {
+      string candidate = Path.Combine(directory.FullName, fileName);
+
+      if (File.Exists(candidate))
+      {
+        return candidate;
+      }
+
+      directory = directory.Parent;
+    }
+
+    throw new FileNotFoundException(
+      $"Could not find '{fileName}' in '{start}' " +
+      "or any of its parent directories.",
+      fileName);
+  }
+
   /// <summary>
   /// Adds NorthwindDb to the specified IServiceCollection. Uses the Sqlite database provider.
   /// </summary>
   /// <param name="services">The service collection.</param>
-  /// <param name="relativePath">Default is ".."</param>
   /// <param name="databaseName">Default is "Northwind.db"</param>
   /// <returns>An IServiceCollection that can be used to add more services.</returns>
   public static IServiceCollection AddNorthwindDb(
     this IServiceCollection services, // The type to extend.
-    string relativePath = "..",
     string databaseName = "Northwind.db")
   {
-    string path = Path.Combine(relativePath, databaseName);
-    path = Path.GetFullPath(path);
-    NorthwindDbLogger.WriteLine($"Database path: {path}");
+    string path = 
+      FindFileInCurrentOrParentDirectories(databaseName);
+
+    try
+    {
+      NorthwindDbLogger.WriteLine($"Database path: {path}");
+    }
+    catch (Exception ex)
+    {
+      WriteLine(ex.Message);
+    }
 
     if (!File.Exists(path))
     {
@@ -33,8 +74,8 @@ public static class NorthwindDbExtensions
       options.UseSqlite($"Data Source={path}");
 
       options.LogTo(NorthwindDbLogger.WriteLine,
-        new[] { Microsoft.EntityFrameworkCore
-          .Diagnostics.RelationalEventId.CommandExecuting });
+        [ Microsoft.EntityFrameworkCore
+          .Diagnostics.RelationalEventId.CommandExecuting ]);
     });
 
     return services;

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking; // To use EntityEntry<T>.
 using Northwind.EntityModels; // To use NorthwindDb and Customer.
 using System.ComponentModel.DataAnnotations; // To use [Required].
 
-static partial class Program
+static class WebApplicationExtensions
 {
   internal static void MapCustomers(this WebApplication app)
   {
@@ -58,8 +58,10 @@ static partial class Program
       int affected = await db.SaveChangesAsync();
       if (affected == 1)
       {
-        return TypedResults.Created( // 201 Created.
-          uri: $"/customers/{c.CustomerId}", value: c);
+        return TypedResults.CreatedAtRoute( // 201 Created.
+          routeName: "GetCustomerById", 
+          routeValues: new { id = c.CustomerId }, 
+          value: c);
       }
       else
       {
@@ -119,11 +121,11 @@ static partial class Program
         ProblemDetails problemDetails = new()
         {
           Status = StatusCodes.Status400BadRequest,
-          Type = "https://localhost:5151/customers/failed-to-delete",
+          Type = "https://localhost:5131/customers/failed-to-delete",
           Title = $"Customer ID {id} found but failed to delete.",
           Detail = "More details like Company Name, Country and so on."
         };
-        return TypedResults.BadRequest(problemDetails); // 400 Bad Request
+        return TypedResults.Problem(problemDetails);
       }
 
       id = id.ToUpper();

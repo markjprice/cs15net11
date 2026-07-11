@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.HttpLogging; // To use HttpLoggingFields.
 using Northwind.EntityModels; // To use AddNorthwindDb method.
 using Scalar.AspNetCore; // To use MapScalarApiReference method.
 using System.ComponentModel.DataAnnotations; // To use RangeAttribute.
+using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
 
 const string corsPolicyName = "allowWasmClient";
 
@@ -21,6 +23,23 @@ builder.Services.AddHttpLogging(options =>
   options.RequestBodyLogLimit = 4096; // Default is 32k.
   options.ResponseBodyLogLimit = 4096; // Default is 32k.
 });
+
+builder.Services.AddResponseCompression(options =>
+{
+  options.EnableForHttps = true;
+});
+
+builder.Services.Configure<ZstandardCompressionProviderOptions>(
+  options =>
+  {
+    options.CompressionOptions =
+      new ZstandardCompressionOptions
+      {
+        Quality = 6
+      };
+  });
+
+builder.Services.AddRequestDecompression();
 
 builder.Services.AddCors(options =>
 {
@@ -47,6 +66,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpLogging();
+
+app.UseResponseCompression();
+app.UseRequestDecompression();
 
 app.UseHttpsRedirection();
 

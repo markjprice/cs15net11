@@ -136,6 +136,7 @@ This documentation section of the repository contains links to all the optional 
 - [Enhancing Blazor apps](ch11-enhanced-blazor.md)
 
 ## Chapter 13 Building and Consuming Web Services
+- [Common responses to a `GET` request](ch13-get-responses.md)
 - [Implementing asynchronous operations](ch13-async-endpoints.md)
 - [In-memory, distributed, and hybrid caches](ch13-caching.md)
 - [Implementing advanced features for web services](ch13-advanced.md)

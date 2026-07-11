@@ -14,8 +14,8 @@ This documentation section of the repository contains links to all the optional 
   - [Chapter 8 Working with Common .NET Types](#chapter-8-working-with-common-net-types)
   - [Chapter 9 Processes, Files, Streams, and Serialization](#chapter-9-processes-files-streams-and-serialization)
   - [Chapter 10 Working with Data Using Entity Framework Core](#chapter-10-working-with-data-using-entity-framework-core)
-  - [Chapter 11 Building Web Apps Using Blazor](#chapter-11-building-web-apps-using-blazor)
-  - [Chapter 12 Querying and Manipulating Data Using LINQ](#chapter-12-querying-and-manipulating-data-using-linq)
+  - [Chapter 11 Querying and Manipulating Data Using LINQ](#chapter-11-querying-and-manipulating-data-using-linq)
+  - [Chapter 12 Building Web Apps Using Blazor](#chapter-12-building-web-apps-using-blazor)
   - [Chapter 13 Building and Consuming Web Services](#chapter-13-building-and-consuming-web-services)
 - [Errata, Improvements, and Common Mistakes](#errata-improvements-and-common-mistakes)
 
@@ -116,7 +116,14 @@ This documentation section of the repository contains links to all the optional 
 - [Avoiding EF Core performance traps](ch10-ef-core-performance.md)
 - [App Secrets](ch11-app-secrets.md)
 
-## Chapter 11 Building Web Apps Using Blazor
+## Chapter 11 Querying and Manipulating Data Using LINQ
+- [LINQ extension methods](ch12-linq-methods.md)
+- [Aggregating and paging sequences](ch12-aggregating.md)
+- [Using multiple threads with parallel LINQ](ch12-plinq.md)
+- [Working with LINQ to XML](ch12-linq-to-xml.md)
+- [Creating your own LINQ extension methods](ch12-custom-linq-methods.md)
+
+## Chapter 12 Building Web Apps Using Blazor
 - [Understanding web development](ch11-http-web-techs.md)
 - [History of Blazor](ch11-blazor-history.md)
 - [Prototyping with Bootstrap](ch11-bootstrap.md)
@@ -127,13 +134,6 @@ This documentation section of the repository contains links to all the optional 
 - [Understanding `MapStaticAssets`](ch11-mapstaticassets.md)
 - [Enabling client-side execution using WebAssembly](ch11-blazor-wasm.md)
 - [Enhancing Blazor apps](ch11-enhanced-blazor.md)
-
-## Chapter 12 Querying and Manipulating Data Using LINQ
-- [LINQ extension methods](ch12-linq-methods.md)
-- [Aggregating and paging sequences](ch12-aggregating.md)
-- [Using multiple threads with parallel LINQ](ch12-plinq.md)
-- [Working with LINQ to XML](ch12-linq-to-xml.md)
-- [Creating your own LINQ extension methods](ch12-custom-linq-methods.md)
 
 ## Chapter 13 Building and Consuming Web Services
 - [Implementing asynchronous operations](ch13-async-endpoints.md)

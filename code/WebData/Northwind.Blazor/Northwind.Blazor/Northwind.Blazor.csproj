@@ -11,13 +11,21 @@
   </ItemGroup>
 
   <ItemGroup Label="Project references.">
+		<!-- Folder structure:
+		
+		     WebData
+		       Northwind.Blazor
+					   Northwind.Blazor
+					   Northwind.Blazor.Client
+					 Northwind.Blazor.Services
+					 Northwind.DataContext-->
+		
     <ProjectReference Include="..\..\Northwind.Blazor.Services\Northwind.Blazor.Services.csproj" />
     <ProjectReference Include="..\Northwind.Blazor.Client\Northwind.Blazor.Client.csproj" />
-    <!-- change Sqlite to SqlServer if you prefer -->
-    <ProjectReference Include="..\..\Northwind.DataContext.Sqlite\Northwind.DataContext.Sqlite.csproj" />
-  </ItemGroup>
+		<ProjectReference Include="..\..\Northwind.DataContext\Northwind.DataContext.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <Using Include="Northwind.EntityModels" />
   </ItemGroup>
 

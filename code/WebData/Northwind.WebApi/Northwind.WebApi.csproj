@@ -10,17 +10,19 @@
   </PropertyGroup>
 
   <ItemGroup Label="Package reference versions are set at the solution level.">
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" />
     <PackageReference Include="Scalar.AspNetCore" />
-  </ItemGroup>
+    <!-- Temporarily added to remove warning about Microsoft.OpenApi:
+		Package 'Microsoft.OpenApi' 3.3.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc-->
+		<PackageReference Include="Microsoft.OpenApi" VersionOverride="3.8.0" />
+	</ItemGroup>
 
   <ItemGroup Label="To simplify use of Console members.">
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
   <ItemGroup>
-    <!-- change Sqlite to SqlServer if you prefer -->
-    <ProjectReference Include="..\Northwind.DataContext.Sqlite\Northwind.DataContext.Sqlite.csproj" />
+    <ProjectReference Include="..\Northwind.DataContext\Northwind.DataContext.csproj" />
   </ItemGroup>
 
 </Project>

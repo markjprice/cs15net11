@@ -1,26 +1,18 @@
 <Solution>
-  <!-- Chapter 10 Blazor Web Apps -->
-  <Project Path="Northwind.Blazor/Northwind.Blazor/Northwind.Blazor.csproj" />
-  <Project Path="Northwind.Blazor.Services/Northwind.Blazor.Services.csproj" />
-  <Project Path="Northwind.Blazor/Northwind.Blazor.Client/Northwind.Blazor.Client.csproj" />
-
-  <!-- Chapter 11 EF Core -->
   <Project Path="CoursesAndStudents/CoursesAndStudents.csproj" />
-  <Project Path="Northwind.EntityModels/Northwind.EntityModels.csproj" />
   <Project Path="EFCore/EFCore.csproj" />
-  <Project Path="Northwind.DataContext.Sqlite/Northwind.DataContext.Sqlite.csproj" />
-  <Project Path="Northwind.EntityModels.Sqlite/Northwind.EntityModels.Sqlite.csproj" />
-  <Project Path="Northwind.UnitTests/Northwind.UnitTests.csproj" />
   <Project Path="Exercise_DataSerialization/Exercise_DataSerialization.csproj" />
-
-  <!-- Chapter 12 LINQ -->
+  <Project Path="Exercise_LinqQueries/Exercise_LinqQueries.csproj" />
   <Project Path="LinqInParallel/LinqInParallel.csproj" />
   <Project Path="LinqWithEFCore/LinqWithEFCore.csproj" />
   <Project Path="LinqWithObjects/LinqWithObjects.csproj" />
-  <Project Path="PacktLinqExtensions/PacktLinqExtensions.csproj" />
-  <Project Path="Exercise_LinqQueries/Exercise_LinqQueries.csproj" />
-
-  <!-- Chapter 13 Minimal API web services -->
+  <Project Path="Northwind.Blazor.Services/Northwind.Blazor.Services.csproj" />
+  <Project Path="Northwind.Blazor/Northwind.Blazor.Client/Northwind.Blazor.Client.csproj" />
+  <Project Path="Northwind.Blazor/Northwind.Blazor/Northwind.Blazor.csproj" />
+  <Project Path="Northwind.DataContext/Northwind.DataContext.csproj" />
+  <Project Path="Northwind.EntityModels/Northwind.EntityModels.csproj" />
+  <Project Path="Northwind.UnitTests/Northwind.UnitTests.csproj" />
+  <Project Path="Northwind.WebApi.WasmClient/Northwind.WebApi.WasmClient.csproj" />
   <Project Path="Northwind.WebApi/Northwind.WebApi.csproj" />
-  <Project Path="Northwind.WebApi.WasmClient/Northwind.WebApi.WasmClient.csproj" Id="7ab35a4f-e104-4330-8b31-d5487925d61d" />
+  <Project Path="PacktLinqExtensions/PacktLinqExtensions.csproj" />
 </Solution>

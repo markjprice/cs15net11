@@ -14,7 +14,8 @@ partial class Program
     // A query to get all categories and their related products.
     IQueryable<Category>? categories;
     //= db.Categories;
-    //.Include(c => c.Products);
+    // Get related products if Categories is not null.
+    //?.Include(c => c.Products);
 
     db.ChangeTracker.LazyLoadingEnabled = false;
 
@@ -79,7 +80,7 @@ partial class Program
     } while (!int.TryParse(input, out stock));
 
     IQueryable<Category>? categories = db.Categories?
-      .Include(c => c.Products.Where(p => p.Stock >= stock));
+      .Include(c => c.Products.Where(p => p.UnitsInStock >= stock));
 
     if (categories is null || !categories.Any())
     {
@@ -96,7 +97,7 @@ partial class Program
 
       foreach (Product p in c.Products)
       {
-        WriteLine($"  {p.ProductName} has {p.Stock} units in stock.");
+        WriteLine($"  {p.ProductName} has {p.UnitsInStock} units in stock.");
       }
     }
   }
@@ -117,8 +118,8 @@ partial class Program
     } while (!decimal.TryParse(input, out price));
 
     IQueryable<Product>? products = db.Products?
-      .Where(product => product.Cost > price)
-      .OrderByDescending(product => product.Cost);
+      .Where(product => product.UnitPrice > price)
+      .OrderByDescending(product => product.UnitPrice);
 
     if (products is null || !products.Any())
     {
@@ -132,7 +133,7 @@ partial class Program
     {
       WriteLine(
         "{0}: {1} costs {2:$#,##0.00} and has {3} in stock.",
-        p.ProductId, p.ProductName, p.Cost, p.Stock);
+        p.ProductId, p.ProductName, p.UnitPrice, p.UnitsInStock);
     }
   }
 
@@ -193,7 +194,7 @@ partial class Program
     foreach (Product p in products)
     {
       WriteLine("{0} has {1} units in stock. Discontinued: {2}",
-        p.ProductName, p.Stock, p.Discontinued);
+        p.ProductName, p.UnitsInStock, p.Discontinued);
     }
   }
 

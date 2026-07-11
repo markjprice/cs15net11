@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Northwind.WebApi\\Northwind.WebApi.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "Northwind.WebApi.WasmClient\\Northwind.WebApi.WasmClient.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

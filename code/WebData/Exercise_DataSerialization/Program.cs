@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore; // Include extension method
-using Packt.Shared; // Northwind, Category, Product
+using Northwind.EntityModels; // Northwind, Category, Product
 
 WriteLine("Creating four files containing serialized categories and products.");
 
-using (Northwind db = new())
+using (NorthwindDb db = new())
 {
   // a query to get all categories and their related products 
   IQueryable<Category>? categories = db.Categories?.Include(c => c.Products);

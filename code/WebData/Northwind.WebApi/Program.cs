@@ -1,4 +1,4 @@
-using Northwind.EntityModels; // To use AddNorthwindContext method.
+using Northwind.EntityModels; // To use AddNorthwindDb method.
 using Microsoft.AspNetCore.HttpLogging; // To use HttpLoggingFields.
 using Scalar.AspNetCore; // To use MapScalarApiReference method.
 
@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi(documentName: "v2");
 
-builder.Services.AddNorthwindContext();
+builder.Services.AddNorthwindDb();
 
 builder.Services.AddValidation();
 
@@ -26,8 +26,8 @@ builder.Services.AddCors(options =>
   options.AddPolicy(name: corsPolicyName,
     policy =>
     {
-      policy.WithOrigins("https://localhost:5152",
-        "http://localhost:5153");
+      policy.WithOrigins("https://localhost:5132",
+        "http://localhost:5133");
     });
 });
 
@@ -36,7 +36,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  app.MapOpenApi();
+  //app.MapOpenApi(); // Defaults to /openapi/v2/openapi.json and /openapi/v2/index.html.
+  app.MapOpenApi("/openapi/{documentName}.json");
+  app.MapOpenApi("/openapi/{documentName}.yaml");
   app.MapScalarApiReference();
 }
 

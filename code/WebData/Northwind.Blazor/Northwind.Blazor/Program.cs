@@ -1,4 +1,3 @@
-using Northwind.Blazor.Client.Pages;
 using Northwind.Blazor.Components;
 using Northwind.Blazor.Services; // To use INorthwindService.
 
@@ -9,7 +8,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-builder.Services.AddNorthwindContext(relativePath: @"..\..");
+builder.Services.AddNorthwindDb(relativePath: @"..\..");
 
 builder.Services.AddTransient<INorthwindService,
   NorthwindServiceServerSide>();
@@ -34,6 +33,9 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
+
+app.MapGet("/env", () =>
+  $"Environment is {app.Environment.EnvironmentName}");
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()

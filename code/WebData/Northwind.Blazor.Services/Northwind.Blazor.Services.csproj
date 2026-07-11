@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <!-- change Sqlite to SqlServer if you prefer -->
-    <ProjectReference Include="..\Northwind.EntityModels.Sqlite\Northwind.EntityModels.Sqlite.csproj" />
+    <ProjectReference Include="..\Northwind.EntityModels\Northwind.EntityModels.csproj" />
   </ItemGroup>
 
 </Project>

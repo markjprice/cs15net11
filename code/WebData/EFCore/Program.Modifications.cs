@@ -29,7 +29,7 @@ partial class Program
       }
 
       WriteLine("| {0:000} | {1,-35} | {2,8:$#,##0.00} | {3,5} | {4} |",
-        p.ProductId, p.ProductName, p.Cost, p.Stock, p.Discontinued);
+        p.ProductId, p.ProductName, p.UnitPrice, p.UnitsInStock, p.Discontinued);
 
       ForegroundColor = previousColor;
     }
@@ -46,8 +46,8 @@ partial class Program
     {
       CategoryId = categoryId,
       ProductName = productName,
-      Cost = price,
-      Stock = stock
+      UnitPrice = price,
+      UnitsInStock = stock
     };
 
     // Set product as added in change tracking.
@@ -76,7 +76,7 @@ partial class Program
     Product updateProduct = db.Products.First(
       p => p.ProductName.StartsWith(productNameStartsWith));
 
-    updateProduct.Cost += amount;
+    updateProduct.UnitPrice += amount;
 
     int affected = db.SaveChanges();
 
@@ -118,8 +118,8 @@ partial class Program
       p => p.ProductName.StartsWith(productNameStartsWith));
 
     int affected = products.ExecuteUpdate(s => s.SetProperty(
-      p => p.Cost, // Property selector lambda expression.
-      p => p.Cost + amount)); // Value to update to lambda expression.
+      p => p.UnitPrice, // Property selector lambda expression.
+      p => p.UnitPrice + amount)); // Value to update to lambda expression.
 
     int[] productIds = products.Select(p => p.ProductId).ToArray();
 

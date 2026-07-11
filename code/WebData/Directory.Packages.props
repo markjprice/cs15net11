@@ -1,6 +1,6 @@
 <Project>
 
-  <!--Last updated package versions: July 1, 2026.-->
+  <!--Last updated package versions: July 9, 2026.-->
 
   <PropertyGroup Label="To enable Central Package Management.">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
@@ -13,14 +13,16 @@
   <ItemGroup Label="For EF Core.">
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(Net11)" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(Net11)" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(Net11)" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Proxies" Version="$(Net11)" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Abstractions" Version="$(Net11)" />
   </ItemGroup>
 
   <ItemGroup Label="For unit testing.">
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.7.0" />
-    <PackageVersion Include="coverlet.collector" Version="10.0.1" />
+		<PackageVersion Include="coverlet.collector" Version="10.0.1" />
+		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.7.0" />
 
-    <!-- xUnit v2 is now deprecated. -->
+		<!-- xUnit v2 is now deprecated. -->
     <PackageVersion Include="xunit" Version="2.9.3" />
 
     <!-- xUnit v3 should be used instead. -->
@@ -28,15 +30,16 @@
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
   </ItemGroup>
 
-  <ItemGroup Label="For Blazor.">
+  <ItemGroup Label="For ASP.NET Core Blazor.">
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(Net11)" />
   </ItemGroup>
 
-  <ItemGroup Label="For web services.">
+  <ItemGroup Label="For ASP.NET Core web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net11)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.7" />
-  </ItemGroup>
+		<PackageVersion Include="Scalar.AspNetCore" Version="2.16.7" />
+		<PackageVersion Include="Microsoft.AspNetCore.Components.Gateway" Version="$(Net11)" />
+	</ItemGroup>
 
 </Project>

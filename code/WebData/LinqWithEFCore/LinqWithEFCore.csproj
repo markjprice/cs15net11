@@ -11,12 +11,8 @@
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
-  <ItemGroup Label="Package reference versions are set at the solution level.">
-    <!--To use SQLite-->
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
-
-    <!--To use SQL Server-->
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+  <ItemGroup>
+    <ProjectReference Include="..\Northwind.DataContext\Northwind.DataContext.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,9 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Northwind.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="settings.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

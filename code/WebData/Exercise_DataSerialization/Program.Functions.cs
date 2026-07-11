@@ -1,6 +1,6 @@
 ﻿using System.Xml; // XmlWriter
 using System.Text.Json; // Utf8JsonWriter, JsonWriterOptions
-using Packt.Shared; // Category, Product
+using Northwind.EntityModels; // Category, Product
 
 using static System.IO.Path;
 using static System.Environment;
@@ -56,8 +56,8 @@ partial class Program
 
             writeMethod("id", p.ProductId.ToString());
             writeMethod("name", p.ProductName);
-            writeMethod("cost", p.Cost is null ? "0" : p.Cost.Value.ToString());
-            writeMethod("stock", p.Stock.ToString());
+            writeMethod("cost", p.UnitPrice is null ? "0" : p.UnitPrice.Value.ToString());
+            writeMethod("stock", p.UnitsInStock.ToString());
             writeMethod("discontinued", p.Discontinued.ToString());
 
             xml.WriteEndElement(); // </product>
@@ -97,10 +97,10 @@ partial class Program
             csv.Write("{0},\"{1}\",{2},",
               arg0: p.ProductId,
               arg1: p.ProductName,
-              arg2: p.Cost is null ? 0 : p.Cost.Value);
+              arg2: p.UnitPrice is null ? 0 : p.UnitPrice.Value);
 
             csv.WriteLine("{0},{1}",
-              arg0: p.Stock,
+              arg0: p.UnitsInStock,
               arg1: p.Discontinued);
           }
         }
@@ -141,8 +141,8 @@ partial class Program
 
             json.WriteNumber("id", p.ProductId);
             json.WriteString("name", p.ProductName);
-            json.WriteNumber("cost", p.Cost is null ? 0 : p.Cost.Value);
-            json.WriteNumber("stock", p.Stock is null ? 0 : p.Stock.Value);
+            json.WriteNumber("cost", p.UnitPrice is null ? 0 : p.UnitPrice.Value);
+            json.WriteNumber("stock", p.UnitsInStock is null ? 0 : p.UnitsInStock.Value);
             json.WriteBoolean("discontinued", p.Discontinued);
 
             json.WriteEndObject(); // product

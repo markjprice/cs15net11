@@ -1,59 +1,86 @@
-﻿using Microsoft.EntityFrameworkCore; // To use ToListAsync<T>.
+﻿using Microsoft.EntityFrameworkCore; // To use EF Core async methods.
 
 namespace Northwind.Blazor.Services;
 
 public class NorthwindServiceServerSide : INorthwindService
 {
-  private readonly NorthwindContext _db;
+  private readonly IDbContextFactory<NorthwindDb> _contextFactory;
 
-  public NorthwindServiceServerSide(NorthwindContext db)
+  public NorthwindServiceServerSide(
+    IDbContextFactory<NorthwindDb> contextFactory)
   {
-    _db = db;
+    _contextFactory = contextFactory;
   }
 
-  public Task<List<Customer>> GetCustomersAsync()
+  public async Task<List<Customer>> GetCustomersAsync()
   {
-    return _db.Customers.ToListAsync();
+    await using NorthwindDb db =
+      await _contextFactory.CreateDbContextAsync();
+
+    return await db.Customers
+      .AsNoTracking()
+      .ToListAsync();
   }
 
-  public Task<List<Customer>> GetCustomersAsync(string country)
+  public async Task<List<Customer>> GetCustomersAsync(string country)
   {
-    return _db.Customers.Where(c => c.Country == country).ToListAsync();
+    await using NorthwindDb db =
+      await _contextFactory.CreateDbContextAsync();
+
+    return await db.Customers
+      .AsNoTracking()
+      .Where(c => c.Country == country)
+      .ToListAsync();
   }
 
-  public Task<Customer?> GetCustomerAsync(string id)
+  public async Task<Customer?> GetCustomerAsync(string id)
   {
-    return _db.Customers.FirstOrDefaultAsync
-      (c => c.CustomerId == id);
+    await using NorthwindDb db =
+      await _contextFactory.CreateDbContextAsync();
+
+    return await db.Customers
+      .AsNoTracking()
+      .FirstOrDefaultAsync(c => c.CustomerId == id);
   }
 
-  public Task<Customer> CreateCustomerAsync(Customer c)
+  public async Task<Customer> CreateCustomerAsync(Customer c)
   {
-    _db.Customers.Add(c);
-    _db.SaveChangesAsync();
-    return Task.FromResult(c);
+    await using NorthwindDb db =
+      await _contextFactory.CreateDbContextAsync();
+
+    db.Customers.Add(c);
+    await db.SaveChangesAsync();
+
+    return c;
   }
 
-  public Task<Customer> UpdateCustomerAsync(Customer c)
+  public async Task<Customer> UpdateCustomerAsync(Customer c)
   {
-    _db.Entry(c).State = EntityState.Modified;
-    _db.SaveChangesAsync();
-    return Task.FromResult(c);
+    await using NorthwindDb db =
+          await _contextFactory.CreateDbContextAsync();
+
+    db.Entry(c).State = EntityState.Modified;
+    await db.SaveChangesAsync();
+
+    return c;
   }
 
-  public Task DeleteCustomerAsync(string id)
+  public async Task DeleteCustomerAsync(string id)
   {
-    Customer? customer = _db.Customers.FirstOrDefaultAsync
-      (c => c.CustomerId == id).Result;
+    await using NorthwindDb db =
+          await _contextFactory.CreateDbContextAsync();
+
+    Customer? customer = await db.Customers
+      .FindAsync(id);
 
     if (customer == null)
     {
-      return Task.CompletedTask;
+      return;
     }
     else
     {
-      _db.Customers.Remove(customer);
-      return _db.SaveChangesAsync();
+      db.Customers.Remove(customer);
+      await db.SaveChangesAsync();
     }
   }
 }

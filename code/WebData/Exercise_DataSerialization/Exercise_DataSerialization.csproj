@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -11,14 +11,8 @@
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
-  <ItemGroup Label="Package reference versions are set at the solution level.">
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Northwind.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Northwind.DataContext\Northwind.DataContext.csproj" />
+	</ItemGroup>
 
 </Project>

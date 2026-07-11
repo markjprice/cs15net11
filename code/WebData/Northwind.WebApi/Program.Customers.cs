@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc; // To use ProblemDetails.
 using Microsoft.EntityFrameworkCore; // To use ToArrayAsync, FindAsync, AddAsync, Update, Remove.
 using Microsoft.EntityFrameworkCore.ChangeTracking; // To use EntityEntry<T>.
-using Northwind.EntityModels; // To use NorthwindContext and Customer.
+using Northwind.EntityModels; // To use NorthwindDb and Customer.
 using System.ComponentModel.DataAnnotations; // To use [Required].
 
 static partial class Program
@@ -10,14 +10,14 @@ static partial class Program
   {
     // GET: /customers
     app.MapGet(pattern: "/customers", handler:
-      async (NorthwindContext db) =>
+      async (NorthwindDb db) =>
     {
       return await db.Customers.ToArrayAsync();
     });
 
     // GET: /customers/in/[country]
     app.MapGet(pattern: "/customers/in/{country}", handler:
-      async ([Required] string country, NorthwindContext db) =>
+      async ([Required] string country, NorthwindDb db) =>
     {
       return await db.Customers
         .Where(customer => customer.Country == country)
@@ -26,7 +26,7 @@ static partial class Program
 
     // GET: /customers/[id]
     app.MapGet("/customers/{id:regex(^[A-Za-z]{{5}}$)}", 
-      async Task<IResult> (string id, NorthwindContext db) =>
+      async Task<IResult> (string id, NorthwindDb db) =>
     {
       id = id.ToUpper(); // Normalize to uppercase.
 
@@ -42,7 +42,7 @@ static partial class Program
     // POST: /customers
     // BODY: Customer (JSON)
     app.MapPost(pattern: "/customers", handler:
-      async Task<IResult> (Customer? c, NorthwindContext db) =>
+      async Task<IResult> (Customer? c, NorthwindDb db) =>
     {
       if (c is null)
       {
@@ -71,7 +71,7 @@ static partial class Program
     // BODY: Customer (JSON)
     app.MapPut(pattern: "/customers/{id:regex(^[A-Za-z]{{5}}$)}", handler:
       async Task<IResult> (Customer? replacement,
-        string id, NorthwindContext db) =>
+        string id, NorthwindDb db) =>
     {
       if (replacement is null)
       {
@@ -111,7 +111,7 @@ static partial class Program
 
     // DELETE: /customers/[id]
     app.MapDelete(pattern: "/customers/{id}", handler:
-      async Task<IResult> (string id, NorthwindContext db) =>
+      async Task<IResult> (string id, NorthwindDb db) =>
     {
       // Take control of problem details.
       if (id == "bad")

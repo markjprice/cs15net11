@@ -11,8 +11,9 @@
   <Project Path="Northwind.Blazor/Northwind.Blazor/Northwind.Blazor.csproj" />
   <Project Path="Northwind.DataContext/Northwind.DataContext.csproj" />
   <Project Path="Northwind.EntityModels/Northwind.EntityModels.csproj" />
+  <Project Path="Northwind.McpServer/Northwind.McpServer.csproj" />
   <Project Path="Northwind.UnitTests/Northwind.UnitTests.csproj" />
-  <Project Path="Northwind.WebApi.IntegrationTests/Northwind.WebApi.IntegrationTests.csproj" Id="8565d654-2140-441c-9d02-4d2a97fcc595" />
+  <Project Path="Northwind.WebApi.IntegrationTests/Northwind.WebApi.IntegrationTests.csproj" />
   <Project Path="Northwind.WebApi.WasmClient/Northwind.WebApi.WasmClient.csproj" />
   <Project Path="Northwind.WebApi/Northwind.WebApi.csproj" />
   <Project Path="PacktLinqExtensions/PacktLinqExtensions.csproj" />

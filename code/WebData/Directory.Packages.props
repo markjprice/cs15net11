@@ -41,6 +41,8 @@
 		<PackageVersion Include="Scalar.AspNetCore" Version="2.16.7" />
 		<PackageVersion Include="Microsoft.AspNetCore.Components.Gateway" Version="$(Net11)" />
 		<PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(Net11)" />
+		<PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(Net11)" />
+		<PackageVersion Include="ModelContextProtocol" Version="1.2.0" />
 	</ItemGroup>
 
 </Project>

@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "Northwind.McpServer": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "C:\\cs15net11\\WebData\\Northwind.McpServer"
+      ]
+    }
+  }
+}

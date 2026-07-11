@@ -300,7 +300,7 @@ private static void LazyLoadingWithNoTracking()
   foreach (Product p in products)
   {
     WriteLine("{0} is in category named {1}.",
-      p.ProductName, p.Category.CategoryName);
+      p.ProductName, p.Category?.CategoryName);
   }
 }
 ```

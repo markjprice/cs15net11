@@ -1,9 +1,9 @@
-**Aggregating and paging sequences**
+# Aggregating and paging sequences
 
-- [Checking for an empty sequence](#checking-for-an-empty-sequence)
-- [Be careful with Count!](#be-careful-with-count)
-- [Paging with LINQ](#paging-with-linq)
-- [Sweetening LINQ syntax with syntactic sugar](#sweetening-linq-syntax-with-syntactic-sugar)
+- [Aggregating and paging sequences](#aggregating-and-paging-sequences)
+  - [Checking for an empty sequence](#checking-for-an-empty-sequence)
+  - [Be careful with Count!](#be-careful-with-count)
+  - [Paging with LINQ](#paging-with-linq)
 
 
 There are LINQ extension methods to perform aggregation functions, such as `Average` and `Sum`. Let's write some code to see some of these methods in action, aggregating information from the `Products` table:
@@ -82,7 +82,7 @@ Average unit price:           $28.87
 Value of units in stock:  $74,050.85
 ```
 
-# Checking for an empty sequence
+## Checking for an empty sequence
 
 There are multiple ways to check if a sequence is empty or it contains any items:
 - Call the LINQ `Count()` method and see if it is greater than zero. This is sometimes the worst way if it must enumerate the whole sequence to count the items. You will see more about this in the next section. But as we saw when we used ILSpy to decompile the `Count()` method implementation, it is smart enough to check if the sequence implements `ICollection` or `ICollection<T>` and therefore has a more efficient `Count` property that it can use.
@@ -90,7 +90,7 @@ There are multiple ways to check if a sequence is empty or it contains any items
 - Get the sequence's `Count` property (if it has one) and see if it is greater than zero. Any sequence that implements `ICollection` or `ICollection<T>` will have a `Count` property.
 - Get the sequence's `Length` property (if it has one) and see if it is greater than zero. Any array will have a `Length` property.
 
-# Be careful with Count!
+## Be careful with Count!
 
 Amichai Mantinband is a software engineer at Microsoft, and he does a great job of highlighting interesting parts of the C# and .NET developer stack.
 
@@ -139,7 +139,7 @@ So, the best answer to Amichai's teaser is "Something else."
 
 > **Good Practice**: Be careful when calling LINQ extension methods like `Count()` that need to enumerate over the sequence to calculate their return value. Even if you are not working with a sequence of executable objects like tasks, re-enumerating the sequence is likely to be inefficient.
 
-# Paging with LINQ
+## Paging with LINQ
 
 Let's see how we could implement paging using the Skip and Take extension methods:
 1.	In `Program.Functions.cs`, add a method to output to the console a table of products passed as an array, as shown in the following code:
@@ -297,54 +297,3 @@ Press <- to page back, press -> to page forward.
 As an optional task, explore how you might use the `Chunk` method to output pages of products. You can read more about partitioning items in a sequence using `Skip`, `Take`, and `Chunk` at the following link: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/partitioning-data.
 
 > **Good Practice**: You should always order data before calling `Skip` and `Take` if you want to implement paging. This is because each time you execute a query, the LINQ provider does not have to guarantee to return the data in the same order unless you have specified it. Therefore, if the SQLite provider wanted to, the first time you request a page of products, they might be in `ProductId` order, but the next time you request a page of products, they might be in `UnitPrice` order, or a random order, and that would confuse the users! In practice, at least for relational databases, the default order is usually by its index on the primary key.
- 
-# Sweetening LINQ syntax with syntactic sugar
-
-C# 3 introduced some new language keywords in 2008 to make it easier for programmers with experience with SQL to write LINQ queries. This syntactic sugar is sometimes called the LINQ *query comprehension syntax*.
-
-Consider the following array of string values:
-```cs
-string[] names = new[] { "Michael", "Pam", "Jim", "Dwight",
-  "Angela", "Kevin", "Toby", "Creed" };
-```
-
-To filter and sort the names, you could use extension methods and lambda expressions, as shown in the following code:
-```cs
-var query = names
-  .Where(name => name.Length > 4)
-  .OrderBy(name => name.Length)
-  .ThenBy(name => name);
-```
-
-Or you could achieve the same results by using query comprehension syntax, as shown in the following code:
-```cs
-var query = from name in names
-  where name.Length > 4
-  orderby name.Length, name
-  select name;
-```
-
-The compiler changes the query comprehension syntax to the equivalent extension methods and lambda expressions for you.
-
-The `select` keyword is always required for LINQ query comprehension syntax. The `Select` extension method is optional when using extension methods and lambda expressions because if you do not call `Select`, then the whole item is implicitly selected.
-
-Not all extension methods have a C# keyword equivalent, for example, the `Skip` and `Take` extension methods, which are commonly used to implement paging for lots of data.
-
-A query that skips and takes cannot be written using only the query comprehension syntax, so we could write the query using all extension methods, as shown in the following code:
-```cs
-var query = names
-  .Where(name => name.Length > 4)
-  .Skip(80)
-  .Take(10);
-```
-
-Or, we could wrap query comprehension syntax in parentheses and then switch to using extension methods, as shown in the following code:
-```cs
-var query = (from name in names
-  where name.Length > 4
-  select name)
-  .Skip(80)
-  .Take(10);
-```
-
-> **Good Practice**: Learn both extension methods with lambda expressions and the query comprehension syntax ways of writing LINQ queries, because you are likely to have to maintain code that uses both.

@@ -1,4 +1,4 @@
-**LINQ extension methods**
+# LINQ extension methods
 
 Method(s)|Description
 ---|---

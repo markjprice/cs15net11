@@ -1,15 +1,16 @@
-**Working with LINQ to XML**
+# Working with LINQ to XML
 
-- [Introducing LINQ to XML](#introducing-linq-to-xml)
-- [Generating XML using LINQ to XML](#generating-xml-using-linq-to-xml)
-- [Reading XML using LINQ to XML](#reading-xml-using-linq-to-xml)
+- [Working with LINQ to XML](#working-with-linq-to-xml)
+  - [Introducing LINQ to XML](#introducing-linq-to-xml)
+  - [Generating XML using LINQ to XML](#generating-xml-using-linq-to-xml)
+  - [Reading XML using LINQ to XML](#reading-xml-using-linq-to-xml)
 
 
-# Introducing LINQ to XML
+## Introducing LINQ to XML
 
 LINQ to XML is a LINQ provider that allows you to query and manipulate XML.
 
-# Generating XML using LINQ to XML
+## Generating XML using LINQ to XML
 
 Let's create a method to convert the Products table into XML:
 
@@ -53,7 +54,7 @@ static void OutputProductsAsXml()
 ...
 ```
 
-# Reading XML using LINQ to XML
+## Reading XML using LINQ to XML
 
 You might want to use LINQ to XML to easily query or process XML files:
 

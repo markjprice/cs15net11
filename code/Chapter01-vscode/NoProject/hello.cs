@@ -1,1 +1,1 @@
-Console.WriteLine("Hello World with no project file!");
+Console.WriteLine("Hello C# with no project file!");

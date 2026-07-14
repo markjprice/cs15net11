@@ -43,7 +43,9 @@ partial class Program
       "OR" or "AK" or "MT" => 0.0M, // Oregon, Alaska, Montana
       "ND" or "WI" or "ME" or "VA" => 0.05M,
       "CA" => 0.0825M, // California
-      _ => 0.06M // Most other states.
+      _ => throw new ArgumentException(
+        $"Unsupported region code: {twoLetterRegionCode}",
+        nameof(twoLetterRegionCode))
     };
 
     return amount * rate;

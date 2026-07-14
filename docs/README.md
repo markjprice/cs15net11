@@ -38,6 +38,7 @@ This documentation section of the repository contains links to all the optional 
 - [Special real number values](ch02-special-real-numbers.md)
 - [Getting and setting the default values for types](ch02-defaults.md)
 - [Dynamic types](ch02-dynamic.md)
+- [What does `new` do?](ch02-what-does-new-do.md)
 - [Custom number formatting](ch02-custom-formatting.md)
 - [Passing arguments to a console app](ch02-arguments.md)
 - [Handling platforms that do not support an API](ch02-api-unsupported-platforms.md)

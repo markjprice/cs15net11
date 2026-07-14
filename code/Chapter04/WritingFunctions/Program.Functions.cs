@@ -30,7 +30,9 @@ partial class Program
   static decimal CalculateTax(
     decimal amount, string twoLetterRegionCode)
   {
-    twoLetterRegionCode = twoLetterRegionCode.Trim().ToUpper();
+    twoLetterRegionCode = twoLetterRegionCode
+      .Trim()
+      .ToUpperInvariant();
 
     decimal rate = twoLetterRegionCode switch
     {

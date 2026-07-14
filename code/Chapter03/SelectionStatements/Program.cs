@@ -64,14 +64,17 @@ WriteLine($"After A_label");
 
 var animals = new Animal?[]
 {
-  new Cat { Name = "Karen", Born = new(year: 2022, month: 8, 
-    day: 23), Legs = 4, IsDomestic = true },
+  new Cat { Name = "Karen", Born = new(
+    year: 2022, month: 8, day: 23), 
+    Legs = 4, IsDomestic = true },
   null,
-  new Cat { Name = "Mufasa", Born = new(year: 1994, month: 6, 
-    day: 12) },
-  new Spider { Name = "Sid Vicious", Born = DateTime.Today,
-    IsPoisonous = true},
-  new Spider { Name = "Captain Furry", Born = DateTime.Today }
+  new Cat { Name = "Mufasa", Born = new(
+    year: 1994, month: 6, day: 12) },
+  new Spider { Name = "Sid Vicious", Born = new(
+    year: 1974, month: 3, day: 14),
+    IsVenomous = true},
+  new Spider { Name = "Captain Furry", Born = new(
+    year: 1949, month: 3, day: 25) }
 };
 
 foreach (Animal? animal in animals)
@@ -80,37 +83,37 @@ foreach (Animal? animal in animals)
 
   switch (animal)
   {
-    case Cat fourLeggedCat when fourLeggedCat.Legs == 4:
+    case Cat { Legs: 4 } fourLeggedCat:
       message = $"The cat named {fourLeggedCat.Name} has four legs.";
       break;
-    case Cat wildCat when wildCat.IsDomestic == false:
+    case Cat { IsDomestic: false } wildCat:
       message = $"The non-domestic cat is named {wildCat.Name}.";
       break;
     case Cat cat:
       message = $"The cat is named {cat.Name}.";
       break;
+    case null:
+      message = "The animal is null.";
+      break;
     default: // default is always evaluated last.
       message = $"{animal.Name} is a {animal.GetType().Name}.";
       break;
-    case Spider spider when spider.IsPoisonous:
-      message = $"The {spider.Name} spider is poisonous. Run!";
-      break;
-    case null:
-      message = "The animal is null.";
+    case Spider { IsVenomous: true } venomousSpider:
+      message = $"The {venomousSpider.Name} spider is venomous. Run!";
       break;
   }
   WriteLine($"switch statement: {message}");
 
   message = animal switch
   {
-    Cat fourLeggedCat when fourLeggedCat.Legs == 4
+    Cat { Legs: 4 } fourLeggedCat
       => $"The cat named {fourLeggedCat.Name} has four legs.",
-    Cat wildCat when wildCat.IsDomestic == false
+    Cat { IsDomestic: false } wildCat
       => $"The non-domestic cat is named {wildCat.Name}.",
     Cat cat
       => $"The cat is named {cat.Name}.",
-    Spider spider when spider.IsPoisonous
-      => $"The {spider.Name} spider is poisonous. Run!",
+    Spider { IsVenomous: true } venomousSpider
+      => $"The {venomousSpider.Name} spider is venomous. Run!",
     null
       => "The animal is null.",
     _

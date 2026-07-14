@@ -1,5 +1,4 @@
 ﻿using Packt.Shared; // To use Person.
-using Dumpify; // To use the Dump extension method.
 
 using Fruit = (string Name, int Number); // Aliasing a tuple type.
 
@@ -90,10 +89,7 @@ Person alfred = new Person();
 alfred.Name = "Alfred";
 bob.Children.Add(alfred);
 
-// Works with C# 3 and later.
-bob.Children.Add(new Person { Name = "Bella" });
-
-// Works with C# 9 and later.
+bob.Children.Add(new() { Name = "Bella" });
 bob.Children.Add(new() { Name = "Zoe" });
 
 WriteLine($"{bob.Name} has {bob.Children.Count} children:");
@@ -147,16 +143,6 @@ WriteLine($"{bob.Name} was born on {bob.HomePlanet}.");
 
 #endregion
 
-#region Outputting an object's state using Dumpify
-
-bob.Dump(label: "Default output");
-
-bob.Dump(label: "Include fields and non-public members",
-  members: new MembersConfig { IncludeFields = true, 
-    IncludeNonPublicMembers = true });
-
-#endregion
-
 #region Requiring fields to be set during instantiation
 
 /* 
@@ -164,15 +150,15 @@ bob.Dump(label: "Include fields and non-public members",
 Book book = new()
 {
   Isbn = "978-1803237800",
-  Title = "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals"
+  Title = "C# 15 and .NET 11 - Modern Cross-Platform Development Fundamentals"
 };
 */
 
 Book book = new(isbn: "978-1803237800",
-  title: "C# 12 and .NET 8 - Modern Cross-Platform Development Fundamentals")
+  title: "C# 15 and .NET 11 - Modern Cross-Platform Development Fundamentals")
 {
   Author = "Mark J. Price",
-  PageCount = 821
+  PageCount = 721
 };
 
 WriteLine("{0}: {1} written by {2} has {3:N0} pages.",
@@ -220,17 +206,18 @@ WriteLine(bob.SayHello("Emily"));
 
 #region Passing optional parameters
 
-WriteLine(bob.OptionalParameters(3));
+WriteLine(bob.DescribeJourney(5));
 
-WriteLine(bob.OptionalParameters(3, "Jump!", 98.5));
+WriteLine(bob.DescribeJourney(8, "work", 45.0));
 
 #endregion
 
 #region Naming parameter values when calling methods
 
-WriteLine(bob.OptionalParameters(3, number: 52.7, command: "Hide!"));
+WriteLine(bob.DescribeJourney(speed: 52.7,
+  destination: "stadium", distance: 20));
 
-WriteLine(bob.OptionalParameters(3, "Poke!", active: false));
+WriteLine(bob.DescribeJourney(12, "Starbucks", includeUnits: false));
 
 #endregion
 
@@ -381,7 +368,16 @@ WriteLine($"Sam's first child is {sam[0].Name}.");
 WriteLine($"Sam's second child is {sam[1].Name}.");
 
 // Get using the string indexer.
-WriteLine($"Sam's child named Ella is {sam["Ella"].Age} years old.");
+Person? ella = sam["Ella"];
+
+if (ella is not null)
+{
+  WriteLine($"Sam's child named {ella.Name} is {ella.Age} years old.");
+}
+else
+{
+  WriteLine("Sam does not have a child named Ella.");
+}
 
 #endregion
 
@@ -400,12 +396,6 @@ foreach (Passenger passenger in passengers)
 {
   decimal flightCost = passenger switch
   {
-    /* C# 8 syntax
-    FirstClassPassenger p when p.AirMiles > 35_000 => 1_500M,
-    FirstClassPassenger p when p.AirMiles > 15_000 => 1_750M,
-    FirstClassPassenger _                          => 2_000M,*/
-
-    // C# 9 or later syntax
     FirstClassPassenger p => p.AirMiles switch
     {
       > 35_000 => 1_500M,

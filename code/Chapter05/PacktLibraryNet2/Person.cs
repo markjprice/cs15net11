@@ -64,15 +64,17 @@ public partial class Person : object
     return $"{Name} says 'Hello, {name}!'";
   }
 
-  public string OptionalParameters(int count,
-    string command = "Run!",
-    double number = 0.0, bool active = true)
+  public string DescribeJourney(
+    int distance,
+    string destination = "home",
+    double speed = 30.0,
+    bool includeUnits = true)
   {
     return string.Format(
-      format: "command is {0}, number is {1}, active is {2}",
-      arg0: command,
-      arg1: number,
-      arg2: active);
+      format: "destination is {1}, speed is {2}, includeUnits is {3}",
+      arg0: destination, 
+      arg1: speed, 
+      arg2: includeUnits);
   }
 
   public void PassingParameters(int w, in int x, ref int y, out int z)
@@ -95,7 +97,7 @@ public partial class Person : object
   {
     int total = 0;
 
-    foreach(int number in numbers)
+    foreach (int number in numbers)
     {
       total += number;
     }

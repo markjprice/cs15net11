@@ -6,7 +6,7 @@ public partial class Person
 {
   #region Properties: Methods to get and/or set data or state.
 
-  // A readonly property defined using C# 1 to 5 syntax.
+  // A readonly property defined getter syntax.
   public string Origin
   {
     get
@@ -16,14 +16,29 @@ public partial class Person
     }
   }
 
-  // Two readonly properties defined using C# 6 or later 
-  // lambda expression body syntax.
+  // Two readonly properties defined using lambda expression body syntax.
 
   public string Greeting => $"{Name} says 'Hello!'";
 
-  public int Age => DateTime.Today.Year - Born.Year;
+  public int Age
+  {
+    get
+    {
+      DateTime today = DateTime.Today;
+      DateTime birthday = Born.Date;
 
-  // A read-write property defined using C# 3 auto-syntax.
+      int age = today.Year - birthday.Year;
+
+      if (birthday > today.AddYears(-age))
+      {
+        age--;
+      }
+
+      return age;
+    }
+  }
+
+  // A read-write property defined using auto-property syntax.
   public string? FavoriteIceCream { get; set; }
 
   // A private backing field to store the property value.

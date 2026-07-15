@@ -1,7 +1,8 @@
-**New features in ASP.NET Core**
+# New features in ASP.NET Core
 
 If you already have some familiarity with older versions of ASP.NET and are excited to find out about the new features in the most recent versions of ASP.NET Core, then I have made it easier for you to jump around by listing ASP.NET Core versions and their important new features below, along with the chapter number and topic title where you can learn about them.
 
+- [New features in ASP.NET Core](#new-features-in-aspnet-core)
 - [ASP.NET Core 1.0, June 2016](#aspnet-core-10-june-2016)
 - [ASP.NET Core 1.1, November 2016](#aspnet-core-11-november-2016)
 - [ASP.NET Core 2.0, August 2017](#aspnet-core-20-august-2017)

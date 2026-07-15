@@ -1,7 +1,8 @@
-**Implementing asynchronous operations**
+# Implementing asynchronous operations
 
 You implemented the endpoints, most of which return a `Task<IResult>`, but only some will call `await` within the method implementation and therefore need to be decorated with `async`. Let’s see why.
 
+- [Implementing asynchronous operations](#implementing-asynchronous-operations)
 - [When to call `await` inside a method](#when-to-call-await-inside-a-method)
 - [When to return a task without `await`](#when-to-return-a-task-without-await)
 - [When to decorate a method with `async`](#when-to-decorate-a-method-with-async)

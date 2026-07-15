@@ -1,7 +1,8 @@
-**Implementing advanced features for web services**
+# Implementing advanced features for web services
 
 Now that you have seen the fundamentals of building a web service and then calling it from a client, let's look at some more advanced features.
 
+- [Implementing advanced features for web services](#implementing-advanced-features-for-web-services)
 - [Implementing a Health Check API](#implementing-a-health-check-api)
 - [Implementing Open API analyzers and conventions](#implementing-open-api-analyzers-and-conventions)
 - [Adding security HTTP headers](#adding-security-http-headers)

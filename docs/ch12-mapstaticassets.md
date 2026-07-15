@@ -1,3 +1,9 @@
+- [Page 673 - Enabling static and default files](#page-673---enabling-static-and-default-files)
+  - [Issue 1: Browsers failing to decode compressed files due to corruption because other features modify the response stream](#issue-1-browsers-failing-to-decode-compressed-files-due-to-corruption-because-other-features-modify-the-response-stream)
+  - [Issue 2: Simulating a "Production" environment cannot find the correct compressed files](#issue-2-simulating-a-production-environment-cannot-find-the-correct-compressed-files)
+  - [Visual Studio features that dynamically inject into HTML files](#visual-studio-features-that-dynamically-inject-into-html-files)
+
+
 # Page 673 - Enabling static and default files
 
 In Step 1, I wrote, "add statements after enabling HTTPS redirection to enable static files and default files" with the following code:

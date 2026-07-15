@@ -1,5 +1,6 @@
-**Enabling HTTP/3 and request decompression support**
+# Enabling HTTP/3 and request decompression support
 
+- [Enabling HTTP/3 and request decompression support](#enabling-http3-and-request-decompression-support)
 - [Introducing HTTP/3](#introducing-http3)
 - [Enabling HTTP/3 support](#enabling-http3-support)
 - [Testing if HTTP/3 is enabled](#testing-if-http3-is-enabled)

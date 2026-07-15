@@ -1,22 +1,22 @@
 # Using multiple threads with parallel LINQ
 
 - [Using multiple threads with parallel LINQ](#using-multiple-threads-with-parallel-linq)
-  - [Introducing Parallel LINQ](#introducing-parallel-linq)
+- [Introducing Parallel LINQ](#introducing-parallel-linq)
 - [Creating an app that benefits from multiple threads](#creating-an-app-that-benefits-from-multiple-threads)
-    - [Using Windows](#using-windows)
-    - [Using macOS](#using-macos)
-    - [For all operating systems](#for-all-operating-systems)
-  - [Why should you avoid calling AsParallel in IEnumerable objects?](#why-should-you-avoid-calling-asparallel-in-ienumerable-objects)
-    - [Why `AsParallel` exists on `IEnumerable<T>` at all](#why-asparallel-exists-on-ienumerablet-at-all)
-    - [Why `IList<T>` matters for performance](#why-ilistt-matters-for-performance)
-    - [Case A: Indexable collections like `IList<T>`](#case-a-indexable-collections-like-ilistt)
-    - [Case B: Streaming enumerables](#case-b-streaming-enumerables)
-  - [Guidance for using `AsParallel`](#guidance-for-using-asparallel)
-  - [Alternative to PLINQ](#alternative-to-plinq)
-  - [Summary](#summary)
+  - [Using Windows](#using-windows)
+  - [Using macOS](#using-macos)
+  - [For all operating systems](#for-all-operating-systems)
+- [Why should you avoid calling AsParallel in IEnumerable objects?](#why-should-you-avoid-calling-asparallel-in-ienumerable-objects)
+  - [Why `AsParallel` exists on `IEnumerable<T>` at all](#why-asparallel-exists-on-ienumerablet-at-all)
+  - [Why `IList<T>` matters for performance](#why-ilistt-matters-for-performance)
+  - [Case A: Indexable collections like `IList<T>`](#case-a-indexable-collections-like-ilistt)
+  - [Case B: Streaming enumerables](#case-b-streaming-enumerables)
+- [Guidance for using `AsParallel`](#guidance-for-using-asparallel)
+- [Alternative to PLINQ](#alternative-to-plinq)
+- [Summary](#summary)
 
 
-## Introducing Parallel LINQ
+# Introducing Parallel LINQ
 
 By default, only one thread is used to execute a LINQ query. **Parallel LINQ (PLINQ)** is an easy way to enable multiple threads to execute a LINQ query.
 
@@ -72,7 +72,7 @@ static int Fibonacci(int term) =>
 
 3.	Run the console app, but do not press *Enter* to start the stopwatch yet because we need to make sure a monitoring tool is showing processor activity.
 
-### Using Windows
+## Using Windows
 
 If you are using Windows:
 
@@ -81,7 +81,7 @@ If you are using Windows:
 3.	At the top of the **Task Manager** window, click on the **Performance** tab.
 4.	Right-click on the **CPU Utilization** graph, select **Change graph to**, and then select **Logical processors**.
 
-### Using macOS
+## Using macOS
 
 If you are using macOS:
 
@@ -89,7 +89,7 @@ If you are using macOS:
 2.	Navigate to **View** | **Update Frequency Very often (1 sec)**.
 3.	To see the CPU graphs, navigate to **Window** | **CPU History**.
 
-### For all operating systems
+## For all operating systems
 
 If you are using Windows, macOS, or any other OS:
 
@@ -123,11 +123,11 @@ Results: 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1,597 2,584 4,181 6,76
 
 5.	The monitoring tool should show that all CPUs were used equally to execute the LINQ query and note that none of the logical processors max out at 100% because the work is more evenly spread.
 
-## Why should you avoid calling AsParallel in IEnumerable<T> objects?
+# Why should you avoid calling AsParallel in IEnumerable<T> objects?
 
 This one trips .NET developers up, including me, because the API design and the performance guidance are mismatched. The bottom line is that `AsParallel` is defined on `IEnumerable<T>` for usability and composability, not because every `IEnumerable<T>` is a good idea to parallelize from a performance perspective.
 
-### Why `AsParallel` exists on `IEnumerable<T>` at all
+## Why `AsParallel` exists on `IEnumerable<T>` at all
 
 PLINQ is designed to sit naturally on top of LINQ. LINQ’s entire ecosystem is built around `IEnumerable<T>`. If `AsParallel` only worked on `IList<T>`, it would break a huge amount of existing LINQ code and force awkward casts everywhere. If `AsParallel` required `IList<T>`, the moment you used `Where` or `Select`, you would lose that type and be blocked. That would be a terrible developer experience.
 
@@ -135,11 +135,11 @@ So Microsoft made a very deliberate choice:
 - **Correctness**: Any `IEnumerable<T>` can be parallelized safely.
 - **Performance**: Some `IEnumerable<T>` implementations are dramatically better than others.
 
-### Why `IList<T>` matters for performance
+## Why `IList<T>` matters for performance
 
 Parallel execution needs to split work into chunks. This is called partitioning. There are two broad cases.
 
-### Case A: Indexable collections like `IList<T>`
+## Case A: Indexable collections like `IList<T>`
 
 Examples:
 - `List<T>`
@@ -152,7 +152,7 @@ These support:
 
 PLINQ can partition these up front into contiguous ranges. Thread 1 gets items 0–999, thread 2 gets 1000–1999, etc. This is cheap, predictable, cache-friendly, and fast.
 
-### Case B: Streaming enumerables
+## Case B: Streaming enumerables
 
 Examples:
 - `Enumerable.Range`
@@ -166,7 +166,7 @@ In these scenarios, PLINQ must use a dynamic partitioner, which means that threa
 
 If you directly use the result of calling `Enumerable.Range`, then PLINQ ends up wrapping it in a dynamic partitioner. The overhead can exceed the cost of the work unless each element does something heavy. That's why our code calls `ToList` to create a data structure that supports `Count` and indexing before processing the numbers.
 
-## Guidance for using `AsParallel`
+# Guidance for using `AsParallel`
 
 Use `AsParallel` when at least one of these is true:
 - The per-item work is expensive, not just arithmetic
@@ -177,7 +177,7 @@ Otherwise, you are probably slowing things down. And yes, this means that using 
 
 PLINQ is massively overused for trivial workloads. People see parallel and assume faster. That is not how it works. Coordination costs real money in CPU terms.
 
-## Alternative to PLINQ
+# Alternative to PLINQ
 
 If your workload really is numeric and index-based, skip PLINQ and do this instead:
 ```cs
@@ -191,7 +191,7 @@ That API is built exactly for this scenario and avoids the enumerable abstractio
 
 > You can learn more about `Parallel.For` method at the following link: https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.parallel.for
 
-## Summary
+# Summary
 
 `AsParallel` extends `IEnumerable<T>` because LINQ composability matters more than performance guarantees, and the advice to only use `AsParallel` on `IList<T>` sequences is about avoiding slow partitioning, not about correctness or API validity.
 

@@ -1,5 +1,8 @@
-**Configuring services and the HTTP request pipeline**
+# Configuring services and the HTTP request pipeline
 
+Now that we have built a website that reads and writes to a database, we will return to the website configuration and review how services and the HTTP request pipeline work in more detail.
+
+- [Configuring services and the HTTP request pipeline](#configuring-services-and-the-http-request-pipeline)
 - [Understanding endpoint routing](#understanding-endpoint-routing)
 - [Configuring endpoint routing](#configuring-endpoint-routing)
 - [Reviewing the endpoint routing configuration in our project](#reviewing-the-endpoint-routing-configuration-in-our-project)
@@ -8,8 +11,6 @@
 - [Visualizing the HTTP pipeline](#visualizing-the-http-pipeline)
 - [Implementing an anonymous inline delegate as middleware](#implementing-an-anonymous-inline-delegate-as-middleware)
 
-
-Now that we have built a website that reads and writes to a database, we will return to the website configuration and review how services and the HTTP request pipeline work in more detail.
 
 # Understanding endpoint routing
 

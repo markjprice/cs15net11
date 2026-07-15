@@ -1,12 +1,12 @@
-**Understanding web development**
+# Understanding web development
 
+Developing for the web means developing with the **Hypertext Transfer Protocol (HTTP)**, so we will start by reviewing this important foundational technology.
+
+- [Understanding web development](#understanding-web-development)
 - [Understanding the Hypertext Transfer Protocol](#understanding-the-hypertext-transfer-protocol)
 - [Understanding the components of a URL](#understanding-the-components-of-a-url)
 - [Using Google Chrome to make HTTP requests](#using-google-chrome-to-make-http-requests)
 - [Understanding client-side web development technologies](#understanding-client-side-web-development-technologies)
-
-
-Developing for the web means developing with the **Hypertext Transfer Protocol (HTTP)**, so we will start by reviewing this important foundational technology.
 
 # Understanding the Hypertext Transfer Protocol
 

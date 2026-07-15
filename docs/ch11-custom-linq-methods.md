@@ -1,11 +1,11 @@
 # Creating your own LINQ extension methods
 
 - [Creating your own LINQ extension methods](#creating-your-own-linq-extension-methods)
-  - [Introducing custom LINQ extension methods](#introducing-custom-linq-extension-methods)
-  - [Trying the chainable extension method](#trying-the-chainable-extension-method)
-  - [Trying the mode and median methods](#trying-the-mode-and-median-methods)
+- [Introducing custom LINQ extension methods](#introducing-custom-linq-extension-methods)
+- [Trying the chainable extension method](#trying-the-chainable-extension-method)
+- [Trying the mode and median methods](#trying-the-mode-and-median-methods)
 
-## Introducing custom LINQ extension methods
+# Introducing custom LINQ extension methods
 
 In *Chapter 6, Implementing Interfaces and Inheriting Classes*, you learned how to create your own extension methods. To create LINQ extension methods, all you must do is extend the `IEnumerable<T>` type.
 
@@ -116,7 +116,7 @@ Since this class is in a separate class library, to use your LINQ extension meth
 
 > **Warning!** All but one of the above extension methods cannot be used with `IQueryable` sequences like those used by **LINQ to SQLite** or **LINQ to SQL Server**, because we have not implemented a way to translate our code into the underlying query language like SQL.
 
-## Trying the chainable extension method
+# Trying the chainable extension method
 
 First, we will try chaining the ProcessSequence method with other extension methods:
 
@@ -141,7 +141,7 @@ IQueryable<Product> filteredProducts = processedProducts
 4.	In `Program.cs`, uncomment the `FilterAndSort` method and comment out any calls to other methods.
 5.	Run the code and note that you see the same output as before because your method doesn't modify the sequence. But you now know how to extend a LINQ expression with your own functionality.
 
-## Trying the mode and median methods
+# Trying the mode and median methods
 
 Next, we will try using the `Mode` and `Median` methods to calculate other kinds of average:
 

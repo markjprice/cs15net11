@@ -1,7 +1,8 @@
-**Enabling client-side execution using WebAssembly**
+# Enabling client-side execution using WebAssembly
 
 Now we will implement similar functionality that runs in the browser using WebAssembly so that you can clearly see the key differences.
 
+- [Enabling client-side execution using WebAssembly](#enabling-client-side-execution-using-webassembly)
 - [Abstracting the service](#abstracting-the-service)
 - [Creating a client-side Blazor components project](#creating-a-client-side-blazor-components-project)
 - [Creating a client-side service implementation](#creating-a-client-side-service-implementation)

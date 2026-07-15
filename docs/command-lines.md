@@ -1,9 +1,10 @@
-**Command-Lines**
+# Command-Lines
 
 To make it easier to enter commands at the prompt, this page lists all commands as a single line that can be copied and pasted.
 
 > Note: Page numbers will be updated once the final print files are made available to me in November 2025.
 
+- [Command-Lines](#command-lines)
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
   - [Page 13 - Installing other extensions](#page-13---installing-other-extensions)
   - [Page 18 - Listing and removing versions of .NET](#page-18---listing-and-removing-versions-of-net)

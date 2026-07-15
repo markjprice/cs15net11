@@ -1,9 +1,9 @@
 # Aggregating and paging sequences
 
 - [Aggregating and paging sequences](#aggregating-and-paging-sequences)
-  - [Checking for an empty sequence](#checking-for-an-empty-sequence)
-  - [Be careful with Count!](#be-careful-with-count)
-  - [Paging with LINQ](#paging-with-linq)
+- [Checking for an empty sequence](#checking-for-an-empty-sequence)
+- [Be careful with Count!](#be-careful-with-count)
+- [Paging with LINQ](#paging-with-linq)
 
 
 There are LINQ extension methods to perform aggregation functions, such as `Average` and `Sum`. Let's write some code to see some of these methods in action, aggregating information from the `Products` table:
@@ -82,7 +82,7 @@ Average unit price:           $28.87
 Value of units in stock:  $74,050.85
 ```
 
-## Checking for an empty sequence
+# Checking for an empty sequence
 
 There are multiple ways to check if a sequence is empty or it contains any items:
 - Call the LINQ `Count()` method and see if it is greater than zero. This is sometimes the worst way if it must enumerate the whole sequence to count the items. You will see more about this in the next section. But as we saw when we used ILSpy to decompile the `Count()` method implementation, it is smart enough to check if the sequence implements `ICollection` or `ICollection<T>` and therefore has a more efficient `Count` property that it can use.
@@ -90,7 +90,7 @@ There are multiple ways to check if a sequence is empty or it contains any items
 - Get the sequence's `Count` property (if it has one) and see if it is greater than zero. Any sequence that implements `ICollection` or `ICollection<T>` will have a `Count` property.
 - Get the sequence's `Length` property (if it has one) and see if it is greater than zero. Any array will have a `Length` property.
 
-## Be careful with Count!
+# Be careful with Count!
 
 Amichai Mantinband is a software engineer at Microsoft, and he does a great job of highlighting interesting parts of the C# and .NET developer stack.
 
@@ -139,7 +139,7 @@ So, the best answer to Amichai's teaser is "Something else."
 
 > **Good Practice**: Be careful when calling LINQ extension methods like `Count()` that need to enumerate over the sequence to calculate their return value. Even if you are not working with a sequence of executable objects like tasks, re-enumerating the sequence is likely to be inefficient.
 
-## Paging with LINQ
+# Paging with LINQ
 
 Let's see how we could implement paging using the Skip and Take extension methods:
 1.	In `Program.Functions.cs`, add a method to output to the console a table of products passed as an array, as shown in the following code:

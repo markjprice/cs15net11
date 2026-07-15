@@ -1,8 +1,14 @@
 # Understanding web development
 
+- [Understanding web development](#understanding-web-development)
+- [Understanding the Hypertext Transfer Protocol](#understanding-the-hypertext-transfer-protocol)
+- [Understanding the components of a URL](#understanding-the-components-of-a-url)
+- [Using Google Chrome to make HTTP requests](#using-google-chrome-to-make-http-requests)
+- [Understanding client-side web development technologies](#understanding-client-side-web-development-technologies)
+
 Developing for the web means developing with the **Hypertext Transfer Protocol (HTTP)**, so we will start by reviewing this important foundational technology.
 
-## Understanding the Hypertext Transfer Protocol
+# Understanding the Hypertext Transfer Protocol
 
 To communicate with a web server, the client, also known as the user agent, makes calls over the network using HTTP. As such, HTTP is the technical underpinning of the web. So when we talk about websites and web services, we mean that they use HTTP to communicate between a client (often a web browser) and a server.
 
@@ -15,7 +21,7 @@ You can use Google Chrome and other browsers to record requests and responses.
 
 > **Good Practice**: Google Chrome is currently used by about two-thirds of website visitors worldwide, and it has powerful, built-in developer tools, so it is a good first choice for trying out your websites. Try out your websites with Chrome and at least two other browsers, for example, Firefox and Safari for macOS and iPhone, respectively. Microsoft Edge switched from using Microsoft’s own rendering engine to using Chromium in 2019, so it is less important to try out with it, although some say Edge has the best developer tools. If Microsoft’s Internet Explorer is used at all, it tends to mostly be inside organizations for intranets.
 
-## Understanding the components of a URL
+# Understanding the components of a URL
 
 A URL is made up of several components:
 
@@ -28,7 +34,7 @@ A URL is made up of several components:
 
 A URL is a subset of a **Uniform Resource Identifier (URI)**. A URL specifies where a resource is located and how to get it. A URI identifies a resource either by the URL or **URN (Uniform Resource Name)**.
 
-## Using Google Chrome to make HTTP requests
+# Using Google Chrome to make HTTP requests
 
 Let’s explore how to use Google Chrome to make HTTP requests:
 1.	Start Google Chrome.
@@ -60,7 +66,7 @@ Note the following aspects:
 
 7.	Close Chrome.
 
-## Understanding client-side web development technologies
+# Understanding client-side web development technologies
 
 When building websites, a developer needs to know more than just C# and .NET. On the client (that is, in the web browser), you will use a combination of the following technologies:
 - **HTML5**: This is used for the content and structure of a web page.
@@ -76,6 +82,6 @@ Although HTML5, CSS3, and JavaScript are the fundamental components of frontend 
 All these higher-level technologies ultimately translate or compile to the underlying three core technologies, so they work across all modern browsers.
 
 As part of the build and deploy process, you will likely use technologies such as:
-- Node.js, a framework for server-side development using JavaScript
-- Node Package Manager (npm) and Yarn, both client-side package managers
-- webpack, a popular module bundler and a tool for compiling, transforming, and bundling website source files
+- **Node.js**, a framework for server-side development using JavaScript
+- **Node Package Manager (npm)** and **Yarn**, both client-side package managers
+- **webpack**, a popular module bundler and a tool for compiling, transforming, and bundling website source files

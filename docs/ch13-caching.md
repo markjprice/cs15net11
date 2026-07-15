@@ -1,6 +1,12 @@
-**In-memory, distributed, and hybrid caches**
+# In-memory, distributed, and hybrid caches
 
 Now let’s see an overview of in-memory, distributed, and hybrid caching.
+
+- [In-memory, distributed, and hybrid caches](#in-memory-distributed-and-hybrid-caches)
+- [In-memory caching](#in-memory-caching)
+- [Distributed caching](#distributed-caching)
+- [Hybrid caching](#hybrid-caching)
+
 
 # In-memory caching
 

@@ -109,6 +109,7 @@ This documentation section of the repository contains links to all the optional 
 - [Understanding legacy Entity Framework](ch10-legacy-ef.md)
 - [Structuring Projects](ch10-structuring-projects.md)
 - [Entity-Relationship Diagram for Northwind](ch11-er-diagram.md)
+- [Validating asynchronously with DataAnnotations](ch10-async-validation.md)
 - [Why the EF Core CLI cannot use data annotations for everything](ch10-data-annotations.md)
 - [Loading and tracking patterns with EF Core](ch11-loading-tracking.md)
 - [Modifying data with EF Core](ch11-modifying.md)

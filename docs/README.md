@@ -98,6 +98,7 @@ This documentation section of the repository contains links to all the optional 
 - [Compressing streams](ch09-compression.md)
 - [Working with Tar archives](ch09-tar-archives.md)
 - [Reading and writing with random access handles](ch09-random-access-handles.md)
+- [Handling ambiguous union cases](ch09-ambiguous-unions.md)
 - [Serializing object graphs as XML](ch09-serializing-xml.md)
 - [JSON Patch implementation improvements](ch09-json-patch.md)
 - [Parsing structured text files with `TextFieldParser`](ch09-textfieldparser.md)

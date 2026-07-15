@@ -74,20 +74,63 @@
 - Rewrote the *Rethrowing exceptions* subsection to make it clearer, for example, by separating the code blocks for the three ways to catch and throw an exception.
 
 ## Chapter 5
-- 
+- Reorganized the subsection, *Categorizing members by technical type*, and added a new subsection, *Categorizing members by behavior*
+- In the *Passing optional parameters* subsection, I renamed the `OptionalParameters` method to `DescribeJounrny` to make it more reaistic and fit with the `Person` class.
+- Added a new table to summarize options for passing parameters.
+- Added a new major section, *Modeling closed alternatives with union types and pattern matching*.
 
 ## Chapter 6
+- Moved the *Working with nullable values and references* section to be the first section after setting up the projects for this chapter because all the other sections benefit from the reader knowing how to handle `null` values.
+- Moved the *Understanding polymorphism* subsection earlier within its parent section to improve flow and reader understanding.
+- Added a new subsection, *Defining closed class hierarchies*.
 
 ## Chapter 7
+- Added a new figure to explain what each .NET layer does.
+- Moved the Central Package Management (CPM) and Package Source Mapping (PSM) theory sections from Chapter 11 to this chapter.
 
 ## Chapter 8
+- Added information about `System.Random` and its new generic numeric methods.
+- Added new subsections in the *Manipulating, comparing, and searching Unicode text* section about runes, *Working with Unicode characters using Rune*, *Searching and modifying strings using runes*, and *Working with user-perceived characters*.
+- Added a new subsection in the *Pattern matching with regular expressions* section titled *Avoiding excessive backtracking*.
+- Added new subsections in the *Storing multiple objects in collections* section, *Passing arguments to collection expressions* and *Using dictionary expressions[*.
 
 ## Chapter 9
+- Changed the chapter title to *Processes, Files, Streams, and Serialization*.
+- Added a major new section, *Working with processes and tasks*, with subsections like *Starting another program from C#*, *Avoiding blocked apps with Task, async, and await*, *Reading output safely as text, lines, or bytes*, *Timeouts, cancellation, and killing processes*, *Shells, arguments, security, and cross-platform behavior*, and *Understanding runtime async*.
+- Added new subsections to the *Reading and writing with streams* section, *Adapting memory and text to streams*, *Reading a string as an encoded stream*, and *Compressing data with Zstandard*.
+- Other APIs for compressing streams and archiving files have moved online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-compression.md
+- Added a new subsection to the *Serializing object graphs* section, *Serializing C# union types with System.Text.Json*.
+- Moved the XML serialization section online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-serializing-xml.md
+- Added an online only optional section, *Parsing structured text files with TextFieldParser*: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-textfieldparser.md
+- Moved the *JSON Patch implementation improvements* subsection online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-json-patch.md
+- Moved the warning about binary serialization using `BinaryFormatter` online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-binary-formatter.md
 
 ## Chapter 10
+- Moved the *Understanding legacy Entity Framework* subsection online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch10-legacy-ef.md
+- Moved the *Structuring and configuring .NET projects* section here from the previous edition's first web development chapter so that this data chapter can start building a shared solution named `WebData` for all projects used in Chapter 10 to Chapter 13. This section has subsections for setting up the solution, *Setting up Central Package Management* and *Enabling Package Source Mapping*.
+- The subsections in the previous edition that walked through manually creating entity models have been removed. The theory is still covered in the major section, *Defining EF Core models with conventions, annotations, and Fluent API*. Instead the chapter immediately covers *Scaffolding models from an existing database*. This saves a lot of unncecessary repeated reader activity and pages in the book.
+- In the database context logger class, I changed the filename to use dashes between the time parts (`"yyyy-MM-dd_HH-mm-ss"`) as well as between the date parts to make it easier to note when exactly the file was created. This helps solve issues with the database.
+- In the *If any of the tests fail* subsection I expanded the instructions to help readers diagnose issues if their unit tests for the EF Core model fail.
+- Added a figure to show the process of how C# LINQ builds an expression tree, EF Core translates it to provider-specific SQL, the database executes that SQL, and EF Core materializes rows back into objects.
+- Added a new subsection to the *Querying EF Core models with LINQ and raw SQL queries* section, *Using no-tracking queries for read-only data* to explain how to use the `AsNoTracking()` method to improve query performance.
+- Added a new online only section, *Top ten EF Core performance mistakes beginners make*: https://github.com/markjprice/cs15net11/blob/main/docs/ch10-ef-core-performance.md
 
 ## Chapter 11
+- Added a new subsection *Query comprehension syntax versus extension methods*.
+- Added a new subsection to the *Querying EF Core* titled *Understanding the LINQ provider boundary*.
+- Added a major new section titled *Exploring queries with LINQPad*, with subsections like *Downloading and installing LINQPad*, *Filtering and sorting sequences*, and *Projecting sequences into new types* that repeat coding tasks that the reader will have previously completed in a console app, but now in LINQPad. This shows them how much easier using LINQPad can be. In later sections, the reader is then encouraged to try all the LINQ they are taught in both a console app and in LINQPad. For topics like grouping and joining this is especially helpful because LINQPad shows the results visually, but the reader also sees how results would need to be process in an actual app.
 
 ## Chapter 12
+- Previous editions started the web development chapters with an empty ASP.NET Core project and manually added to it, feature by feature. Although there are good pedagogical reasons for presenting it that way, it's not how real-world web projects with .NET are created. In this edition, the reader starts with a working Blazor Web App project with all needed features enabled.
+- In the *Accessing EF Core through dependency injection*, I have switched from registering a transient-scoped `DbContext` to registering a `DbContextFactory` because that is better practice. In a traditional ASP.NET Core app as covered in the previous edition, a scoped database context usually works well because the scope lasts for one HTTP request. An interactive server-side Blazor component is different. After its initial HTTP request, the component can remain active in a server-side circuit while the user triggers many events.
+- In the Northwind database context extension method, I changed the algorithm to search upward through parent folders recursively to find the database file instead of specifying one path to look in. This makes connecting to the database more reliable and avoids common errors.
+- Added an online only optional section, *Keeping Blazor WebAssembly responsive with a Web Worker*: https://github.com/markjprice/cs15net11/blob/main/docs/ch12-web-worker.md
 
 ## Chapter 13
+- In the *Understanding HTTP requests and responses* section, I simplified the table and moved the full version online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch13-get-responses.md
+- Added a major new section, *Modeling business outcomes with a union*, with subsections including *Defining order-fulfillment logic using union types*, *Using the union class library in the web service*, and *Trying out the web service using HTTP/REST tools*.
+- Added an online only optional section about asynchronous validation with Minimal API web services: https://github.com/markjprice/cs15net11/blob/main/docs/ch13-async-validation.md
+- Added a new subsection, *Integration testing a web service*.
+- Added a new subsection, *Compressing HTTP content with Zstandard*.
+- Added a major new section, *Exposing application capabilities to AI clients with MCP*, with subsections like *MCP Server project template* and *Creating an MCP server for Northwind customers*.
+

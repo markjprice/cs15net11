@@ -17,10 +17,11 @@
 
 # What's New in the 11th Edition
 - There are hundreds of minor fixes and improvements throughout the 11th edition; too many to list individually. 
-- All [errata](https://github.com/markjprice/cs14net10/blob/main/docs/errata/errata.md) and [improvements](https://github.com/markjprice/cs14net10/blob/main/docs/errata/improvements.md) for the 10th edition (up to mid-September 2026) have been made to the 11th edition. 
-- The *Test your knowledge* questions at the end of each chapter have stayed the same for many editions. I have now reviewed, updated, and expanded them all.
+- All [errata](https://github.com/markjprice/cs14net10/blob/main/docs/errata/errata.md) and [improvements](https://github.com/markjprice/cs14net10/blob/main/docs/errata/improvements.md) for the 10th edition (up to mid-September 2026) have been made to the 11th edition.
+- Added about a dozen suggested prompts to each chapter to encourage readers to use their preferred AI chatbot to coach them to learn deeper in a responsible way.
+- The *Test your knowledge* questions at the end of each chapter have stayed the same for many editions. I have now reviewed, updated, and expanded them all, so there are now almost twice as many questions in the book.
 - Removed "version-to-version" commentary. In previous editions, I would often say which version of C# or .NET a feature was introduced. I now assume the reader will be using the version the book was written for and they do not care when a feature was introduced. I limit historic discussions and version-specific commentary to optional online-only sections.
-- Removed `, as shown in the following code/markup:`. Earlier Packt editors insisted that I always lead-in to code and commands, but this just adds about 1-2 pages of verbosity to every chapter so I've trimmed that out, unless I need to point out highlighted parts.
+- Removed `, as shown in the following code:`. Earlier Packt editors insisted that I always lead-in to code and commands, but this just adds about 1-2 pages of verbosity to every chapter so I've trimmed that out, unless I need to point out highlighted parts.
 - Moved some subsections that cover topics that are never used again in the book to become optional online-only in the book's GitHub repository (see details of which subsections below).
 
 > After publishing the 11th edition, any errata and improvements for the 10th edition will be duplicated in both the 10th and 11th edition [errata and improvements](https://github.com/markjprice/cs15net11/blob/main/docs/errata/README.md).
@@ -34,7 +35,8 @@
 - Updated the figures for .NET lifetime to emphasize the shared end-of-life dates of both .NET 10 and .NET 11. The most important reason is to counter the assumption that enterprise organizations should only target LTS releases. But .NET 10 projects could retarget to .NET 11 despite it being STS instead of LTS and still have the same EOL date.
 - Moved the sections about top-level programs to *Chapter 2* to avoid overwhelming beginners in their first chapter and avoid disrupting the flow of *Chapter 1*.
 - Moved the *Running a C# code file without a project file* to immediately after building the first two projects, and added *Splitting file-based apps across multiple files* and *Referencing another C# file as a library* subsections because these are new features in .NET 11.
-- Moved the *Getting help from documentation, communities, and AI* section from a PDF appendix in the 10th edition back into the print book to encourage more readers to actually read it, and added a *Coding assistants* subsection.
+- Moved the *Getting help from documentation, communities, and AI* section from a PDF appendix in the 10th edition back into the print book to encourage more readers to actually read it.
+- Added a *Coding assistants* subsection to introduce products like **Claude Code**, **ChatGPT Codex**, and **GitHub Copilot**, and how they are better than chatbots for programmers.
 
 ## Chapter 2
 - In the *Introducing C#, its compiler, and language versions* section, I removed rows from the tables for older now-irrelevant versions.
@@ -60,9 +62,19 @@
 - Moved the *Checking for overflow* section to be optional online-only: https://github.com/markjprice/cs15net11/blob/main/docs/ch03-overflow.md
 
 ## Chapter 4
-- 
+- Added more explanation about controlling cultures so the output of the coding tasks looks consistent for all readers.
+- Added more explanation about recursion to the *Calculating factorials with recursion* subsection to make it clearer how it works.
+- Added steps to add XML documentation to the `Factorial` function to show how to document the exceptions that a function might throw, and how to hover over the function call to see that.
+- Updated the screenshots of the debugging toolbar and windows to show the latest Visual Studio user interface changes.
+- Changed the variables names from `a` and `b` to `firstNumber` and `secondNumber` to follow good practice.
+- Update the *Finding bugs with xUnit unit testing* subsection to use **xUnit v3** instead of the now deprecated xUnit v2.
+- Added a subsection, *Testing frameworks, Microsoft Testing Platform, and xUnit*, to explain how Microsoft Testing Platform relates to xUnit.net.
+- Added a subsection, *xUnit versions and project templates*, to explain how to use xUnit.net v3.
+- Added a screenshot of the Visual Studio UI for the **xUnit Test Project** template to the *Creating an xUnit v3 test project* subsection to show how the reader can select the version and test runner.
+- Rewrote the *Rethrowing exceptions* subsection to make it clearer, for example, by separating the code blocks for the three ways to catch and throw an exception.
 
 ## Chapter 5
+- 
 
 ## Chapter 6
 

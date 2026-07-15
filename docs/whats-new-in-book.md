@@ -18,7 +18,7 @@
 # What's New in the 11th Edition
 - There are hundreds of minor fixes and improvements throughout the 11th edition; too many to list individually. 
 - All [errata](https://github.com/markjprice/cs14net10/blob/main/docs/errata/errata.md) and [improvements](https://github.com/markjprice/cs14net10/blob/main/docs/errata/improvements.md) for the 10th edition (up to mid-September 2026) have been made to the 11th edition.
-- Added about a dozen suggested prompts to each chapter to encourage readers to use their preferred AI chatbot to coach them to learn deeper in a responsible way.
+- Added about a dozen suggested [prompts](https://github.com/markjprice/cs15net11/blob/main/prompts/readme.md) to each chapter to encourage readers to use their preferred AI chatbot to coach them to learn deeper in a responsible way.
 - The *Test your knowledge* questions at the end of each chapter have stayed the same for many editions. I have now reviewed, updated, and expanded them all, so there are now almost twice as many questions in the book.
 - Removed "version-to-version" commentary. In previous editions, I would often say which version of C# or .NET a feature was introduced. I now assume the reader will be using the version the book was written for and they do not care when a feature was introduced. I limit historic discussions and version-specific commentary to optional online-only sections.
 - Removed `, as shown in the following code:`. Earlier Packt editors insisted that I always lead-in to code and commands, but this just adds about 1-2 pages of verbosity to every chapter so I've trimmed that out, unless I need to point out highlighted parts.

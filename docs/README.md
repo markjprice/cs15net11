@@ -133,6 +133,7 @@ This documentation section of the repository contains links to all the optional 
 - [New features in ASP.NET Core](ch11-features.md)
 - [ASP.NET Core common classes and methods](ch11-common-classes.md)
 - [Configuring services and the HTTP request pipeline](ch11-http-pipeline.md)
+- [Understanding automatic cross-origin CSRF protection](ch12-csrf-protection.md)
 - [Enabling HTTP/3 and request decompression support](ch11-enabling-http3.md)
 - [Understanding `MapStaticAssets`](ch11-mapstaticassets.md)
 - [Enabling client-side execution using WebAssembly](ch11-blazor-wasm.md)

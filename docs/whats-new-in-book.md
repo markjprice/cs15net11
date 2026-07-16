@@ -16,13 +16,13 @@
 > A major goal for the 11th edition is to reduce the page count of the print book so that we can (1) reduce the price and (2) reduce the physical size and weight. 
 
 # What's New in the 11th Edition
-- There are hundreds of minor fixes and improvements throughout the 11th edition; too many to list individually. 
-- All [errata](https://github.com/markjprice/cs14net10/blob/main/docs/errata/errata.md) and [improvements](https://github.com/markjprice/cs14net10/blob/main/docs/errata/improvements.md) for the 10th edition (up to mid-September 2026) have been made to the 11th edition.
+- There are hundreds of minor fixes and improvements throughout the 11th edition; too many to list individually.
 - Added about a dozen suggested [prompts](https://github.com/markjprice/cs15net11/blob/main/prompts/readme.md) to each chapter to encourage readers to use their preferred AI chatbot to coach them to learn deeper in a responsible way.
 - The *Test your knowledge* questions at the end of each chapter have stayed the same for many editions. I have now reviewed, updated, and expanded them all, so there are now almost twice as many questions in the book.
 - Removed "version-to-version" commentary. In previous editions, I would often say which version of C# or .NET a feature was introduced. I now assume the reader will be using the version the book was written for and they do not care when a feature was introduced. I limit historic discussions and version-specific commentary to optional online-only sections.
 - Removed `, as shown in the following code:`. Earlier Packt editors insisted that I always lead-in to code and commands, but this just adds about 1-2 pages of verbosity to every chapter so I've trimmed that out, unless I need to point out highlighted parts.
 - Moved some subsections that cover topics that are never used again in the book to become optional online-only in the book's GitHub repository (see details of which subsections below).
+- All [errata](https://github.com/markjprice/cs14net10/blob/main/docs/errata/errata.md) and [improvements](https://github.com/markjprice/cs14net10/blob/main/docs/errata/improvements.md) for the 10th edition (up to mid-September 2026) have been made to the 11th edition.
 
 > After publishing the 11th edition, any errata and improvements for the 10th edition will be duplicated in both the 10th and 11th edition [errata and improvements](https://github.com/markjprice/cs15net11/blob/main/docs/errata/README.md).
 
@@ -40,7 +40,7 @@
 
 ## Chapter 2
 - In the *Introducing C#, its compiler, and language versions* section, I removed rows from the tables for older now-irrelevant versions.
-- In the *Showing the compiler version* section, I created a new project called `Compiler` instead of using the old `Vocabulary` project that was used later in this chapter and has now been made optional. 
+- In the *Showing the compiler version* section, I created a new project called `Compiler` instead of using the old `Vocabulary` project that was used later in this chapter and has now been moved online only and made optional. 
 - Moved the *Revealing the extent of the C# vocabulary* section online-only with a box to explain it's optional, to avoid overwhelming beginners with example code that uses reflection which is not a beginner feature.
 - Added a *Importing namespaces* section that contains some of the implicit namespace discussion that used to be in *Chapter 1* as well as subsections that were already in *Chapter 2*, and updated the code and screenshots to show that the feature now also includes the `System.Net.Http.Json` namespace in console apps in .NET 11.
 - Added a new *Declaration, assignment, initialization, and instantiation* subsection to explain those terms.
@@ -65,6 +65,7 @@
 - Added more explanation about controlling cultures so the output of the coding tasks looks consistent for all readers.
 - Added more explanation about recursion to the *Calculating factorials with recursion* subsection to make it clearer how it works.
 - Added steps to add XML documentation to the `Factorial` function to show how to document the exceptions that a function might throw, and how to hover over the function call to see that.
+- Moved section about how to implement functions using a declarative, functional programming (FP) style online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch04-lambdas.md
 - Updated the screenshots of the debugging toolbar and windows to show the latest Visual Studio user interface changes.
 - Changed the variables names from `a` and `b` to `firstNumber` and `secondNumber` to follow good practice.
 - Update the *Finding bugs with xUnit unit testing* subsection to use **xUnit v3** instead of the now deprecated xUnit v2.
@@ -72,24 +73,42 @@
 - Added a subsection, *xUnit versions and project templates*, to explain how to use xUnit.net v3.
 - Added a screenshot of the Visual Studio UI for the **xUnit Test Project** template to the *Creating an xUnit v3 test project* subsection to show how the reader can select the version and test runner.
 - Rewrote the *Rethrowing exceptions* subsection to make it clearer, for example, by separating the code blocks for the three ways to catch and throw an exception.
+- Moved the *Patterns to avoid exceptions* section online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch04-try-pattern.md
 
 ## Chapter 5
 - Reorganized the subsection, *Categorizing members by technical type*, and added a new subsection, *Categorizing members by behavior*
+- Moved the subsection about type aliases online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch05-type-alias.md
 - In the *Passing optional parameters* subsection, I renamed the `OptionalParameters` method to `DescribeJounrny` to make it more reaistic and fit with the `Person` class.
 - Added a new table to summarize options for passing parameters.
+- Moved the subsection about when to change an enum base type for performance and other reasons online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch05-enum-base-type.md
+- Moved the subsection about defining a primary constructor online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch05-primary-constructor.md
+- Moved the subsection about validating properties online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch05-validating-properties.md
+- Moved the subsection about equality of other types online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch05-equality.md
+- Moved the subsection about local functions online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch05-local-functions.md
 - Added a new major section, *Modeling closed alternatives with union types and pattern matching*.
 
 ## Chapter 6
 - Moved the *Working with nullable values and references* section to be the first section after setting up the projects for this chapter because all the other sections benefit from the reader knowing how to handle `null` values.
+- Moved the subsection about comparing objects online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch06-comparing-objects.md
+- Moved the summary about custom type choices online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch06-summarizing-custom-types.md
+- Moved the section about delegates and events online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch06-events.md
 - Moved the *Understanding polymorphism* subsection earlier within its parent section to improve flow and reader understanding.
 - Added a new subsection, *Defining closed class hierarchies*.
 
 ## Chapter 7
 - Added a new figure to explain what each .NET layer does.
 - Moved the Central Package Management (CPM) and Package Source Mapping (PSM) theory sections from Chapter 11 to this chapter.
+- Moved the subsection about controlling the SDK used by a project online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch07-control-sdk.md
+- Moved the subsection about working with preview features online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch07-preview-features.md
 
 ## Chapter 8
 - Added information about `System.Random` and its new generic numeric methods.
+- Moved the subsection about specialized numbers online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch08-numbers.md
+- Added an online-only section about performance benchmarking using string concatenations as the main example: https://github.com/markjprice/cs15net11/blob/main/docs/ch08-benchmarking.md
+- Moved the subsection about sorting collections online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch08-sorting-collections.md
+- Moved the subsection about read-only, frozen, and immutable collections online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch08-readonly-frozen.md
+- Moved the subsection about good practice with collections online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch08-good-practice.md
+- Moved the subsection about spans, indexes, and ranges online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch08-spans-indexes-ranges.md
 - Added new subsections in the *Manipulating, comparing, and searching Unicode text* section about runes, *Working with Unicode characters using Rune*, *Searching and modifying strings using runes*, and *Working with user-perceived characters*.
 - Added a new subsection in the *Pattern matching with regular expressions* section titled *Avoiding excessive backtracking*.
 - Added new subsections in the *Storing multiple objects in collections* section, *Passing arguments to collection expressions* and *Using dictionary expressions[*.
@@ -98,7 +117,7 @@
 - Changed the chapter title to *Processes, Files, Streams, and Serialization*.
 - Added a major new section, *Working with processes and tasks*, with subsections like *Starting another program from C#*, *Avoiding blocked apps with Task, async, and await*, *Reading output safely as text, lines, or bytes*, *Timeouts, cancellation, and killing processes*, *Shells, arguments, security, and cross-platform behavior*, and *Understanding runtime async*.
 - Added new subsections to the *Reading and writing with streams* section, *Adapting memory and text to streams*, *Reading a string as an encoded stream*, and *Compressing data with Zstandard*.
-- Other APIs for compressing streams and archiving files have moved online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-compression.md
+- Moved the subsection about other APIs for compressing streams and archiving files online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-compression.md
 - Added a new subsection to the *Serializing object graphs* section, *Serializing C# union types with System.Text.Json*.
 - Moved the XML serialization section online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-serializing-xml.md
 - Added an online only optional section, *Parsing structured text files with TextFieldParser*: https://github.com/markjprice/cs15net11/blob/main/docs/ch09-textfieldparser.md

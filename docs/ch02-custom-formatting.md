@@ -60,6 +60,7 @@ A full list of custom format codes can be found at the following link: https://l
 You can apply standard date and time formatting using simpler format codes, such as the `d` and `D` we used in the code example, as shown in the following table:
 
 Format code|Description
+---|---
 `d`|Short date pattern. Varies by culture, for example, `en-US` uses `M/d/yyyy` and `fr-FR` uses `dd/MM/yyyy`.
 `D`|Long date pattern. Varies by culture; for example, `en-US` uses `dddd, MMMM d, yyyy` and `fr-FR` uses `dddd, dd MMMM yyyy`.
 `f`|Full date/time pattern (short time – hours and minutes). Varies by culture.

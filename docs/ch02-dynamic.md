@@ -8,7 +8,6 @@ The `dynamic` type in C# offers flexibility by deferring type checking to runtim
 - [Interoperability with Dynamic Languages](#interoperability-with-dynamic-languages)
 - [Working with Reflection](#working-with-reflection)
 - [Handling JSON or XML with Unknown Structures](#handling-json-or-xml-with-unknown-structures)
-- [Simplifying Code in ExpandoObject and DynamicObject](#simplifying-code-in-expandoobject-and-dynamicobject)
 - [Scripting and DSLs](#scripting-and-dsls)
 - [Prototyping and Rapid Development](#prototyping-and-rapid-development)
 - [Runtime Polymorphism](#runtime-polymorphism)
@@ -108,6 +107,10 @@ LastName = Doe
 Age = 30
 ```
 
+Similarly, you can create custom types by inheriting from `DynamicObject` to intercept property and method calls dynamically.
+
+, you can create custom types by inheriting from `DynamicObject` to intercept property and method calls dynamically.
+
 > You will learn more about casting and dictionaries later in this book, so do not worry about them for now. You can learn more about ExpandoObject at the following link: https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-dynamic-expandoobject.
 
 # Interoperability with COM Objects
@@ -150,18 +153,6 @@ Console.WriteLine(jsonObject.Age);  // 25
 ```
 
 However, libraries like `System.Text.Json` or `Newtonsoft.Json` now encourage strongly-typed models for safety.
-
-# Simplifying Code in ExpandoObject and DynamicObject
-
-The `ExpandoObject` and `DynamicObject` types are designed for dynamic programming, and `dynamic` makes their usage intuitive:
-```csharp
-dynamic expando = new ExpandoObject();
-expando.Name = "John";
-expando.Age = 30;
-Console.WriteLine($"{expando.Name}, {expando.Age}");
-```
-
-Similarly, you can create custom types by inheriting from `DynamicObject` to intercept property and method calls dynamically.
 
 # Scripting and DSLs
 

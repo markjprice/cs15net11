@@ -30,6 +30,9 @@ partial class Program
   static decimal CalculateTax(
     decimal amount, string twoLetterRegionCode)
   {
+    // Reject a null or empty argument passed to this function.
+    ArgumentException.ThrowIfNullOrWhiteSpace(twoLetterRegionCode);
+    
     twoLetterRegionCode = twoLetterRegionCode
       .Trim()
       .ToUpperInvariant();
@@ -90,13 +93,25 @@ partial class Program
     WriteLine();
   }
 
+  /// <summary>
+  /// Pass a 32-bit signed integer and it will return the factorial for that number.
+  /// </summary>
+  /// <param name="number">Number to calculate the factorial for.</param>
+  /// <returns>Factorial of the given number.</returns>
+  /// <exception cref="ArgumentOutOfRangeException">
+  /// Thrown when <paramref name="number"/> is negative.
+  /// </exception>
+  /// <exception cref="OverflowException">
+  /// Thrown when the result cannot be represented by <see cref="int"/>.
+  /// </exception>
   static int Factorial(int number)
   {
     if (number < 0)
     {
       throw new ArgumentOutOfRangeException(
-        message: $"The factorial function is defined for non-negative integers only. Input: {number}",
-        paramName: nameof(number));
+        actualValue: number,
+        paramName: nameof(number),
+        message: $"The factorial function is defined for non-negative integers only.");
     }
 
     if (number == 0) return 1;

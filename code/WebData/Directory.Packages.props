@@ -1,13 +1,13 @@
 <Project>
 
-  <!--Last updated package versions: July 14, 2026.-->
+  <!--Last updated package versions: August 11, 2026.-->
 
   <PropertyGroup Label="To enable Central Package Management.">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <PropertyGroup Label="Define custom properties for common version numbers.">
-    <Net11>11.0.0-preview.6.26359.118</Net11>
+    <Net11>11.0.0-preview.7.26381.103</Net11>
   </PropertyGroup>
 
   <ItemGroup Label="For EF Core.">
@@ -33,11 +33,11 @@
 
   <ItemGroup Label="For ASP.NET Core web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net11)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.11" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.18" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.Gateway" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(Net11)" />
-    <PackageVersion Include="ModelContextProtocol" Version="1.4.1" />
+    <PackageVersion Include="ModelContextProtocol" Version="2.1.0" />
   </ItemGroup>
 
 </Project>

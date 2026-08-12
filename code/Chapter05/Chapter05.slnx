@@ -2,5 +2,6 @@
   <Project Path="Namespaces/Namespaces.csproj" />
   <Project Path="PacktLibraryModern/PacktLibraryModern.csproj" />
   <Project Path="PacktLibraryNet2/PacktLibraryNet2.csproj" />
+  <Project Path="PaymentApp/PaymentApp.csproj" Id="da9f1fd1-825a-4682-a9f4-b1e9eec67fda" />
   <Project Path="PeopleApp/PeopleApp.csproj" />
 </Solution>

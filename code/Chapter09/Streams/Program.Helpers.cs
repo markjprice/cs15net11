@@ -18,7 +18,7 @@ partial class Program
     WriteLine($"Path: {GetDirectoryName(path)}");
     WriteLine($"Size: {new FileInfo(path).Length:N0} bytes.");
     WriteLine("/------------------");
-    WriteLine(File.ReadAllText(path));
+    Write(File.ReadAllText(path));
     WriteLine("------------------/");
   }
 }

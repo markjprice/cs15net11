@@ -4,9 +4,6 @@
     <TargetFramework>net11.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    
-    <!-- Delete after .NET 11 GA.-->
-    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup Label="To simplify use of Console members.">

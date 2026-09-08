@@ -5,10 +5,6 @@
     <TargetFramework>net11.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
-		<!--To use most modern C# compiler features. -->
-		<!--Delete after .NET 11 GA.-->
-		<LangVersion>preview</LangVersion>
 	</PropertyGroup>
 
   <ItemGroup>

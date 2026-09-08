@@ -1,13 +1,13 @@
 <Project>
 
-  <!--Last updated package versions: August 11, 2026.-->
+  <!--Last updated package versions: September 8, 2026.-->
 
   <PropertyGroup Label="To enable Central Package Management.">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <PropertyGroup Label="Define custom properties for common version numbers.">
-    <Net11>11.0.0-preview.7.26381.103</Net11>
+    <Net11>11.0.0-rc.1.26425.128</Net11>
   </PropertyGroup>
 
   <ItemGroup Label="For EF Core.">
@@ -20,7 +20,7 @@
 
   <ItemGroup Label="For unit testing.">
     <PackageVersion Include="coverlet.collector" Version="10.0.1" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.8.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.9.0" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
 		<PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
 		<PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
@@ -34,11 +34,11 @@
 
   <ItemGroup Label="For ASP.NET Core web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net11)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.16.18" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.17.3" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.Gateway" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(Net11)" />
-    <PackageVersion Include="ModelContextProtocol" Version="2.1.0" />
+    <PackageVersion Include="ModelContextProtocol" Version="2.2.0" />
   </ItemGroup>
 
 </Project>

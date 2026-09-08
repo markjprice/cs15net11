@@ -11,6 +11,7 @@
   <Project Path="Northwind.Blazor/Northwind.Blazor/Northwind.Blazor.csproj" />
   <Project Path="Northwind.DataContext/Northwind.DataContext.csproj" />
   <Project Path="Northwind.EntityModels/Northwind.EntityModels.csproj" />
+  <Project Path="Northwind.Fulfillment/Northwind.Fulfillment.csproj" />
   <Project Path="Northwind.McpServer/Northwind.McpServer.csproj" />
   <Project Path="Northwind.UnitTests/Northwind.UnitTests.csproj" />
   <Project Path="Northwind.WebApi.IntegrationTests/Northwind.WebApi.IntegrationTests.csproj" />

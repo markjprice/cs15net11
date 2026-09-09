@@ -2,8 +2,11 @@ using Microsoft.AspNetCore.HttpLogging; // To use HttpLoggingFields.
 using Northwind.EntityModels; // To use AddNorthwindDb method.
 using Scalar.AspNetCore; // To use MapScalarApiReference method.
 using System.ComponentModel.DataAnnotations; // To use RangeAttribute.
-using Microsoft.AspNetCore.ResponseCompression;
-using System.IO.Compression;
+using Microsoft.AspNetCore.ResponseCompression; // To use Zstandard options.
+using System.IO.Compression; // To use GzipCompressionProviderOptions.
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Northwind.Fulfillment; // To use FulfillmentService.
 
 const string corsPolicyName = "allowWasmClient";
 
@@ -54,6 +57,8 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddSingleton<FulfillmentService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -87,8 +92,35 @@ app.MapGet("/user", () => new {
 
 app.MapCustomers();
 
-app.Run();
+app.MapPost("/fulfillment/decisions",
+  Results<
+    Ok<FulfillmentDecision>,
+    BadRequest<ProblemDetails>>
+  (FulfillmentRequest request,
+    FulfillmentService service) =>
+  {
+    if (request.ProductId < 1 ||
+      request.Quantity < 1 ||
+      request.UnitsInStock < 0)
+    {
+      ProblemDetails problem = new()
+      {
+        Status = StatusCodes.Status400BadRequest,
+        Title = "Invalid fulfillment request.",
+        Detail = "ProductId and Quantity must be positive, " +
+          "and UnitsInStock cannot be negative."
+      };
 
-public partial class Program
-{
-}
+      return TypedResults.BadRequest(problem);
+    }
+
+    FulfillmentDecision decision =
+      service.Decide(request);
+
+    return TypedResults.Ok(decision);
+  })
+  .WithName("DecideFulfillment")
+  .WithSummary(
+    "Determines how an order line can be fulfilled.");
+
+app.Run();

@@ -1,0 +1,45 @@
+@base_address = https://localhost:5131
+
+### Enough stock to ship immediately.
+POST {{base_address}}/fulfillment/decisions
+Content-Type: application/json
+
+{
+  "productId": 42,
+  "quantity": 5,
+  "unitsInStock": 12,
+  "allowBackOrder": true
+}
+
+### Insufficient stock, but a back order is allowed.
+POST {{base_address}}/fulfillment/decisions
+Content-Type: application/json
+
+{
+  "productId": 42,
+  "quantity": 20,
+  "unitsInStock": 4,
+  "allowBackOrder": true
+}
+
+### Insufficient stock, and back orders are disabled.
+POST {{base_address}}/fulfillment/decisions
+Content-Type: application/json
+
+{
+  "productId": 42,
+  "quantity": 20,
+  "unitsInStock": 4,
+  "allowBackOrder": false
+}
+
+### Invalid request.
+POST {{base_address}}/fulfillment/decisions
+Content-Type: application/json
+
+{
+  "productId": 42,
+  "quantity": 0,
+  "unitsInStock": 4,
+  "allowBackOrder": false
+}

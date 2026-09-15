@@ -1,6 +1,6 @@
 <Project>
 
-  <!--Last updated package versions: September 8, 2026.-->
+  <!--Last updated package versions: September 14, 2026.-->
 
   <PropertyGroup Label="To enable Central Package Management.">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
@@ -20,10 +20,10 @@
 
   <ItemGroup Label="For unit testing.">
     <PackageVersion Include="coverlet.collector" Version="10.0.1" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.9.0" />
-    <PackageVersion Include="xunit.v3" Version="3.2.2" />
-		<PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
-		<PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.0" />
+    <PackageVersion Include="xunit.v3" Version="4.0.1" />
+		<PackageVersion Include="xunit.v3.mtp-v2" Version="4.0.1" />
+		<PackageVersion Include="xunit.runner.visualstudio" Version="4.0.0" />
 	</ItemGroup>
 
   <ItemGroup Label="For ASP.NET Core Blazor.">

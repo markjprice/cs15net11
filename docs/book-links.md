@@ -1,20 +1,15 @@
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
   - [Visual Studio](#visual-studio)
   - [VS Code](#vs-code)
-  - [Other C# code editors and platforms](#other-c-code-editors-and-platforms)
-  - [.NET Interactive and Polyglot Notebooks](#net-interactive-and-polyglot-notebooks)
-  - [Command Line Interfaces](#command-line-interfaces)
+  - [Command Line Interfaces and other C# code editors and platforms](#command-line-interfaces-and-other-c-code-editors-and-platforms)
   - [.NET](#net)
   - [.NET performance improvements](#net-performance-improvements)
-  - [Open source and other projects related to .NET](#open-source-and-other-projects-related-to-net)
-  - [Git](#git)
   - [Help and learning](#help-and-learning)
 - [Chapter 2 - Speaking C#](#chapter-2---speaking-c)
   - [What's New in C#?](#whats-new-in-c)
   - [The journey to modern C#](#the-journey-to-modern-c)
   - [C# language](#c-language)
   - [C# implemented proposals](#c-implemented-proposals)
-  - [C# proposals being worked on](#c-proposals-being-worked-on)
   - [Text and number types](#text-and-number-types)
   - [Console apps and formatting](#console-apps-and-formatting)
   - [Miscellaneous](#miscellaneous)
@@ -99,9 +94,7 @@
 - [20 Must-Know Visual Studio Shortcuts for Developers - YouTube](https://www.youtube.com/watch?v=nhEHXQGVmaQ)
 - [Microsoft Visual Studio on YouTube](https://www.youtube.com/visualstudio)
 - [Building Apps with Visual Studio in the Cloud with Dev Box](https://www.youtube.com/watch?v=9imDpJwrFJE)
-- [Cool features in Visual Studio 2022](https://www.youtube.com/watch?v=NBfNnyPQTKs)
 - [MSBuild and 64-bit Visual Studio 2022](https://devblogs.microsoft.com/dotnet/msbuild-and-64-bit-visual-studio-2022/)
-- [Create C# apps with Visual Studio](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/)
 - [Comparison of Visual Studio Code and Visual Studio](https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html)
 
 ## VS Code
@@ -119,51 +112,32 @@
 - [Learning with VS Code on Chromebooks](https://code.visualstudio.com/blogs/2020/12/03/chromebook-get-started)
 - [The History of VS Code | BDL134](https://www.youtube.com/watch?v=Tw8l0WzQxmY)
 
-## Other C# code editors and platforms
-- [Stack Overflow survey 2021 - Integrated development environment](https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-integrated-development-environment)
-- [Stack Overflow survey 2019 - Most Popular Development Environments](https://insights.stackoverflow.com/survey/2019#development-environments-and-tools)
+## Command Line Interfaces and other C# code editors and platforms
+- [Windows Terminal as your Default Command Line Experience](https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/)
+- [.NET Core Command-Line Interface (CLI) tool overview](https://aka.ms/dotnet-cli-docs)
 - [GitHub Codespaces](https://docs.github.com/en/codespaces/overview)
 - [WebStorm and Rider Are Now Free for Non-Commercial Use](https://blog.jetbrains.com/blog/2024/10/24/webstorm-and-rider-are-now-free-for-non-commercial-use/)
 - [JetBrains Rider](https://www.jetbrains.com/rider/)
 - [Rider documentation](https://www.jetbrains.com/help/rider/Introduction.html)
 
-## .NET Interactive and Polyglot Notebooks
-- [The Power of Polyglot Notebooks | .NET Conf 2022](https://www.youtube.com/watch?v=IXRGa5m-Lbo)
-- [.NET Interactive documentation](https://github.com/dotnet/interactive/blob/main/docs/README.md)
-- [VS Code Notebooks: A Deep Dive video](https://www.youtube.com/watch?v=D-AXZZDTQhM)
-- [Discuss: File format in the .NET Interactive VS Code extension](https://github.com/dotnet/interactive/issues/467)
-- [Polyglot Notebooks: Variable Sharing](https://devblogs.microsoft.com/dotnet/net-interactive-preview-3-vs-code-insiders-and-polyglot-notebooks/)
-- [Using HTML and JavaScript in .NET Interactive](https://github.com/dotnet/interactive/blob/main/docs/javascript-overview.md)
-- [.NET Interactive Samples](https://github.com/dotnet/interactive/blob/main/samples/readme.md)
-- [Markdown syntax](https://daringfireball.net/projects/markdown/syntax)
-
-## Command Line Interfaces
-- [Windows Terminal as your Default Command Line Experience](https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/)
-- [.NET Core Command-Line Interface (CLI) tool overview](https://aka.ms/dotnet-cli-docs)
-
 ## .NET
 - [Download .NET SDK](https://dotnet.microsoft.com/en-us/download)
-- [Official list of .NET 9 supported operating systems](https://github.com/dotnet/core/blob/main/release-notes/9.0/supported-os.md)
+- [What's new in .NET 11](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11)
+- [Official list of .NET 11 supported operating systems](https://github.com/dotnet/core/blob/main/release-notes/11.0/supported-os.md)
 - [The convenience of .NET](https://devblogs.microsoft.com/dotnet/the-convenience-of-dotnet/)
-- [What's new in .NET 9](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9)
-- [.NET Conf 2022 Keynote: Welcome to .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=8V_BUGFKdaI)
-- [Stack Overflow survey 2021 - Most loved frameworks and libraries](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-other-frameworks-and-libraries)
-- [Themes of .NET](https://themesof.net/)
 - [Microsoft's positioning of .NET Core and .NET Framework](https://devblogs.microsoft.com/dotnet/update-on-net-core-3-0-and-net-framework-4-8/)
-- [Microsoft's plans for the journey to one .NET](https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/)
 - [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
 - [.NET versions](https://learn.microsoft.com/en-us/dotnet/core/versions/)
 - [.NET Uninstall Tool](https://learn.microsoft.com/en-us/dotnet/core/additional-tools/uninstall-tool)
 - [How to remove .NET SDKs and runtimes](https://learn.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions)
 - [ASP.NET Core and EF Core branding for .NET 5](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-5)
-- [.NET Optional SDK Workloads](https://github.com/dotnet/designs/blob/main/accepted/2020/workloads/workloads.md)
 - [.NET Runtime](https://github.com/dotnet/runtime/blob/main/README.md)
 - [.NET Release Schedule](https://github.com/dotnet/core/blob/main/roadmap.md)
 - [.NET Team Members on Twitter](https://twitter.com/i/lists/120961876//members)
 - [dotnet new templates](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
-- [.NET 6 is now in Ubuntu 22.04](https://devblogs.microsoft.com/dotnet/dotnet-6-is-now-in-ubuntu-2204/)
 
 ## .NET performance improvements
+- [Performance Improvements in .NET 11](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/)
 - [Performance Improvements in .NET 10](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)
 - [Performance Improvements in .NET 9](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-9/)
 - [Performance Improvements in .NET 8](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
@@ -175,26 +149,7 @@
 - [Performance Improvements in .NET Core 2.1](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-2-1/)
 - [Performance Improvements in .NET Core](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core/)
 
-## Open source and other projects related to .NET
-- [Mono project](http://www.mono-project.com/)
-- [Unity project](https://docs.unity3d.com/)
-- [Open source projects to enable WCF and WF to migrate to .NET 5](https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/)
-- [CoreWCF 1.1.0 and project templates](https://devblogs.microsoft.com/dotnet/corewcf-1-1-0-and-project-templates/)
-- [Upgrading a WCF service to .NET 6 with CoreWCF](https://devblogs.microsoft.com/dotnet/upgrading-a-wcf-service-to-dotnet-6/)
-- [CoreWCF 1.0 has been Released, WCF for .NET Core and .NET 5+](https://devblogs.microsoft.com/dotnet/corewcf-v1-released/)
-- [Open source project for Blazor Web Forms components](https://github.com/FritzAndFriends/BlazorWebFormsComponents/blob/dev/README.md)
-- [OSS Spotlight - Build amazing cross-platform UI for .NET with Avalonia UI!](https://www.youtube.com/watch?v=qcZSr2ejH5I)
-
-## Git
-- [Download Git](https://git-scm.com/download)
-- [Download GitHub Desktop](https://desktop.github.com)
-- [Become a master at Git and Open Source](https://devblogs.microsoft.com/visualstudio/become-a-master-at-git-and-open-source/)
-
 ## Help and learning
-- [Raise an issue with the book](https://github.com/markjprice/cs11dotnet7/issues): Please tell me as much as possible about the scenario e.g. the book section title and page number, your operating system and code editor including version, project file (.csproj), code files, what you expected and what actually happened, and so on.
-- [Top .NET Videos & Live Streams of 2024](https://devblogs.microsoft.com/dotnet/top-dotnet-videos-live-streams-of-2024/)
-- [Top .NET Blogs Posts of 2024](https://devblogs.microsoft.com/dotnet/top-dotnet-blogs-posts-of-2024/)
-- [.NET Conf 2021 Recap – Videos, Slides, Demos, and More](https://devblogs.microsoft.com/dotnet/net-conf-2021-recap-videos-slides-demos-and-more/)
 - [Microsoft Learn - Technical Documentation](https://learn.microsoft.com/en-us/docs/)
 - [Official .NET Blog written by the .NET engineering teams](https://devblogs.microsoft.com/dotnet/)
 - [Scott Hanselman's Computer Stuff They Didn't Teach You video series on YouTube](http://computerstufftheydidntteachyou.com/)
@@ -209,6 +164,8 @@
 # Chapter 2 - Speaking C#
 
 ## What's New in C#?
+- [What's new in C# 15](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-15)
+- [What's new in C# 14](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-14)
 - [What's new in C# 13](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-13)
 - [What's new in C# 12](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12)
 - [What's new in C# 11](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11)
@@ -231,8 +188,6 @@
 - [How Microsoft rewrote its C# compiler in C# and made it open source](https://medium.com/microsoft-open-source-stories/how-microsoft-rewrote-its-c-compiler-in-c-and-made-it-open-source-4ebed5646f98)
 - [Current status of the C# language](https://github.com/dotnet/roslyn/blob/main/docs/Language%20Feature%20Status.md)
 - [C# Language Specification 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=7029)
-- [Draft proposals for C# Language Specifications for 6.0 and later](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/)
-- [C# 9 & 10 Workshop](https://github.com/dotnet-presentations/csharp-workshop)
 - [C# language versioning](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version)
 - [The history of C#](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history)
 - [Interview with the C# Boss - Mads Torgersen](https://www.dotnetcurry.com/csharp/1455/mads-torgersen-interview)
@@ -251,6 +206,8 @@
 - [Patterns (C# reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns)
 
 ## C# implemented proposals
+- [C# 15](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-15.0)
+- [C# 14](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-14.0)
 - [C# 13](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-13.0)
 - [C# 12](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-12.0)
 - [C# 11](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-11.0)
@@ -262,11 +219,6 @@
 - [C# 7.1](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.1)
 - [C# 7.0](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.0)
 - [C# 6.0](https://github.com/dotnet/csharplang/tree/main/proposals/csharp-6.0)
-
-## C# proposals being worked on
-- [Champion: Simplified parameter null validation code #2145](https://github.com/dotnet/csharplang/issues/2145)
-- [Proposal: Semi-Auto-Properties; field keyword #140](https://github.com/dotnet/csharplang/issues/140)
-- [Working Set (of proposals)](https://github.com/dotnet/csharplang/milestone/19)
 
 ## Text and number types
 - [Strings (C# Programming Guide)](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/)
@@ -418,6 +370,9 @@
 
 ## .NET versions
 The official announcement links are useful because they describe the most important new features in each release.
+- [What's new in .NET 11](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/overview)
+- [What's new in .NET 10](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/overview)
+- [What's new in .NET 9](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview)
 - [What's new in .NET 8](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8)
 - [Announcing .NET 7](https://devblogs.microsoft.com/dotnet/announcing-net-7/)
 - [Performance Improvements in .NET 7 | .NET Conf 2022](https://www.youtube.com/watch?v=yNPEdaxkTZw)

@@ -1,13 +1,13 @@
 <Project>
 
-  <!--Last updated package versions: September 14, 2026.-->
+  <!--Last updated package versions: October 13, 2026.-->
 
   <PropertyGroup Label="To enable Central Package Management.">
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
   <PropertyGroup Label="Define custom properties for common version numbers.">
-    <Net11>11.0.0-rc.1.26425.128</Net11>
+    <Net11>11.0.0-rc.2.26504.105</Net11>
   </PropertyGroup>
 
   <ItemGroup Label="For EF Core.">
@@ -19,11 +19,11 @@
   </ItemGroup>
 
   <ItemGroup Label="For unit testing.">
-    <PackageVersion Include="coverlet.collector" Version="10.0.1" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.0" />
-    <PackageVersion Include="xunit.v3" Version="4.0.1" />
-		<PackageVersion Include="xunit.v3.mtp-v2" Version="4.0.1" />
-		<PackageVersion Include="xunit.runner.visualstudio" Version="4.0.0" />
+    <PackageVersion Include="coverlet.collector" Version="10.1.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageVersion Include="xunit.v3" Version="4.0.2" />
+		<PackageVersion Include="xunit.v3.mtp-v2" Version="4.0.2" />
+		<PackageVersion Include="xunit.runner.visualstudio" Version="4.0.1" />
 	</ItemGroup>
 
   <ItemGroup Label="For ASP.NET Core Blazor.">
@@ -34,7 +34,7 @@
 
   <ItemGroup Label="For ASP.NET Core web services.">
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(Net11)" />
-    <PackageVersion Include="Scalar.AspNetCore" Version="2.17.3" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.18.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.Gateway" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(Net11)" />
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(Net11)" />

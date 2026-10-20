@@ -83,4 +83,13 @@ public class NorthwindServiceServerSide : INorthwindService
       await db.SaveChangesAsync();
     }
   }
+
+  public async Task<List<string?>> GetCountriesAsync()
+  {
+    await using NorthwindDb db =
+          await _contextFactory.CreateDbContextAsync();
+
+    return await db.Customers.Select(c => c.Country)
+      .Distinct().OrderBy(country => country).ToListAsync();
+  }
 }

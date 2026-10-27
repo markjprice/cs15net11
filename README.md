@@ -77,8 +77,10 @@ Catch up on previous newsletters in the archive: https://packtnetpro.substack.co
   - [code/WebData/Northwind.WebApi.WasmClient](code/WebData/Northwind.WebApi.WasmClient)
 
 **Online Material**
-- [*Appendix, Answers to the Test Your Knowledge Questions*](docs/B37286_Appendix.pdf)
-- The Appendix is included with your purchase. Visit https://packtpub.com/unlock, then use the search bar to find this book by name. Double-check the edition shown to make sure you get the right one.
+- [*Appendix A, Answers to the Test Your Knowledge Questions*](docs/B37286_Appendix_A.pdf)
+- [*Appendix B, Optional Topics for Experienced
+.NET Developers*](docs/B37286_Appendix_B.pdf)
+- The Appendices are included with your purchase. Visit https://packtpub.com/unlock, then use the search bar to find this book by name. Double-check the edition shown to make sure you get the right one.
 
 # Code solutions for Visual Studio and VS Code
 

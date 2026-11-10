@@ -60,7 +60,7 @@ To use it, your project must enable the OpenAPI Analyzers:
 1.	In the `Northwind.WebApi` project file, add the element that enables the OpenAPI Analyzers, as shown in the following markup:
 ```xml
 <PropertyGroup>
-  <TargetFramework>net8.0</TargetFramework>
+  <TargetFramework>net11.0</TargetFramework>
   <Nullable>enable</Nullable>
   <ImplicitUsings>enable</ImplicitUsings>
   <InvariantGlobalization>false</InvariantGlobalization>
@@ -82,7 +82,7 @@ public async Task<IActionResult> Update(
 
 4.	Uncomment the three attributes to remove the warnings.
 
-Automatic code fixes can then add the appropriate `[Produces]` and `[ProducesResponseType]` attributes, although this only currently works in Visual Studio 2022. In Visual Studio Code, you will see warnings about where the analyzer thinks you should add attributes, but you must add them yourself.
+Automatic code fixes can then add the appropriate `[Produces]` and `[ProducesResponseType]` attributes, although this only currently works in Visual Studio. In VS Code, you will see warnings about where the analyzer thinks you should add attributes, but you must add them yourself.
 
 # Adding security HTTP headers
 
@@ -134,7 +134,7 @@ app.UseMiddleware<SecurityHeaders>();
 
 # Enabling HTTP/3 support for HttpClient
 
-In *Chapter 13, Building Websites Using ASP.NET Core Razor Pages*, you learned how to enable HTTP/3 support in the Kestrel web server. Now we will see how to enable HTTP/3 on the client side:
+Now we will see how to enable HTTP/3 on the client side:
 
 1.	In the `Northwind.WebApi` project/folder, in `appSettings.json`, add an entry to show hosting diagnostics, as shown highlighted in the following configuration:
 ```json

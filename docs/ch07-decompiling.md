@@ -29,9 +29,9 @@ For learning purposes, you can decompile any .NET assembly with a tool like ILSp
 
 12.	In ILSpy, navigate to **File** | **Open…**.
 13.	Navigate to the following folder:
-`cs14net10/Chapter07/DotNetEverywhere/bin/Release/net10.0/linux-x64`
+`cs15net11/Chapter07/DotNetEverywhere/bin/Release/net11.0/linux-x64`
 14.	Select the `System.Linq.dll` assembly and click **Open**.
-15.	In the **Assemblies** tree, expand the **System.Linq (9.0.0.0, .NETCoreApp, v9.0)** assembly, expand the **System.Linq** namespace, expand the **Enumerable** class, and then click the **Count<TSource>(this IEnumerable<TSource>) : int** method.
+15.	In the **Assemblies** tree, expand the **System.Linq (11.0.0.0, .NETCoreApp, v11.0)** assembly, expand the **System.Linq** namespace, expand the **Enumerable** class, and then click the **Count<TSource>(this IEnumerable<TSource>) : int** method.
 16.	In the `Count` method, note the good practice of checking the source parameter and throwing an `ArgumentNullException` if it is `null`, checking for interfaces that the source might implement with their own `Count` properties that would be more efficient to read, and finally, the last resort of enumerating through all the items in the source and incrementing a counter, which would be the least efficient implementation, as shown in *Figure 7.5*:
  
 ![Decompiled Count method of the Enumerable class](assets/B22322_07_05.png)
@@ -82,7 +82,7 @@ The final part of the `Count` method implementation shows how the `foreach` stat
 
 19.	Close ILSpy.
 
-You can learn how to use the ILSpy extension for VS Code at the following link: https://github.com/markjprice/cs14net10/blob/main/docs/code-editors/vscode.md#decompiling-using-the-ilspy-extension-for-visual-studio-code.
+You can learn how to use the ILSpy extension for VS Code at the following link: https://github.com/markjprice/cs15net11/blob/main/docs/code-editors/vscode.md#decompiling-using-the-ilspy-extension-for-visual-studio-code.
 
 # Viewing source links with Visual Studio
 Instead of decompiling, Visual Studio has a feature that allows you to view the original source code using source links. This feature is not available in Code.

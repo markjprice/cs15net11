@@ -75,7 +75,7 @@ Let's get started writing code!
 *Figure 1.4: Selecting the Console App project template*
 
 4.	Click **Next**.
-5.	In the **Configure your new project** dialog, enter `HelloCS` for the project name, enter `C:\cs14net10` for the location, and enter `Chapter01` for the solution name, as shown in *Figure 1.5*:
+5.	In the **Configure your new project** dialog, enter `HelloCS` for the project name, enter `C:\cs15net11` for the location, and enter `Chapter01` for the solution name, as shown in *Figure 1.5*:
 
  ![Configuring names and locations for your new project](assets/vs/B19586_01_05.png)
 *Figure 1.5: Configuring names and locations for your new project*
@@ -210,7 +210,7 @@ Let's add a second project to our solution to work with multiple projects.
 > **Warning!** The above step adds a new project to the existing solution. Do NOT navigate to **File** | **New** | **Project…** which instead is meant to be used to create a new project and solution (although the dialog box has a dropdown to choose to add to an existing solution too).
 
 2.	In the **Add a new project** dialog, in **Recent project templates**, select **Console App [C#]** and then click **Next**.
-3.	In the **Configure your new project** dialog, for the **Project name**, enter `AboutMyEnvironment`, leave the location as `C:\cs14net10\Chapter01`, and then click **Next**.
+3.	In the **Configure your new project** dialog, for the **Project name**, enter `AboutMyEnvironment`, leave the location as `C:\cs15net11\Chapter01`, and then click **Next**.
 4.	In the **Additional information** dialog, select **.NET 10.0 (Long Term Support)**, select the **Do not use top-level statements** check box.
 
 > **Warning!** Make sure you have selected the check box, so we get to see the older style of `Program.cs`.
@@ -246,7 +246,7 @@ Console.WriteLine(Environment.OSVersion.VersionString);
 12. Navigate to **Debug** | **Start Without Debugging** to run the `AboutMyEnvironment` project, and note the result, as shown in the following output and in *Figure 1.10*:
 
 ```
-C:\cs12dotnet8\Chapter01\AboutMyEnvironment\bin\Debug\net8.0
+C:\cs15net11\Chapter01\AboutMyEnvironment\bin\Debug\net11.0
 Microsoft Windows NT 10.0.22621.0
 ```
 

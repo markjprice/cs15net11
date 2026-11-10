@@ -20,7 +20,7 @@ JavaScript does have some issues, however. Although it has superficial similarit
 
 It’d be great if we could use the same language and libraries in a browser as we do on the server.
 
-Even Blazor cannot replace JavaScript completely. For example, some parts of the browser are only accessible to JavaScript. Blazor provides an interop service so that your C# code can call JavaScript code, and vice versa. You will see this in the online-only Interop with JavaScript section in Chapter 14, Building Interactive Web Components Using Blazor.
+Even Blazor cannot replace JavaScript completely. For example, some parts of the browser are only accessible to JavaScript. Blazor provides an interop service so that your C# code can call JavaScript code, and vice versa.
 
 # Silverlight – C# and .NET using a plugin
 

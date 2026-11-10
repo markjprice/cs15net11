@@ -58,8 +58,8 @@ Let's get started writing code!
 3.	In the **New Solution** dialog, in the left-side list of project templates, select **Console**, and set additional names and options as shown in *Figure 1.3*:
     - **Solution name**: `Chapter01`
     - **Project name**: `HelloCS`
-    - **Solution directory**: `C:\cs12dotnet8` or `C:\Users\<user>\RiderProjects`
-    - **Target framework**: `net8.0` from **SDK 8.0**
+    - **Solution directory**: `C:\cs15dotnet11` or `C:\Users\<user>\RiderProjects`
+    - **Target framework**: `net11.0` from **SDK 11.0**
     - **Language**: C#
     - **Docker Support**: Cleared
 

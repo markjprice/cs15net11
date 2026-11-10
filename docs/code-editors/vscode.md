@@ -86,7 +86,7 @@ For example, to install the **C# Dev Kit** extension, enter the following at the
 code --install-extension ms-dotnettools.csdevkit
 ```
 
-I have created PowerShell scripts to install and uninstall the VS Code extensions in the preceding table. You can find them at the following link: https://github.com/markjprice/cs12dotnet8/tree/main/scripts/extension-scripts/.
+I have created PowerShell scripts to install and uninstall the VS Code extensions in the preceding table. You can find them at the following link: https://github.com/markjprice/cs15net11/tree/main/scripts/extension-scripts/.
 
 ### Understanding Microsoft VS Code versions
 
@@ -122,8 +122,8 @@ Let's get started writing code!
 
 1. Start your favorite tool for working with the filesystem, for example, **File Explorer** on Windows or **Finder** on Mac.
 2.	Navigate to your `C:` drive on Windows, your user folder on macOS (mine is named `markjprice`), or any directory or drive in which you want to save your projects.
-3.	Create a new folder named `cs14net10`. (If you completed the section for Visual Studio, then this folder will already exist.)
-4.	In the `cs14net10` folder, create a new folder named `Chapter01-vscode`.
+3.	Create a new folder named `cs15net11`. (If you completed the section for Visual Studio, then this folder will already exist.)
+4.	In the `cs15net11` folder, create a new folder named `Chapter01-vscode`.
 
 > If you did not complete the section for Visual Studio, then you could name this folder `Chapter01`, but I will assume you will want to complete both sections and therefore need to use a non-conflicting name.
 
@@ -212,7 +212,7 @@ throw new Exception();
 Hello, C#!
 Namespace: None!
 Unhandled exception. System.Exception: Exception of type 'System.Exception' was thrown.
-   at Program.<Main>$(String[] args) in C:\cs14net10\Chapter01-vscode\HelloCS\Program.cs:line 7
+   at Program.<Main>$(String[] args) in C:\cs15net11\Chapter01-vscode\HelloCS\Program.cs:line 7
 ```
 
 ## Adding a second project using VS Code
@@ -252,7 +252,7 @@ Console.WriteLine("Namespace: {0}",
 7.	In **TERMINAL**, enter the command to run the project, as shown in the following command: `dotnet run`.
 8.	Note the output in the **TERMINAL** window, as shown in the following output and in *Figure 1.14*:
 ```
-C:\cs14net10\Chapter01-vscode\AboutMyEnvironment
+C:\cs15net11\Chapter01-vscode\AboutMyEnvironment
 Microsoft Windows NT 10.0.26100.0
 Namespace: AboutMyEnvironment
 ```
@@ -302,7 +302,7 @@ ASP.NET Core Web API (native AOT)|`webapiaot`|ASP.NET Core Web Application – W
 
 The steps for adding any type of new project to a solution are the same. Only the type name of the project template differs and, sometimes, some command-line switches to control options. I will always specify what those switches and options should be if they differ from the defaults.
 
-A summary of project template defaults, options, and switches can be found here: https://github.com/markjprice/cs14net10/blob/main/docs/ch01-project-options.md.
+A summary of project template defaults, options, and switches can be found here: https://github.com/markjprice/cs15net11/blob/main/docs/ch01-project-options.md.
 
 # Chapter 4 - Writing, Debugging, and Testing Functions
 
@@ -548,7 +548,7 @@ dotnet watch 🔥 Hot reload enabled. For a list of supported edits, see https:/
 dotnet watch 🔧 Building...
   Determining projects to restore...
   All projects are up-to-date for restore.
-  HotReloading -> C:\cs12dotnet8\Chapter04\HotReloading\bin\Debug\net8.0\HotReloading.dll
+  HotReloading -> C:\cs15dotnet11\Chapter04\HotReloading\bin\Debug\net11.0\HotReloading.dll
 dotnet watch 🚀 Started
 Hello, Hot Reload!
 Hello, Hot Reload!
@@ -597,7 +597,7 @@ A similar capability is available cross-platform as an extension for VS Code.
 3.	In VS Code, navigate to **View** | **Command Palette…**.
 4.	Type `ilspy` and then select **ILSpy: Pick assembly from file system**.
 5.	Navigate to the following folder:
-`cs11dotnet7/Chapter07/DotNetEverywhere/bin/Release/net7.0/linux-x64`
+`cs15dotnet11/Chapter07/DotNetEverywhere/bin/Release/net11.0/linux-x64`
 6.	Select the `System.IO.FileSystem.dll` assembly and click **Select assembly**. Nothing will appear to happen, but you can confirm that ILSpy is working by viewing the **Output** window, selecting **ILSpy Extension** in the dropdown list, and seeing the processing, as shown in Figure 7.6:
 ![]()
 *Figure 7.6: ILSpy extension output when selecting an assembly to decompile*

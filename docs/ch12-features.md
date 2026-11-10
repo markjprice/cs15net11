@@ -31,7 +31,7 @@ Focused on bug fixes and general improvements to features and performance.
 
 # ASP.NET Core 2.0, August 2017
 
-Added new features such as Razor Pages, bunded assemblies into a `Microsoft.AspNetCore.All` metapackage, targeted .NET Standard 2.0, provided a new authentication model, and added many performance improvements. The biggest new features introduced with ASP.NET Core 2.0 are ASP.NET Core Razor Pages, which is covered in *Chapter 13, Building Websites Using ASP.NET Core Razor Pages*, and ASP.NET Core OData support. OData is covered in an online-only chapter of the companion book, *Apps and Services with .NET 8*, and is available at the following link: https://github.com/markjprice/apps-services-net8/blob/main/docs/ch08-odata.md.
+Added new features such as Razor Pages, bunded assemblies into a `Microsoft.AspNetCore.All` metapackage, targeted .NET Standard 2.0, provided a new authentication model, and added many performance improvements. The biggest new features introduced with ASP.NET Core 2.0 was ASP.NET Core Razor Pages and ASP.NET Core OData support.
 
 # ASP.NET Core 2.1, May 2018
 
@@ -127,7 +127,7 @@ Feature|Chapter|Topic
 ---|---|---
 Route short-circuiting|14|Short-circuit routes in ASP.NET Core 8
 Route tooling enhancements|14|Improved route tooling in ASP.NET Core 8
-Unification of Blazor hosting|15|All of *Chapter 15, Building User Interfaces Using Blazor*.
+Unification of Blazor hosting|15|*Chapter 12, Building Web Apps Using Blazor*.
 
 *Table 12.8: Features of ASP.NET Core 8 covered in this book*
 

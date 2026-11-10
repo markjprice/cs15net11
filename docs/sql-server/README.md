@@ -87,12 +87,12 @@ Objects in SQL Server have up to four parts to their unique address: `<server>.<
 
 Now we can run a database script to create the Northwind sample database:
 
-1.	If you have not previously downloaded or cloned the GitHub repository for this book, then do so now using the following link: https://github.com/markjprice/cs12dotnet8/.
-2.	Copy the script to create the Northwind database for SQL Server from the following path in your local Git repository: `/sql-scripts/Northwind4SQLServer.sql` into the `WorkingWithEFCore` folder.
+1.	If you have not previously downloaded or cloned the GitHub repository for this book, then do so now using the following link: https://github.com/markjprice/cs15net11/.
+2.	Copy the script to create the Northwind database for SQL Server from the following path in your local Git repository: `/scripts/sql-scripts/Northwind4SQLServerLocal.sql` into the `EFCore` folder.
 3.	Start **SQL Server Management Studio**.
 4.	In the **Connect to Server** dialog, for **Server name**, enter `.` (a dot) meaning the local computer name, and then click **Connect**. If you had to create a named instance, like `csdotnetbook`, then enter `.\csdotnetbook`
 5.	Navigate to **File** | **Open** | **File...**.
-6.	Browse to select the `Northwind4SQLServer.sql` file and then click **Open**.
+6.	Browse to select the `Northwind4SQLServerLocal.sql` file and then click **Open**.
 7.	In the toolbar, click **Execute**, and note the the **Command(s) completed successfully** message.
 8.	In **Object Explorer**, expand the **Northwind** database, and then expand **Tables**.
 9.	Right-click **Products**, click **Select Top 1000 Rows**, and note the returned results, as shown in *Figure 10.2*:
@@ -105,9 +105,9 @@ Now we can run a database script to create the Northwind sample database:
 
 ## Managing the Northwind sample database with Server Explorer
 
-We did not have to use **SQL Server Management Studio** to execute the database script. We can also use tools in **Visual Studio 2022** including the **SQL Server Object Explorer** and **Server Explorer**:
+We did not have to use **SQL Server Management Studio** to execute the database script. We can also use tools in **Visual Studio** including the **SQL Server Object Explorer** and **Server Explorer**:
 
-1.	In Visual Studio 2022, choose **View** | **Server Explorer**.
+1.	In Visual Studio, choose **View** | **Server Explorer**.
 2.	In the **Server Explorer** window, right-click **Data Connections** and choose **Add Connection...**.
 3.	If you see the **Choose Data Source** dialog, as shown in *Figure 10.3*, then select **Microsoft SQL Server** and then click **Continue**:
 
@@ -225,10 +225,10 @@ Copy the path to the version of SQL Server Configuration Manager you have instal
 
 ## Defining the Northwind database context class
 
-1.	In the `WorkingWithEFCore` project, add package references to the EF Core data provider for SQL Server (which has a dependency on the ADO.NET Provider for SQL Server), and globally and statically import the `System.Console` class for all C# files, as shown in the following markup:
+1.	In the `EFCore.csproj` project file, add package references to the EF Core data provider for SQL Server (which has a dependency on the ADO.NET Provider for SQL Server), and globally and statically import the `System.Console` class for all C# files, as shown in the following markup:
 ```xml
 <ItemGroup>
-  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.1" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="11.0.0" />
 </ItemGroup>
 
 <ItemGroup>
@@ -236,7 +236,7 @@ Copy the path to the version of SQL Server Configuration Manager you have instal
 </ItemGroup>
 ```
 
-2.	Build the `WorkingWithEFCore` project to restore packages.
+2.	Build the `EFCore` project to restore packages.
 3.	Add a new class file named `NorthwindDb.cs`.
 4.	In `NorthwindDb.cs`, define a class named `NorthwindDb`, import the main namespace for EF Core, make the class inherit from `DbContext`, and in an `OnConfiguring` method, configure the options builder to use SQL Server, as shown in the following code:
 ```cs
@@ -300,7 +300,7 @@ The instructions for this section are in the book and are the same for both SQL 
 
 For SQL Server, change the database provider and connection string, as shown in the following command:
 ```shell
-dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;Encrypt=true;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --table Categories --table Products --output-dir AutoGenModels --namespace WorkingWithEFCore.AutoGen --data-annotations --context NorthwindDb
+dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;Encrypt=true;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --table Categories --table Products --output-dir AutoGenModels --namespace EFCore.AutoGen --data-annotations --context NorthwindDb
 ```
 
 > The `Data Source` can have many different values, as shown in the [Data source aka server name](#data-source-aka-server-name) section.
@@ -316,7 +316,7 @@ To use SQL Server, you will not need to do anything if you already set up the No
 1.	Add a new project, as defined in the following list:
     - Project template: **Class Library** / `classlib`
     - Project file and folder: `Northwind.EntityModels.SqlServer`
-    - Solution file and folder: `ModernWeb`
+    - Solution file and folder: `WebData`
 
 2.	In the `Northwind.EntityModels.SqlServer` project, add package references for the SQL Server database provider and EF Core design-time support, as shown in the following markup:
 ```xml
@@ -329,7 +329,7 @@ To use SQL Server, you will not need to do anything if you already set up the No
 </ItemGroup>
 ```
 
-> The `ModernWeb` folder contains the `Directory.Packages.props` file that defines package version numbers centrally so that they do not need to be specified in each project file: https://github.com/markjprice/cs14net10/blob/main/code/ModernWeb/Directory.Packages.props
+> The `WebData` folder contains the `Directory.Packages.props` file that defines package version numbers centrally so that they do not need to be specified in each project file: https://github.com/markjprice/cs15net11/blob/main/code/WebData/Directory.Packages.props
 
 3.	Delete the `Class1.cs` file.
 4.	Build the `Northwind.EntityModels.SqlServer` project to restore packages.
@@ -347,7 +347,7 @@ Note the following:
 
 > The `Data Source` can have many different values, as shown in the [Data source aka server name](#data-source-aka-server-name) section.
 
-6.  Note the results, as shown in the following otput:
+1.  Note the results, as shown in the following otput:
 ```
 Build started...
 Build succeeded.
@@ -379,7 +379,7 @@ You will now define a database context class library:
 1.	Add a new project, as defined in the following list:
     - Project template: **Class Library** / `classlib`
     - Project file and folder: `Northwind.DataContext.SqlServer`
-    - Solution file and folder: `ModernWeb`
+    - Solution file and folder: `WebData`
 
 2.	In the `Northwind.DataContext.SqlServer` project, statically and globally import the `Console` class, add a project reference to the `Northwind.EntityModels.SqlServer` project, and add a package reference for the EF Core database provider for SQL Server, as shown in the following markup:
 ```xml

@@ -248,7 +248,7 @@ Trace.WriteLineIf(ts.TraceInfo, "Trace information");
 Trace.WriteLineIf(ts.TraceVerbose, "Trace verbose");
 ```
 
-If the `appsettings.json` file is not found, then the following exception will be thrown: `System.IO.FileNotFoundException: The configuration file 'appsettings.json' was not found and is not optional. The expected physical path was 'C:\cs14net10\Chapter04\Instrumenting\bin\Debug\net11.0\appsettings.json'`.
+If the `appsettings.json` file is not found, then the following exception will be thrown: `System.IO.FileNotFoundException: The configuration file 'appsettings.json' was not found and is not optional. The expected physical path was 'C:\cs15net11\Chapter04\Instrumenting\bin\Debug\net11.0\appsettings.json'`.
 
 7.	After the statements that close `Debug` and `Trace`, add some statements to prompt the user to press Enter to exit the console app, as shown in the following code:
 ```cs
@@ -352,7 +352,7 @@ Trace.Close();
 
 4.	Run the console app without debugging, press *Enter* and close the console app, and then open the `log.txt` file and note the result, as shown in the following output:
 ```
-[C:\cs14net10\Chapter04\Instrumenting\Program.cs]
+[C:\cs15net11\Chapter04\Instrumenting\Program.cs]
   <Main>$ on line 44. Expression: unitsInStock > 10
 ```
 

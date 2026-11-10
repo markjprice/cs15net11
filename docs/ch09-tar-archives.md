@@ -26,7 +26,7 @@ Member|Description
 ## Exploring Tar archives
 
 Let's see some example code in action:
-1.	Use your preferred code editor to add a new **Console App** / `console` project named `WorkingWithTarArchives` to the `Chapter09` solution.
+1.	Use your preferred code editor to add a new **Console App** / `console` project named `TarArchives` to the `Chapter09` solution.
 2.	In the project file, add an element to statically and globally import the `System.Console` class.
 3.	In `Program.Helpers.cs`, add a partial `Program` class with three methods to output errors, warnings, and information messages to the console in appropriate colors, as shown in the following code:
 ```cs
@@ -58,11 +58,11 @@ partial class Program
 }
 ```
 
-4.	In the `WorkingWithTarArchives` project, create a folder named `images` and copy some images into it.
+4.	In the `TarArchives` project, create a folder named `images` and copy some images into it.
 
     - If you are using Visual Studio, then select all the image files, view **Properties**, and set **Copy to Output Directory** to **Copy always**.
 
-> You can download some images from the following link: https://github.com/markjprice/cs14net10/tree/main/code/Chapter09/WorkingWithTarArchives/images.
+> You can download some images from the following link: https://github.com/markjprice/cs15net11/tree/main/code/Chapter09/TarArchives/images.
 
 5.	In `Program.cs`, delete the existing statements and then add statements to archive the contents of a specified folder into a Tar archive file and then extract it into a new folder, as shown in the following code:
 ```cs
@@ -135,14 +135,14 @@ catch (Exception ex)
 
 6.	Run the console app and note the messages, as shown in the following output:
 ```
-INFO: Current directory:   C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0
-INFO: Archiving directory: C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0\images
-      To .tar file:        C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0\images-archive.tar
-INFO: Does C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0\images-archive.tar exist? True.
-WARN: C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0\extracted did not exist so it was created.
-INFO: Extracting archive:  C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0\images-archive.tar
-      To directory:        C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0\extracted
-INFO: Extracted directory C:\cs14net10\Chapter09\WorkingWithTarArchives\bin\Debug\net10.0\extracted\images containing these files: category1.jpeg,category2.jpeg,category3.jpeg,category4.jpeg,category5.jpeg,category6.jpeg,category7.jpeg,category8.jpeg
+INFO: Current directory:   C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0
+INFO: Archiving directory: C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0\images
+      To .tar file:        C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0\images-archive.tar
+INFO: Does C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0\images-archive.tar exist? True.
+WARN: C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0\extracted did not exist so it was created.
+INFO: Extracting archive:  C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0\images-archive.tar
+      To directory:        C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0\extracted
+INFO: Extracted directory C:\cs15net11\Chapter09\TarArchives\bin\Debug\net10.0\extracted\images containing these files: category1.jpeg,category2.jpeg,category3.jpeg,category4.jpeg,category5.jpeg,category6.jpeg,category7.jpeg,category8.jpeg
 ```
 
 7.	If you have software that can view the contents of a Tar archive, like 7-Zip, then use it to review the contents of the `images-archive.tar` file, as shown in *Figure 9B.1*:

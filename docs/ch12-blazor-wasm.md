@@ -73,7 +73,7 @@ await builder.Build().RunAsync();
 
 # Creating a client-side service implementation
 
-Next, we need a web service that the client app can call to get and manage customers. You must have completed *Chapter 15, Building and Consuming Web Services*, so you have a customers service in the `Northwind.WebApi` service project that you will use:
+Next, we need a web service that the client app can call to get and manage customers. You must have completed *Chapter 13, Building and Consuming Web Services*, so you have a customers service in the `Northwind.WebApi` service project that you will use:
 
 1.	In the `Northwind.Blazor.Wasm` project, create a folder named `Services`.
 2.	In the `Services` folder, add a new file named `NorthwindServiceClientSide.cs`, and modify its contents to implement the `INorthwindService` interface by using an `HttpClient` to call the customers service, as shown in the following code:

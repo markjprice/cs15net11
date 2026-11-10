@@ -17,6 +17,7 @@ If you already have some familiarity with older versions of ASP.NET and are exci
 - [ASP.NET Core 8, November 2023](#aspnet-core-8-november-2023)
 - [ASP.NET Core 9, November 2024](#aspnet-core-9-november-2024)
 - [ASP.NET Core 10, November 2025](#aspnet-core-10-november-2025)
+- [ASP.NET Core 11, November 2026](#aspnet-core-11-november-2026)
 
 > **Note**: Chapter number `*` in the tables means the online-only chapter about ASP.NET Core MVC that is available at the following link: https://github.com/markjprice/cs12dotnet8/blob/main/docs/aspnetcoremvc.md.
 
@@ -144,7 +145,7 @@ OpenAPI document generation|15|Understanding the OpenAPI Specification
 
 # ASP.NET Core 10, November 2025
 
-Focused on improving performance, including the topics listed in *Table 12.10*:
+Focused on improving validation support and OpenAPI capabilities, including the topics listed in *Table 12.10*:
 
 Feature|Chapter|Topic
 ---|---|---
@@ -153,3 +154,15 @@ YAML format for OpenAPI docs|15|Generating OpenAPI documents in YAML format
 XML doc for OpenAPI docs|15|Populating XML documentation comments into the OpenAPI document
 
 *Table 12.10: Features of ASP.NET Core 10 covered in this book*
+
+# ASP.NET Core 11, November 2026
+
+Focused on `union` type and Zstandard support, and MCP integration for AI, including the topics listed in *Table 12.11*:
+
+Feature|Chapter|Topic
+---|---|---
+Union type support|13|Modeling business outcomes with a union
+Zstandard support|13|Compressing HTTP content with Zstandard
+MCP project template|13|Exposing application capabilities to AI clients with MCP
+
+*Table 12.11: Features of ASP.NET Core 10 covered in this book*

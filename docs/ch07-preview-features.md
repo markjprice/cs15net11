@@ -14,14 +14,14 @@ For example, when Microsoft released .NET SDK 6.0.200 in February 2022, it inclu
 
 Once .NET SDK 7.0.100 was released in November 2022, any .NET 6 developer who wanted to continue to use the C# 11 compiler then needed to use the .NET 7 SDK for their .NET 6 projects and set the target framework to `net6.0`, with a `<LangVersion>` set to `11`. This way, they use the supported .NET 7 SDK with the supported C# 11 compiler to build .NET 6 projects.
 
-In November 2026, Microsoft is likely to release .NET 11 SDK with a C# 15 compiler. You can then install and use the .NET 11 SDK to gain the benefits of whatever new features are available in C# 15, while still targeting .NET 10, as shown highlighted in the following Project file:
+In November 2027, Microsoft is likely to release .NET 12 SDK with a C# 16 compiler. You can then install and use the .NET 12 SDK to gain the benefits of whatever new features are available in C# 16, while still targeting .NET 11, as shown highlighted in the following project file:
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
-    <LangVersion>15</LangVersion> <!--Requires .NET 11 SDK GA-->
+    <TargetFramework>net11.0</TargetFramework>
+    <LangVersion>16</LangVersion> <!--Requires .NET 12 SDK GA-->
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -29,7 +29,7 @@ In November 2026, Microsoft is likely to release .NET 11 SDK with a C# 15 compil
 </Project>
 ```
 
-> **Good Practice**: Preview features are not supported in production code. Preview features are likely to have breaking changes before the final release. Enable preview features at your own risk. Switch to a GA-release future SDK like .NET 11 to use new compiler features, while still targeting older but LTS versions of .NET like .NET 8 or 10.
+> **Good Practice**: Preview features are not supported in production code. Preview features are likely to have breaking changes before the final release. Enable preview features at your own risk. Switch to a GA-release future SDK like .NET 12 to use new compiler features, while still targeting older but LTS versions of .NET like .NET 10 or .NET 11.
 
 # Requiring preview features
 
@@ -37,13 +37,13 @@ The `[RequiresPreviewFeatures]` attribute is used to indicate assemblies, types,
 
 # Enabling preview features
 
-In the project file, add an element to enable preview features and an element to enable preview language features, as shown highlighted in the following markup:
+In the project file, add an element to enable preview features and an element to enable preview language features, as shown in the following markup:
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnablePreviewFeatures>true</EnablePreviewFeatures>

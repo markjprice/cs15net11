@@ -73,7 +73,7 @@ Feature|Chapter|Topic
 Dynamic types and ExpandoObject|2|Storing dynamic types
 Named/optional arguments|5|Optional parameters and named arguments
 
-*Table 2.3: Features of C# 3 covered in this book*
+*Table 2.3: Features of C# 4 covered in this book*
 
 # C# 5, 2012
 
@@ -202,7 +202,7 @@ Aliasing any type|5|Renaming a type with a using alias
 Primary constructors|5|Defining a primary constructor
 Interceptors|7|Method interceptors
 
-*Table 2.13: Features of C# 12 mentioned in this book*
+*Table 2.13: Features of C# 12 covered in this book*
 
 # C# 13, November 2024
 
@@ -214,7 +214,7 @@ Feature|Chapter|Topic
 Partial properties|5|Partial properties
 params collection expression support|5|Passing a variable number of parameters
 
-*Table 2.14: Features of C# 13 mentioned in this book*
+*Table 2.14: Features of C# 13 covered in this book*
 
 # C# 14, November 2025
 
@@ -229,7 +229,7 @@ Null-conditional assignment operator|3|Null-conditional assignment operator
 Partial instance constructors and events|5|Partial members
 Extension members|6|Extension members
 
-*Table 2.15: Features of C# 14 mentioned in this book*
+*Table 2.15: Features of C# 14 covered in this book*
 
 # C# 15, November 2026
 
@@ -240,5 +240,7 @@ Feature|Chapter|Topic
 Multi-file support in file-based apps|1|Running a C# code file without a project file
 `union` keyword|5|Union types
 `closed` keyword|6|Closed class hierarchies
+Labeled `break` and `continue`|3|Labeled break and continue statements
+Collection expression arguments|8|Passing arguments to collection expressions
 
-*Table 2.16: Features of C# 15 mentioned in this book*
+*Table 2.16: Features of C# 15 covered in this book*

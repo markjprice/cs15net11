@@ -31,7 +31,7 @@ Focused on bug fixes and general improvements to features and performance.
 
 # ASP.NET Core 2.0, August 2017
 
-Added new features such as Razor Pages, bunded assemblies into a `Microsoft.AspNetCore.All` metapackage, targeted .NET Standard 2.0, provided a new authentication model, and added many performance improvements. The biggest new features introduced with ASP.NET Core 2.0 was ASP.NET Core Razor Pages and ASP.NET Core OData support.
+Added new features such as Razor Pages, bundled assemblies into a `Microsoft.AspNetCore.All` metapackage, targeted .NET Standard 2.0, provided a new authentication model, and added many performance improvements. The biggest new features introduced with ASP.NET Core 2.0 was ASP.NET Core Razor Pages and ASP.NET Core OData support.
 
 # ASP.NET Core 2.1, May 2018
 

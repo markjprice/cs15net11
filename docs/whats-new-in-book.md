@@ -112,7 +112,7 @@
 - Moved the subsection about spans, indexes, and ranges online only: https://github.com/markjprice/cs15net11/blob/main/docs/ch08-spans-indexes-ranges.md
 - Added new subsections in the *Manipulating, comparing, and searching Unicode text* section about runes, *Working with Unicode characters using Rune*, *Searching and modifying strings using runes*, and *Working with user-perceived characters*.
 - Added a new subsection in the *Pattern matching with regular expressions* section titled *Avoiding excessive backtracking*.
-- Added new subsections in the *Storing multiple objects in collections* section, *Passing arguments to collection expressions* and *Using dictionary expressions[*.
+- Added a new subsection in the *Storing multiple objects in collections* section titled *Passing arguments to collection expressions*.
 
 ## Chapter 9
 - Changed the chapter title to *Processes, Files, Streams, and Serialization*.

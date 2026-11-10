@@ -97,7 +97,7 @@ Corrections for typos and other mistakes and improvements like refactoring code.
 - [Command-Lines](docs/command-lines.md) page lists all commands as a single line that can be copied and pasted to make it easier to enter commands at the prompt.
 - [Book Links](docs/book-links.md)
 - [Common Mistakes, Improvements, and Errata aka list of corrections](docs/errata/README.md)
-- [11th edition's support for .NET 12](docs/dotnet12.md)
+- [11th edition's support for .NET 12](https://github.com/markjprice/markjprice/blob/main/articles/dotnet12.md)
 
 # Miscellaneous
 

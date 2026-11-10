@@ -15,6 +15,7 @@ If you already have some familiarity with older versions of .NET and are excited
 - [.NET 8, November 2023](#net-8-november-2023)
 - [.NET 9, November 2024](#net-9-november-2024)
 - [.NET 10, November 2025](#net-10-november-2025)
+- [.NET 11, November 2026](#net-11-november-2026)
 
 
 # .NET Core 1.0, June 2016
@@ -144,7 +145,7 @@ new LINQ methods: `CountBy`, `AggregateBy`, `Index`|11|Building LINQ expressions
 
 # .NET 10, November 2025
 
-Improved performance and new features, including the topics listed in *Table 7.7*:
+Improved performance and new features, including the topics listed in *Table 7.8*:
 
 Feature|Chapter|Topic
 ---|---|---
@@ -156,3 +157,19 @@ JSON Patch implementation improvements|9|JSON Patch implementation improvements
 `LeftJoin` and `RightJoin` LINQ methods|11|Left and right join LINQ extension methods
 
 *Table 7.8: Features of .NET 10*
+
+# .NET 11, November 2026
+
+Improved performance and new features, including the topics listed in *Table 7.9*:
+
+Feature|Chapter|Topic
+---|---|---
+Generic numeric methods in `System.Random`|8|Generating random numbers
+`Rune` type|8|Working with Unicode characters using `Rune`; Searching and modifying strings using runes; Working with user-perceived characters
+Collection expression arguments|8|Passing arguments to collection expressions
+Working with processes and tasks|9|Starting another program from C#; Avoiding blocked apps with Task, async, and await; Timeouts, cancellation, and killing processes; Understanding runtime async
+Stream adaptors|9|Adapting memory and text to streams; Reading a string as an encoded stream
+Zstandard support|9|Compressing data with Zstandard
+Union type serialization|9|Serializing C# `union` types with `System.Text.Json`
+
+*Table 7.9: Features of .NET 11*

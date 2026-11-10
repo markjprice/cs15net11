@@ -86,7 +86,7 @@ dotnet new console --use-program-main
 ## Page 34 - Cloning the book solution code repository
 
 ```shell
-git clone https://github.com/markjprice/cs14net10.git
+git clone https://github.com/markjprice/cs15net11.git
 ```
 
 ## Page 36 - Converting a file-based app to a project-based app
